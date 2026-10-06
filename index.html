@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Právní rádce</title>
+  <style>
+    :root{--wp-blue:#2271b1;--wp-blue-dark:#135e96;--sidebar:#1d2327;--sidebar-hover:#2c3338;--sidebar-active:#2271b1;--adminbar:#1d2327;--bg:#f0f0f1;--card:#fff;--ink:#1d2327;--muted:#646970;--line:#c3c4c7;--line-soft:#dcdcde;--green:#008a20;--red:#b32d2e;--orange:#dba617;--shadow:0 1px 1px rgba(0,0,0,.04)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;background:var(--bg);color:var(--ink)}
+    body::before{content:"";position:fixed;inset:32px 0 0 260px;z-index:-1;pointer-events:none;background:radial-gradient(circle at 88% 12%,rgba(34,113,177,.10),transparent 26%),radial-gradient(circle at 72% 82%,rgba(29,35,39,.06),transparent 30%),linear-gradient(135deg,rgba(255,255,255,.72),rgba(240,240,241,.9)),url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360"%3E%3Cg fill="none" stroke="%232271b1" stroke-opacity=".07" stroke-width="2"%3E%3Cpath d="M180 48v214M120 92h120M145 92l-42 78h84l-42-78ZM215 92l-42 78h84l-42-78ZM154 262h52M132 292h96"/%3E%3C/g%3E%3C/svg%3E');background-size:auto,auto,auto,360px 360px;background-repeat:no-repeat,no-repeat,no-repeat,repeat}
+    a{color:var(--wp-blue);text-decoration:none}a:hover{text-decoration:underline}button,.button{font:inherit;border:1px solid var(--line);border-radius:3px;background:#f6f7f7;color:#2c3338;padding:6px 12px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;text-decoration:none;box-shadow:0 1px 0 #00000008}.button:hover,button:hover{border-color:#8c8f94;background:#f0f0f1;text-decoration:none}.primary{background:var(--wp-blue);border-color:var(--wp-blue);color:#fff}.primary:hover{background:var(--wp-blue-dark);border-color:var(--wp-blue-dark);color:#fff}.link-button{border:0;background:transparent;box-shadow:none;color:var(--wp-blue);padding:0;min-height:0}.danger{color:var(--red)}
+    input,textarea,select{width:100%;font:inherit;border:1px solid #8c8f94;border-radius:3px;background:#fff;color:#2c3338;padding:6px 8px;min-height:34px}textarea{resize:vertical}input:focus,textarea:focus,select:focus{outline:1px solid var(--wp-blue);border-color:var(--wp-blue);box-shadow:0 0 0 1px var(--wp-blue)}label{display:block;font-weight:600;margin:10px 0 4px}.hidden{display:none!important}.muted{color:var(--muted)}.small{font-size:12px}.err{color:var(--red);font-weight:600}.ok{color:var(--green);font-weight:600}.msg{min-height:22px;margin-top:10px}.pill{display:inline-flex;align-items:center;border:1px solid var(--line-soft);background:#f6f7f7;border-radius:999px;padding:2px 8px;color:#50575e;font-size:12px}.status{display:inline-flex;align-items:center;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:600;border:1px solid var(--line-soft)}.status.open{background:#f0f6fc;color:#135e96}.status.progress{background:#fcf9e8;color:#7a5b00}.status.done{background:#edfaef;color:#006b1b}
+    .login-view{min-height:100vh;display:grid;place-items:center;padding:24px;background:#f0f0f1}.login-card{width:min(420px,calc(100vw - 32px));background:#fff;border:1px solid var(--line-soft);box-shadow:0 1px 3px rgba(0,0,0,.08);padding:24px}.login-logo{display:flex;align-items:center;justify-content:center;margin-bottom:18px}.login-mark{width:64px;height:64px;border-radius:4px;background:var(--wp-blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:24px}.login-card h1{font-size:22px;font-weight:400;text-align:center;margin:0 0 20px}.captcha-box{margin-top:12px}.captcha-row{display:flex;gap:6px;align-items:center}.captcha-question{font-weight:700;white-space:nowrap}.hint{margin-top:14px;padding:10px;background:#f6f7f7;border-left:4px solid var(--wp-blue);color:#50575e}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}.row label{margin:0;font-weight:400;display:inline-flex;align-items:center;gap:6px}.row input[type=checkbox]{width:auto;min-height:0}
+    .admin{min-height:100vh;display:grid;grid-template-columns:260px minmax(0,1fr);grid-template-rows:32px 1fr}.adminbar{grid-column:1/-1;background:var(--adminbar);color:#f0f0f1;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:13px}.adminbar strong{font-weight:600}.adminbar-user{display:flex;gap:10px;align-items:center}.adminbar button{background:transparent;border:0;color:#f0f0f1;box-shadow:none;min-height:28px;padding:0 6px}.sidebar{grid-row:2;background:var(--sidebar);color:#c3c4c7;min-height:calc(100vh - 32px);position:sticky;top:32px;align-self:start;overflow:auto;max-height:calc(100vh - 32px)}.side-title{padding:14px 14px 8px;color:#fff;font-weight:600}.tree-root,.tree-children{list-style:none;margin:0;padding:0}.tree-node{margin:0}.tree-toggle,.tree-link{display:flex;align-items:center;gap:8px;width:100%;border:0;box-shadow:none;border-radius:0;background:transparent;color:#c3c4c7;text-align:left;min-height:34px;justify-content:flex-start}.tree-toggle:hover,.tree-link:hover{background:var(--sidebar-hover);color:#fff;transform:none;text-decoration:none}.tree-link.active,.tree-toggle.active{background:var(--sidebar-active);color:#fff}.tree-toggle{padding:8px 12px}.tree-link{padding:7px 12px}.level-client>.tree-toggle{font-weight:700;color:#fff}.level-detail>.tree-toggle{padding-left:30px}.level-case>.tree-link{padding-left:48px;font-size:13px}.chev{width:12px;display:inline-block;color:#a7aaad}.tree-count{margin-left:auto;color:#a7aaad;font-size:12px}.tree-actions{padding:10px 12px;border-top:1px solid #2c3338}.content{grid-row:2;padding:20px 24px 40px;min-width:0}.page-title{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px}.page-title h1{font-size:24px;font-weight:400;margin:0}.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.breadcrumb{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:-4px 0 14px;color:var(--muted);font-size:13px}.breadcrumb a{font-weight:600}.breadcrumb span::before{content:'›';margin-right:7px;color:#8c8f94}.panel{background:rgba(255,255,255,.96);border:1px solid var(--line-soft);box-shadow:var(--shadow);padding:16px;margin:0 0 16px}.panel h2{font-size:19px;margin:0 0 10px}.dashboard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.client-card{cursor:pointer;transition:.16s transform,.16s box-shadow}.client-card:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,0,0,.08)}.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.metric{border:1px solid var(--line-soft);background:#f9fafb;padding:12px}.metric strong{display:block;font-size:24px}.case-table{width:100%;border-collapse:collapse;background:#fff}.case-table th,.case-table td{border-bottom:1px solid var(--line-soft);padding:9px 8px;text-align:left;vertical-align:top}.case-table th{background:#f6f7f7;font-weight:600}.case-detail-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.detail-body{white-space:pre-wrap;line-height:1.6}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px}.form-grid .full{grid-column:1/-1}.file-list{margin:0;padding-left:18px}.file-list li{margin:4px 0}.timeline{position:relative;margin:0;padding:0;list-style:none}.timeline::before{content:'';position:absolute;left:9px;top:4px;bottom:4px;width:2px;background:var(--line-soft)}.timeline li{position:relative;margin:0 0 12px;padding-left:30px}.timeline li::before{content:'';position:absolute;left:3px;top:5px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--wp-blue)}.section-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.admin-footer{margin-top:24px;color:var(--muted);font-size:12px}.empty{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);background:#fafafa}
+    @media(max-width:900px){body::before{inset:32px 0 0 0}.admin{grid-template-columns:1fr}.sidebar{position:static;min-height:auto;max-height:none}.content{padding:16px}.form-grid{grid-template-columns:1fr}.case-table{display:block;overflow:auto}.adminbar{position:sticky;top:0;z-index:5}.login-view{padding:12px}}@media(max-width:520px){.page-title,.case-detail-head{display:block}.captcha-row{display:block}.captcha-question{display:block;margin-bottom:6px}}
+  </style>
+</head>
+<body>
+<section id="loginView" class="login-view hidden">
+  <main class="login-card">
+    <div class="login-logo"><div class="login-mark">PR</div></div>
+    <h1>Právní rádce</h1>
+    <label for="roleSelect">Uživatel</label>
+    <select id="roleSelect"><option value="admin">admin</option><option value="advokat-a">advokát A</option><option value="advokat-b">advokát B</option></select>
+    <label for="passwordInput">Heslo</label>
+    <input id="passwordInput" type="password" autocomplete="current-password">
+    <div class="captcha-box"><label for="captchaAnswer">Kontrola</label><div class="captcha-row"><span id="captchaQuestion" class="captcha-question"></span><input id="captchaAnswer" inputmode="numeric" autocomplete="off"></div></div>
+    <div class="row"><label><input id="rememberLogin" type="checkbox" checked> Zapamatovat na 14 dní</label><button class="primary" type="button" onclick="submitLogin()">Přihlásit</button></div>
+    <div id="loginMessage" class="msg"></div>
+    <div class="hint small">Statická aplikace používá lokální přihlášení v prohlížeči. Citlivá data nepublikujte bez další ochrany.</div>
+  </main>
+</section>
+<section id="appView" class="admin hidden">
+  <div class="adminbar"><strong>Právní rádce</strong><div class="adminbar-user"><span id="adminUser"></span><button type="button" onclick="logout()">Odhlásit</button></div></div>
+  <aside class="sidebar">
+    <div class="side-title">Klienti</div>
+    <ul id="treeRoot" class="tree-root"></ul>
+    <div class="tree-actions"><button class="primary" type="button" onclick="showNewClient()">+ Vložit klienta</button></div>
+  </aside>
+  <main class="content">
+    <div class="page-title"><h1 id="pageTitle">Klienti</h1><div class="actions"><button type="button" onclick="showDashboard()">Dashboard</button><button class="primary" type="button" onclick="showNewClient()">Vložit klienta</button></div></div>
+    <div id="mainRoot"></div>
+    <div class="admin-footer">Data aplikace se načítají z <code>data/database.json</code>. Lokální změny se ukládají do <code>localStorage</code>; aplikace je soběstačná ze statické databáze <code>data/database.json</code>; původní zdrojové soubory jsou převedené do databázových metadat.</div>
+  </main>
+</section>
+<script>
+const SESSION_KEY='pravni_pripady_login_session_v2';
+const ROLE_KEY='pravni_pripady_role_v2';
+const DB_KEY='pravni_radce_database_v2';
+const DB_URL='data/database.json';
+const ROLE_ACCOUNTS={
+  admin:{username:'admin',passwordHash:'45eb06a239fae53624e74c5ada6bf8c9d6fc41c7b4df37b797df08698c5a96da'},
+  'advokat-a':{username:'advokat-a',passwordHash:'cf914427ac9028b2e7e49fd3d09034bbc9dcfb7ff6af3c340a52fd1a1f26b86d'},
+  'advokat-b':{username:'advokat-b',passwordHash:'4fc15d83edb0833a20cbcc82fa274eb8ea375e7bd00b19f8ff59e1b92c79d3a4'}
+};
+let captcha={a:0,b:0};
+let db={schema:'pravni-radce-db-v2',version:2,clients:[]};
+let selected={clientId:null,detailId:null,view:'dashboard',caseId:null};
+let expanded={clients:{},details:{}};
+function esc(v){return String(v??'').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));}
+function slugify(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'pripad';}
+async function hashPassword(value){const data=new TextEncoder().encode(value); const hash=await crypto.subtle.digest('SHA-256',data); return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('');}
+function roleLabel(role){return ({admin:'admin','advokat-a':'advokát A','advokat-b':'advokát B'})[role]||role;}
+function statusLabel(s){return ({open:'otevřeno',progress:'probíhá',done:'hotovo'})[s]||'otevřeno';}
+function statusClass(s){return ['open','progress','done'].includes(s)?s:'open';}
+function breadcrumb(items){return '<nav class="breadcrumb" aria-label="Drobečková navigace"><a href="#" onclick="event.preventDefault();showDashboard()">Klienti</a>'+items.map(item=>'<span>'+(item.href?'<a href="#" onclick="event.preventDefault();'+item.href+'">'+esc(item.label)+'</a>':esc(item.label))+'</span>').join('')+'</nav>';}
+function withBreadcrumb(items,html){return breadcrumb(items)+html;}
+function loadSession(){try{const s=JSON.parse(localStorage.getItem(SESSION_KEY)||'null'); if(!s||!s.role||!s.expiresAt||Date.now()>s.expiresAt){localStorage.removeItem(SESSION_KEY);return null;} return s;}catch(e){localStorage.removeItem(SESSION_KEY);return null;}}
+function refreshCaptcha(){captcha.a=1+Math.floor(Math.random()*9); captcha.b=1+Math.floor(Math.random()*9); document.getElementById('captchaQuestion').textContent=captcha.a+' + '+captcha.b+' ='; const ans=document.getElementById('captchaAnswer'); if(ans)ans.value='';}
+function showLogin(){document.getElementById('appView').classList.add('hidden');document.getElementById('loginView').classList.remove('hidden');refreshCaptcha();}
+async function submitLogin(){const role=document.getElementById('roleSelect').value; const pass=document.getElementById('passwordInput').value; const msg=document.getElementById('loginMessage'); const answer=Number(document.getElementById('captchaAnswer').value); if(answer!==captcha.a+captcha.b){msg.className='msg err';msg.textContent='Kontrola nesouhlasí.';refreshCaptcha();return;} const account=ROLE_ACCOUNTS[role]; if(!account||await hashPassword(pass)!==account.passwordHash){msg.className='msg err';msg.textContent='Neplatné přihlašovací údaje.';refreshCaptcha();return;} const days=document.getElementById('rememberLogin').checked?14:1; localStorage.setItem(SESSION_KEY,JSON.stringify({role,username:account.username,expiresAt:Date.now()+days*86400000})); localStorage.setItem(ROLE_KEY,role); document.getElementById('passwordInput').value=''; document.getElementById('captchaAnswer').value=''; await showApp();}
+function logout(){localStorage.removeItem(SESSION_KEY);localStorage.setItem(ROLE_KEY,'viewer');showLogin();}
+async function loadDb(){const local=localStorage.getItem(DB_KEY); if(local){try{db=JSON.parse(local); normalizeDb(); return;}catch(e){}}
+  try{const res=await fetch(DB_URL,{cache:'no-store'}); if(res.ok){db=await res.json(); normalizeDb(); saveDb(); return;}}catch(e){}
+  db={schema:'pravni-radce-db-v2',version:2,updatedAt:new Date().toISOString().slice(0,10),activeClientId:'petr-ullmann',clients:[{id:'petr-ullmann',name:'Petr Ullmann',email:'',note:'',caseDetail:{id:'detail-pripadu',title:'SVJ',subtitle:'',description:'',status:'open',cases:[]}}]}; normalizeDb();}
+function normalizeDb(){
+  if(!Array.isArray(db.clients))db.clients=[];
+  const normalizeDetail=(detail,client)=>{detail=detail||{}; detail.id=detail.id||'detail-pripadu'; if(client&&client.id==='petr-ullmann'&&detail.title==='Detail případu')detail.title='SVJ'; detail.title=detail.title||'SVJ'; detail.status=detail.status||'open'; detail.cases=Array.isArray(detail.cases)?detail.cases:[]; detail.cases.forEach(c=>{c.id=c.id||slugify(c.title); c.title=c.title||'Nový případ'; c.status=c.status||'open'; c.files=Array.isArray(c.files)?c.files:[]; c.legalQuestions=Array.isArray(c.legalQuestions)?c.legalQuestions:[]; c.claims=Array.isArray(c.claims)?c.claims:[]; c.missingDocuments=Array.isArray(c.missingDocuments)?c.missingDocuments:[];}); return detail;};
+  const petr=db.clients.find(c=>c.id==='petr-ullmann'||c.name==='Petr Ullmann');
+  const evaIndex=db.clients.findIndex(c=>c.id==='eva');
+  if(petr&&evaIndex>-1){const eva=db.clients[evaIndex]; petr.caseDetails=Array.isArray(petr.caseDetails)?petr.caseDetails:(petr.caseDetail?[petr.caseDetail]:[]); const evaDetail=normalizeDetail(eva.caseDetail||{id:'eva',title:'Eva',subtitle:'Případy Evy',description:'Agenda Evy vedená pod klientem Petr Ullmann.',status:'open',cases:[]},eva); evaDetail.id='eva'; evaDetail.title='Eva'; if(!petr.caseDetails.some(d=>d.id==='eva'))petr.caseDetails.push(evaDetail); db.clients.splice(evaIndex,1);}
+  db.clients.forEach(client=>{client.id=client.id||slugify(client.name); client.name=client.name||'Nový klient'; let details=Array.isArray(client.caseDetails)?client.caseDetails:(client.caseDetail?[client.caseDetail]:[]); if(!details.length)details=[{id:'detail-pripadu',title:client.id==='petr-ullmann'?'SVJ':'Agenda',subtitle:'',description:'',status:'open',cases:[]}]; client.caseDetails=details.map(d=>normalizeDetail(d,client)); client.caseDetail=client.caseDetails[0]; expanded.clients[client.id]=expanded.clients[client.id]??true; client.caseDetails.forEach(d=>{expanded.details[client.id+'::'+d.id]=expanded.details[client.id+'::'+d.id]??true;});});
+}
+
+function saveDb(){db.updatedAt=new Date().toISOString().slice(0,10); localStorage.setItem(DB_KEY,JSON.stringify(db));}
+async function showApp(){document.getElementById('loginView').classList.add('hidden');document.getElementById('appView').classList.remove('hidden'); const s=loadSession(); await loadDb(); const active=getClient(db.activeClientId)||db.clients[0]; document.getElementById('adminUser').textContent=(active?active.name+' · ':'')+(s?roleLabel(s.role)+' · '+s.username:''); renderTree(); if(active)showClient(active.id); else showDashboard();}
+function getClient(id){return db.clients.find(c=>c.id===id);} function getDetails(client){if(!client)return []; return Array.isArray(client.caseDetails)?client.caseDetails:(client.caseDetail?[client.caseDetail]:[]);} function getDetail(clientId,detailId){const client=getClient(clientId); const details=getDetails(client); return details.find(d=>d.id===detailId)||details[0];} function getCase(clientId,detailId,caseId){return getDetail(clientId,detailId)?.cases?.find(c=>c.id===caseId);} function setTitle(t){document.getElementById('pageTitle').textContent=t;}
+
+function toggleClient(clientId){expanded.clients[clientId]=!expanded.clients[clientId]; renderTree();}
+function toggleDetail(key){expanded.details[key]=!expanded.details[key]; renderTree();}
+function jsArg(v){return esc(v).replace(/'/g,'&#39;');}
+function renderTree(){
+  const root=document.getElementById('treeRoot');
+  root.innerHTML=db.clients.map(client=>{
+    const details=getDetails(client);
+    const total=details.reduce((n,d)=>n+(d.cases||[]).length,0);
+    const isClient=selected.clientId===client.id&&!selected.detailId&&!selected.caseId;
+    const clientOpen=expanded.clients[client.id];
+    return `<li class="tree-node level-client"><button class="tree-toggle ${isClient?'active':''}" type="button" onclick="showClient('${jsArg(client.id)}')"><span class="chev" onclick="event.stopPropagation();toggleClient('${jsArg(client.id)}')">${clientOpen?'▾':'▸'}</span><span>${esc(client.name)}</span><span class="tree-count">${total}</span></button>${clientOpen?`<ul class="tree-children">${details.map(detail=>{const key=client.id+'::'+detail.id; const cases=detail.cases||[]; const detailOpen=expanded.details[key]; const active=selected.clientId===client.id&&selected.detailId===detail.id&&selected.view==='detail'&&!selected.caseId; return `<li class="tree-node level-detail"><button class="tree-toggle ${active?'active':''}" type="button" onclick="showCaseDetail('${jsArg(client.id)}','${jsArg(detail.id)}')"><span class="chev" onclick="event.stopPropagation();toggleDetail('${jsArg(key)}')">${detailOpen?'▾':'▸'}</span><span>${esc(detail.title||'Detail případu')}</span><span class="tree-count">${cases.length}</span></button>${detailOpen?`<ul class="tree-children">${cases.map(c=>`<li class="tree-node level-case"><a class="tree-link ${selected.clientId===client.id&&selected.detailId===detail.id&&selected.caseId===c.id?'active':''}" href="#" onclick="event.preventDefault();showCase('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')"><span>${esc(c.title)}</span></a></li>`).join('')}</ul>`:''}</li>`;}).join('')}</ul>`:''}</li>`;
+  }).join('');
+}
+
+function showDashboard(){
+  selected={clientId:null,detailId:null,view:'dashboard',caseId:null};
+  renderTree();
+  setTitle('Klienti');
+  const totalCases=db.clients.reduce((n,c)=>n+getDetails(c).reduce((m,d)=>m+(d.cases||[]).length,0),0);
+  document.getElementById('mainRoot').innerHTML=withBreadcrumb([],`<section class="panel"><h2>Dashboard</h2><div class="metric-grid"><div class="metric"><strong>${db.clients.length}</strong><span>klientů</span></div><div class="metric"><strong>${totalCases}</strong><span>případů v databázi</span></div><div class="metric"><strong>${esc(db.updatedAt||'')}</strong><span>poslední aktualizace</span></div><div class="metric"><strong>${(db.archiveInventory||[]).length}</strong><span>převedených zdrojů</span></div></div></section>${renderArchiveInventory()}<section class="dashboard-grid">${db.clients.map(clientCard).join('')}<article class="panel client-card" onclick="showNewClient()"><h2>+ Vložit klienta</h2><p class="muted">Založí nového klienta v databázi a přidá ho do levého stromového menu.</p></article></section>`);
+}
+
+
+function renderArchiveInventory(){const items=db.archiveInventory||[]; if(!items.length)return ''; const shown=items.slice(0,60); return `<section class="panel"><h2>Převedený zdrojový archiv</h2><p class="muted">Původní soubory byly odstraněny z repozitáře. Níže je databázový inventář prvních ${shown.length} z ${items.length} převedených zdrojů.</p><table class="case-table"><thead><tr><th>Soubor</th><th>Typ</th><th>Velikost</th><th>Původní případ</th></tr></thead><tbody>${shown.map(f=>`<tr><td>${esc(f.path||f.name||'')}</td><td>${esc(f.type||'')}</td><td>${esc(f.size||'')}</td><td>${esc([f.agendaTitle,f.caseTitle].filter(Boolean).join(' / '))}</td></tr>`).join('')}</tbody></table></section>`;}
+function clientCard(c){
+  const details=getDetails(c);
+  const cases=details.reduce((n,d)=>n+(d.cases||[]).length,0);
+  const first=details[0]||{};
+  return `<article class="panel client-card" onclick="showClient('${jsArg(c.id)}')"><h2>${esc(c.name)}</h2><p>${esc(first.subtitle||first.description||c.note||'Bez popisu.')}</p><p><span class="pill">${details.length} agend</span> <span class="pill">${cases} případů</span> <span class="status ${statusClass(first.status)}">${statusLabel(first.status)}</span></p></article>`;
+}
+
+function showClient(clientId){
+  const client=getClient(clientId);
+  if(!client)return showDashboard();
+  db.activeClientId=clientId;
+  saveDb();
+  selected={clientId,detailId:null,view:'client',caseId:null};
+  expanded.clients[clientId]=true;
+  renderTree();
+  document.getElementById('adminUser').textContent=client.name+' · '+document.getElementById('adminUser').textContent.split(' · ').slice(-2).join(' · ');
+  setTitle(client.name);
+  const details=getDetails(client);
+  document.getElementById('mainRoot').innerHTML=withBreadcrumb([{label:client.name}],`<section class="panel"><div class="case-detail-head"><div><h2>${esc(client.name)}</h2><p>${esc(client.note||'Klientská složka v databázi případů.')}</p></div></div></section><section class="dashboard-grid">${details.map(d=>`<article class="panel client-card" onclick="showCaseDetail('${jsArg(client.id)}','${jsArg(d.id)}')"><h2>${esc(d.title||'Agenda')}</h2><p>${esc(d.subtitle||d.description||'Bez popisu.')}</p><p><span class="pill">${(d.cases||[]).length} případů</span> <span class="status ${statusClass(d.status)}">${statusLabel(d.status)}</span></p></article>`).join('')}</section>`);
+}
+
+function showCaseDetail(clientId,detailId){
+  const client=getClient(clientId);
+  const detail=getDetail(clientId,detailId);
+  if(!client||!detail)return showDashboard();
+  selected={clientId,detailId:detail.id,view:'detail',caseId:null};
+  expanded.clients[clientId]=true;
+  expanded.details[clientId+'::'+detail.id]=true;
+  renderTree();
+  setTitle(client.name+' / '+(detail.title||'Agenda'));
+  const bc=[{label:client.name,href:`showClient('${jsArg(client.id)}')`},{label:detail.title||'Agenda'}];
+  document.getElementById('mainRoot').innerHTML=withBreadcrumb(bc,`<section class="panel"><div class="case-detail-head"><div><h2>${esc(detail.title||'Agenda')}</h2><p class="muted">${esc(detail.subtitle||'')}</p><p>${esc(detail.description||'')}</p></div><div class="actions"><button class="primary" type="button" onclick="showNewCase('${jsArg(client.id)}','${jsArg(detail.id)}')">Přidat případ</button></div></div></section>${renderTimeline(client,detail)}${renderCaseOverview(client,detail)}`);
+}
+
+function renderTimeline(client,detail){
+  const cases=(detail.cases||[]).slice().sort((a,b)=>String(b.updatedAt||'').localeCompare(String(a.updatedAt||''))).slice(0,12);
+  if(!cases.length)return '<section class="panel empty">Časová osa zatím neobsahuje žádné případy.</section>';
+  return `<section class="panel"><h2>Časová osa</h2><ul class="timeline">${cases.map(c=>`<li><strong><a href="#" onclick="event.preventDefault();showCase('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">${esc(c.title)}</a></strong><div class="small muted">${esc((c.updatedAt||'').slice(0,10)||'bez data')} · ${esc(c.category||'bez okruhu')}</div><div class="small">${esc((c.summary||'').slice(0,160))}${c.summary&&c.summary.length>160?'…':''}</div></li>`).join('')}</ul></section>`;
+}
+
+function renderCaseOverview(client,detail){
+  const cases=detail.cases||[];
+  if(!cases.length)return '<section class="panel empty">Zatím nejsou vložené žádné případy.</section>';
+  return `<section class="panel"><h2>Jednotlivé případy</h2><table class="case-table"><thead><tr><th>Název</th><th>Stav</th><th>Okruh</th><th>Zdroj</th><th></th></tr></thead><tbody>${cases.map(c=>`<tr><td><a href="#" onclick="event.preventDefault();showCase('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">${esc(c.title)}</a><div class="small muted">${esc((c.summary||'').slice(0,180))}${c.summary&&c.summary.length>180?'…':''}</div></td><td><span class="status ${statusClass(c.status)}">${statusLabel(c.status)}</span></td><td>${esc(c.category||'')}</td><td class="small">${esc(c.sourcePath||'databáze')}</td><td><button type="button" onclick="showCase('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Detail</button></td></tr>`).join('')}</tbody></table></section>`;
+}
+
+function showCase(clientId,detailId,caseId){
+  const client=getClient(clientId);
+  const detail=getDetail(clientId,detailId);
+  const c=getCase(clientId,detailId,caseId);
+  if(!client||!detail||!c)return showCaseDetail(clientId,detailId);
+  selected={clientId,detailId:detail.id,view:'case',caseId};
+  expanded.clients[clientId]=true;
+  expanded.details[clientId+'::'+detail.id]=true;
+  renderTree();
+  setTitle(c.title);
+  const edits=c.edits||{};
+  const bc=[{label:client.name,href:`showClient('${jsArg(client.id)}')`},{label:detail.title||'Agenda',href:`showCaseDetail('${jsArg(client.id)}','${jsArg(detail.id)}')`},{label:c.title}];
+  document.getElementById('mainRoot').innerHTML=withBreadcrumb(bc,`<section class="panel"><div class="case-detail-head"><div><h2>${esc(c.title)}</h2><p><span class="status ${statusClass(c.status)}">${statusLabel(c.status)}</span> ${c.category?`<span class="pill">${esc(c.category)}</span>`:''} ${c.sourcePath?`<span class="pill">${esc(c.sourcePath)}</span>`:''}</p></div><div class="actions"><button type="button" onclick="cycleStatus('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Změnit stav</button><button type="button" onclick="showCaseDetail('${jsArg(client.id)}','${jsArg(detail.id)}')">Zpět na ${esc(detail.title||'Agendu')}</button></div></div></section><section class="panel"><h2>Popis případu</h2><div class="detail-body">${esc(edits.popis||c.summary||'Bez popisu.')}</div></section>${renderListPanel('Právní otázky',c.legalQuestions)}${renderListPanel('Nároky / další postup',c.claims)}${renderListPanel('Doplnit podklady',c.missingDocuments)}${renderFiles(c.files)}${renderSourceTexts(c.sourceTexts)}${renderComments(c.comments)}`);
+}
+
+function renderListPanel(title,items){if(!items||!items.length)return ''; return `<section class="panel"><h2>${esc(title)}</h2><ul>${items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></section>`;}
+function renderFiles(files){if(!files||!files.length)return ''; return `<section class="panel"><h2>Přílohy / původní zdrojové soubory</h2><ul class="file-list">${files.map(f=>`<li><strong>${esc(f.name||f.path)}</strong> <span class="small muted">${esc([f.type,f.size,f.date].filter(Boolean).join(' · '))}</span>${f.preview?`<div class="small">${esc(f.preview)}</div>`:''}<div class="small muted">${esc(f.migrationNote||'Soubor je evidovaný v databázi jako metadata.')}</div></li>`).join('')}</ul></section>`;}
+
+function renderSourceTexts(items){if(!items||!items.length)return ''; return `<section class="panel"><h2>Převedené textové zdroje</h2>${items.map(src=>`<details><summary><strong>${esc(src.title||src.path)}</strong> <span class="small muted">${esc(src.path||'')}</span></summary><pre class="source-text">${esc(src.content||'')}</pre></details>`).join('')}</section>`;}
+function renderComments(comments){if(!comments||!comments.length)return ''; return `<section class="panel"><h2>Komentáře</h2>${comments.map(c=>`<p><strong>${esc(c.author||'')}</strong> <span class="small muted">${esc(c.created||'')}</span><br>${esc(c.text||'')}</p>`).join('')}</section>`;}
+function showNewClient(){selected={clientId:null,detailId:null,view:'new-client',caseId:null}; renderTree(); setTitle('Vložit klienta'); document.getElementById('mainRoot').innerHTML=withBreadcrumb([{label:'Vložit klienta'}],'<section class="panel"><h2>Nový klient</h2><div class="form-grid"><label>Název klienta<input id="newClientName" placeholder="Např. Petr Ullmann"></label><label>E-mail<input id="newClientEmail" type="email" placeholder="volitelné"></label><label class="full">Poznámka<textarea id="newClientNote" rows="4" placeholder="Krátká interní poznámka ke klientovi"></textarea></label><label class="full">Popis detailu případu<textarea id="newClientDetail" rows="4" placeholder="Úvodní popis hlavní agendy klienta"></textarea></label></div><p><button class="primary" type="button" onclick="createClient()">Vložit klienta</button></p></section>');}
+function createClient(){const name=(document.getElementById('newClientName').value||'').trim(); if(!name){alert('Vyplňte název klienta.');return;} let id=slugify(name),i=2; while(db.clients.some(c=>c.id===id))id=slugify(name)+'-'+i++; db.clients.push({id,name,email:(document.getElementById('newClientEmail').value||'').trim(),note:(document.getElementById('newClientNote').value||'').trim(),caseDetails:[{id:'detail-pripadu',title:'SVJ',subtitle:'',description:(document.getElementById('newClientDetail').value||'').trim(),status:'open',cases:[]}]}); normalizeDb(); saveDb(); showClient(id);}
+function showNewCase(clientId,detailId){const client=getClient(clientId); const detail=getDetail(clientId,detailId); if(!client||!detail)return; selected={clientId,detailId:detail.id,view:'new-case',caseId:null}; renderTree(); setTitle('Nový případ'); document.getElementById('mainRoot').innerHTML=`<section class="panel"><h2>Nový případ pro agendu ${esc(client.name)} / ${esc(detail.title||'Agenda')}</h2><div class="form-grid"><label>Název<input id="newCaseTitle" placeholder="Např. Výzva k plnění"></label><label>Stav<select id="newCaseStatus"><option value="open">otevřeno</option><option value="progress">probíhá</option><option value="done">hotovo</option></select></label><label>Okruh<input id="newCaseCategory" placeholder="Např. Vyúčtování"></label><label>Zdroj/příloha<input id="newCaseSource" placeholder="volitelné"></label><label class="full">Popis<textarea id="newCaseSummary" rows="6" placeholder="Skutkový stav, právní otázka, další krok"></textarea></label></div><p><button class="primary" type="button" onclick="createCase('${jsArg(clientId)}','${jsArg(detail.id)}')">Přidat případ</button> <button type="button" onclick="showCaseDetail('${jsArg(clientId)}','${jsArg(detail.id)}')">Zpět</button></p></section>`;}
+function createCase(clientId,detailId){const detail=getDetail(clientId,detailId); const title=(document.getElementById('newCaseTitle').value||'').trim(); if(!detail||!title){alert('Vyplňte název případu.');return;} let id=slugify(title),i=2; while(detail.cases.some(c=>c.id===id))id=slugify(title)+'-'+i++; detail.cases.unshift({id,title,status:document.getElementById('newCaseStatus').value,category:(document.getElementById('newCaseCategory').value||'').trim(),summary:(document.getElementById('newCaseSummary').value||'').trim(),sourcePath:(document.getElementById('newCaseSource').value||'').trim(),legalQuestions:[],claims:[],missingDocuments:[],files:[],comments:[],updatedAt:new Date().toISOString()}); saveDb(); showCase(clientId,detail.id,id);}
+function cycleStatus(clientId,detailId,caseId){const c=getCase(clientId,detailId,caseId); if(!c)return; const order=['open','progress','done']; c.status=order[(order.indexOf(c.status||'open')+1)%order.length]; saveDb(); showCase(clientId,detailId,caseId);}
+
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&!document.getElementById('loginView').classList.contains('hidden'))submitLogin();});
+document.addEventListener('DOMContentLoaded',()=>{if(loadSession())showApp(); else showLogin();});
+</script>
+</body>
+</html>

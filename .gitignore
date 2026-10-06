@@ -1,0 +1,17 @@
+.DS_Store
+.idea/
+*.tmp
+*.log
+
+# Local/plaintext credentials - never publish
+/accounts.md
+/accounts.txt
+/accounts
+
+# Removed source archive; the app is database-only
+/0-data/
+
+# Large local media/documents should stay outside the GitHub Pages app
+*.m4a
+*.mp3
+*.mov

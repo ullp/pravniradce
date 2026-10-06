@@ -21,7 +21,7 @@
     <div class="login-logo"><div class="login-mark">PR</div></div>
     <h1>Právní rádce</h1>
     <label for="roleSelect">Uživatel</label>
-    <select id="roleSelect"><option value="admin">admin</option><option value="advokat-a">advokát A</option><option value="advokat-b">advokát B</option></select>
+    <select id="roleSelect"><option value="admin">admin</option><option value="panuska">panuska@akpanuska.cz</option><option value="advokat-a">advokát A</option><option value="advokat-b">advokát B</option></select>
     <label for="passwordInput">Heslo</label>
     <input id="passwordInput" type="password" autocomplete="current-password">
     <div class="captcha-box"><label for="captchaAnswer">Kontrola</label><div class="captcha-row"><span id="captchaQuestion" class="captcha-question"></span><input id="captchaAnswer" inputmode="numeric" autocomplete="off"></div></div>
@@ -49,9 +49,10 @@ const ROLE_KEY='pravni_pripady_role_v2';
 const DB_KEY='pravni_radce_database_v2';
 const DB_URL='data/database.json';
 const ROLE_ACCOUNTS={
-  admin:{username:'admin',passwordHash:'45eb06a239fae53624e74c5ada6bf8c9d6fc41c7b4df37b797df08698c5a96da'},
-  'advokat-a':{username:'advokat-a',passwordHash:'cf914427ac9028b2e7e49fd3d09034bbc9dcfb7ff6af3c340a52fd1a1f26b86d'},
-  'advokat-b':{username:'advokat-b',passwordHash:'4fc15d83edb0833a20cbcc82fa274eb8ea375e7bd00b19f8ff59e1b92c79d3a4'}
+  admin:{username:'admin',label:'admin',role:'admin',passwordHash:'a89f66c8aa825322ede067a00a0f5ba9db7a9eb1164752fd277e8dde72416b1d'},
+  panuska:{username:'panuska@akpanuska.cz',label:'panuska@akpanuska.cz',role:'admin',passwordHash:'03126cdc3bde481e80999f6626dae4971e864d9ad0455db14d13c0f66f9f3235'},
+  'advokat-a':{username:'advokat-a',label:'advokát A',role:'advokat-a',passwordHash:'cf914427ac9028b2e7e49fd3d09034bbc9dcfb7ff6af3c340a52fd1a1f26b86d'},
+  'advokat-b':{username:'advokat-b',label:'advokát B',role:'advokat-b',passwordHash:'4fc15d83edb0833a20cbcc82fa274eb8ea375e7bd00b19f8ff59e1b92c79d3a4'}
 };
 let captcha={a:0,b:0};
 let db={schema:'pravni-radce-db-v2',version:2,clients:[]};
@@ -61,6 +62,7 @@ function esc(v){return String(v??'').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&l
 function slugify(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'pripad';}
 async function hashPassword(value){const data=new TextEncoder().encode(value); const hash=await crypto.subtle.digest('SHA-256',data); return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('');}
 function roleLabel(role){return ({admin:'admin','advokat-a':'advokát A','advokat-b':'advokát B'})[role]||role;}
+function accountLabel(account){return account.label||account.username||'';}
 function statusLabel(s){return ({open:'otevřeno',progress:'probíhá',done:'hotovo'})[s]||'otevřeno';}
 function statusClass(s){return ['open','progress','done'].includes(s)?s:'open';}
 function breadcrumb(items){return '<nav class="breadcrumb" aria-label="Drobečková navigace"><a href="#" onclick="event.preventDefault();showDashboard()">Klienti</a>'+items.map(item=>'<span>'+(item.href?'<a href="#" onclick="event.preventDefault();'+item.href+'">'+esc(item.label)+'</a>':esc(item.label))+'</span>').join('')+'</nav>';}
@@ -68,7 +70,7 @@ function withBreadcrumb(items,html){return breadcrumb(items)+html;}
 function loadSession(){try{const s=JSON.parse(localStorage.getItem(SESSION_KEY)||'null'); if(!s||!s.role||!s.expiresAt||Date.now()>s.expiresAt){localStorage.removeItem(SESSION_KEY);return null;} return s;}catch(e){localStorage.removeItem(SESSION_KEY);return null;}}
 function refreshCaptcha(){captcha.a=1+Math.floor(Math.random()*9); captcha.b=1+Math.floor(Math.random()*9); document.getElementById('captchaQuestion').textContent=captcha.a+' + '+captcha.b+' ='; const ans=document.getElementById('captchaAnswer'); if(ans)ans.value='';}
 function showLogin(){document.getElementById('appView').classList.add('hidden');document.getElementById('loginView').classList.remove('hidden');refreshCaptcha();}
-async function submitLogin(){const role=document.getElementById('roleSelect').value; const pass=document.getElementById('passwordInput').value; const msg=document.getElementById('loginMessage'); const answer=Number(document.getElementById('captchaAnswer').value); if(answer!==captcha.a+captcha.b){msg.className='msg err';msg.textContent='Kontrola nesouhlasí.';refreshCaptcha();return;} const account=ROLE_ACCOUNTS[role]; if(!account||await hashPassword(pass)!==account.passwordHash){msg.className='msg err';msg.textContent='Neplatné přihlašovací údaje.';refreshCaptcha();return;} const days=document.getElementById('rememberLogin').checked?14:1; localStorage.setItem(SESSION_KEY,JSON.stringify({role,username:account.username,expiresAt:Date.now()+days*86400000})); localStorage.setItem(ROLE_KEY,role); document.getElementById('passwordInput').value=''; document.getElementById('captchaAnswer').value=''; await showApp();}
+async function submitLogin(){const accountKey=document.getElementById('roleSelect').value; const pass=document.getElementById('passwordInput').value; const msg=document.getElementById('loginMessage'); const answer=Number(document.getElementById('captchaAnswer').value); if(answer!==captcha.a+captcha.b){msg.className='msg err';msg.textContent='Kontrola nesouhlasí.';refreshCaptcha();return;} const account=ROLE_ACCOUNTS[accountKey]; if(!account||await hashPassword(pass)!==account.passwordHash){msg.className='msg err';msg.textContent='Neplatné přihlašovací údaje.';refreshCaptcha();return;} const role=account.role||accountKey; const days=document.getElementById('rememberLogin').checked?14:1; localStorage.setItem(SESSION_KEY,JSON.stringify({role,accountKey,username:account.username,expiresAt:Date.now()+days*86400000})); localStorage.setItem(ROLE_KEY,role); document.getElementById('passwordInput').value=''; document.getElementById('captchaAnswer').value=''; await showApp();}
 function logout(){localStorage.removeItem(SESSION_KEY);localStorage.setItem(ROLE_KEY,'viewer');showLogin();}
 async function loadDb(){const local=localStorage.getItem(DB_KEY); if(local){try{db=JSON.parse(local); normalizeDb(); return;}catch(e){}}
   try{const res=await fetch(DB_URL,{cache:'no-store'}); if(res.ok){db=await res.json(); normalizeDb(); saveDb(); return;}}catch(e){}

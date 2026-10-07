@@ -30,8 +30,8 @@ Databáze obsahuje:
 
 - klienta **Petr Ullmann**,
 - agendy pod klientem:
-  - **SVJ**,
-  - **Eva**,
+  - **Klient 1**,
+  - **Klient 2**,
 - jednotlivé případy v agendách,
 - právní otázky, nároky, chybějící podklady,
 - metadata původních příloh,
@@ -43,12 +43,12 @@ Levé menu má strukturu:
 ```text
 Klienti
 └─ Petr Ullmann
-   ├─ SVJ
-   │  ├─ Souhrnné stížnosti a přestupky SVJ
-   │  ├─ Balkony
-   │  ├─ Energie
+   ├─ KLIENT-1
+   │  ├─ A
+   │  ├─ B
+   │  ├─ C
    │  └─ ...
-   └─ Eva
+   └─ KLIENT-2
 ```
 
 Kliknutí na agendu **SVJ** nebo **Eva** zobrazí časovou osu a výpis jednotlivých případů. Kliknutí na konkrétní případ zobrazí detail případu.

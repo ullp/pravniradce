@@ -396,19 +396,36 @@ function getHtml(id){const el=document.getElementById(id); return el?el.innerHTM
 function normalizeCheckItems(items){const out=[];const seen=new Set();(Array.isArray(items)?items:[]).forEach(item=>{let html='';let done=false;let files=[];if(typeof item==='string'){html=item;}else if(item&&typeof item==='object'){html=item.html||item.text||item.question||item.claim||item.document||'';done=!!(item.done||item.checked||item.yn==='ano'||item.status==='done');files=Array.isArray(item.files)?normalizeFiles(item.files):[];}html=sanitizeHtml(html);const hasText=!!htmlToPlainText(html);if(!hasText&&!files.length)return;const key=(hasText?htmlToPlainText(html).toLowerCase():'__files__'+files.map(f=>fileName(f).toLowerCase()).join('|'));if(seen.has(key))return;seen.add(key);out.push({html,done,files});});return out;}
 function normalizeLegalQuestions(items){return normalizeCheckItems(items);}
 function htmlToPlainText(html){const div=document.createElement('div'); div.innerHTML=sanitizeHtml(html); return (div.textContent||'').replace(/\u00a0/g,' ').trim();}
+const SANITIZE_ALLOWED_TAGS=new Set(['P','BR','STRONG','B','EM','I','U','S','UL','OL','LI','H2','H3','H4','H5','BLOCKQUOTE','A','PRE','HR','CODE','DIV','SPAN','TABLE','THEAD','TBODY','TR','TD','TH']);
+const SANITIZE_ALLOWED_CLASSES=new Set(['formatted-content','small','muted','case-table','compact','form-grid','full','analysis-check-item','analysis-check-state','legal-analysis-source','legal-analysis-source-grid','legal-analysis-disclaimer','legal-analysis-meta','legal-analysis-result','legal-analysis-actions','legal-checklist-view','formatted-list','attachment-list','attachment-item','attachment-head','attachment-meta','attachment-actions','pill','button','hidden']);
+const SANITIZE_ALLOWED_STYLE=new Set(['height','width','background','background-color','border','border-radius','color','font-size','font-weight','margin','margin-top','margin-left','padding','padding-top','padding-left','overflow','display','text-align','white-space','cursor']);
+function sanitizeStyleValue(value){const v=String(value||'').trim();if(!v||/[<>"'`\\]|url\(|expression|javascript:|@import|behavior/i.test(v))return '';return v;}
 function sanitizeHtml(html){
   const template=document.createElement('template');
   template.innerHTML=String(html||'');
-  const allowed=new Set(['P','BR','STRONG','B','EM','I','U','S','UL','OL','LI','H2','H3','BLOCKQUOTE','A','PRE','HR','CODE']);
   const walk=node=>{
     [...node.childNodes].forEach(child=>{
       if(child.nodeType===Node.ELEMENT_NODE){
-        if(!allowed.has(child.tagName)){
+        if(!SANITIZE_ALLOWED_TAGS.has(child.tagName)){
           child.replaceWith(...child.childNodes);
           return;
         }
         const href=child.tagName==='A'?(child.getAttribute('href')||''):'';
+        const cls=String(child.getAttribute('class')||'').split(/\s+/).filter(x=>SANITIZE_ALLOWED_CLASSES.has(x)).join(' ');
+        const style=String(child.getAttribute('style')||'').split(';').map(decl=>{
+          const i=decl.indexOf(':');if(i<0)return '';
+          const prop=decl.slice(0,i).trim().toLowerCase();
+          const val=sanitizeStyleValue(decl.slice(i+1));
+          if(!SANITIZE_ALLOWED_STYLE.has(prop)||!val)return '';
+          return prop+':'+val;
+        }).filter(Boolean).join(';');
+        const editable=child.getAttribute('contenteditable')==='false'?'false':'';
+        const span=/^\d{1,3}$/.test(String(child.getAttribute('colspan')||''))?String(child.getAttribute('colspan')):'';
         [...child.attributes].forEach(attr=>child.removeAttribute(attr.name));
+        if(cls)child.setAttribute('class',cls);
+        if(style)child.setAttribute('style',style);
+        if(editable)child.setAttribute('contenteditable',editable);
+        if(span)child.setAttribute('colspan',span);
         if(child.tagName==='A'&&(/^https?:\/\//i.test(href)||href.startsWith('mailto:'))){child.setAttribute('href',href); child.setAttribute('target','_blank'); child.setAttribute('rel','noopener noreferrer');}
         walk(child);
       }else if(child.nodeType!==Node.TEXT_NODE){child.remove();}

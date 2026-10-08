@@ -4370,19 +4370,20 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Má SVJ právní titul k navýšení záloh nebo zadržení přeplatku?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Představuje dlouhodobý výkon funkce předsedy SVJ zástupcem na plnou moc porušení nezastupitelnosti funkce statutárního orgánu dle § 159 a § 1205 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly předloženy podklady k vyúčtování, smlouvám a skutečným nákladům?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Je SVJ povinno bezodkladně zajistit opravu havarijního stavu společných částí (obvodového pláště a balkonů) ze společných prostředků dle § 1189 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je rozúčtování služeb přezkoumatelné a v souladu se stanovami a právní úpravou?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Může SVJ podmiňovat výplatu přeplatků z vyúčtování služeb platbami do hotovostního fondu oprav?</p>",
+                  "done": true
+                },
+                {
+                  "html": "<p>Má vlastník jednotky právo na nahlížení a pořízení kopií originálních zápisů ze shromáždění SVJ dle § 1179 a § 1208 NOZ?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -4736,29 +4737,28 @@
               "title": "Souhrnné stížnosti a přestupky SVJ",
               "edits": {
                 "problem": "<ol><li>role předsedy SVJ je rolí nezastupitelnou</li><li>Václav Hodek se prokazoval plnou mocí od syna Pavla Hodka min. od roku 2011</li><li>Pan Hodek st. V. si vyloženě po celou dobu vybíral co se bude realizovat a co ne, viz. zateplení a kotelna (Martinec na kotelnu upozorňoval mnoho let).</li></ol>",
-                "popis": "Mělo by se jednat o: Působení předsedy Pavla Hodka od roku 2011 v zástupu jeho otcem Václave Hodkem, kdy jeho jménem otec realizoval pouze ty věci, které se mu hodily. Vytvářel ve spolupráci s Vítězslavem Husárkem pravidla, která pokdu někdo nerespektoval, byl potrestán, viz. zadržování přeplatků ve výši 27000 Kč vs. příspěvek do \"hotovostního\" fondu oprav ve výši 3 tis. Kč. Odhlasováno na schůzi SVJ a tak by mělo být v zápise, který chceme vidět. Havarijní stav obvodového plášťě a balkónů kuchyň a obývák včetně dlažeb. Vyhrožování Pavlem Hodkem. MASTER ŠABLONA PRO CELÝ PŘÍPAD (hlavní dokument, který shrnuje všechny incidenty, právní vady, požadavky a návrhy) md # MASTER DOKUMENT – Kompletní…"
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Působení předsedy Pavla Hodka min. od roku 2011 v nezákonném zástupu jeho otcem Václavem Hodkem na základě plné moci (role předsedy SVJ je ze zákona nezastupitelná). Václav Hodek realizoval pouze vybrané akce, které se mu hodily, a ve spolupráci s Vítězslavem Husárkem nastavoval svévolná pravidla. V případě nesouhlasu vlastníků docházelo k sankcím, např. k zadržování přeplatků ve výši 27 000 Kč kvůli hotovostnímu fondu oprav 3 000 Kč.</p><h3>Aktuální stav:</h3><p>Dlouhodobě zanedbaná správa domu a havarijní stav obvodového pláště a balkónů (kuchyň a obývák včetně dlažeb). Pan Hodek st. si svévolně vybíral, co se bude realizovat a co ne (dlouholeté ignorování zateplení a stavu kotelny přes opakovaná upozornění). Vyhrožování Pavlem Hodkem při dotazech na opravy. Chybí transparentní zápisy a vyúčtování.</p><h3>Očekávaný stav:</h3><p>Zajištění řádného statutárního fungování SVJ v souladu se zákonem bez neplatného zastupování plnou mocí. Předložení originálních zápisů ze schůzí SVJ k nahlédnutí, vrácení neoprávněně zadržených přeplatků, ukončení hotovostního fondu oprav a zahájení odborných oprav obvodového pláště a havarijních balkónů.</p>",
+                "jak_nastal": "<p>Působení předsedy Pavla Hodka min. od roku 2011 v nezákonném zástupu jeho otcem Václavem Hodkem na základě plné moci (role předsedy SVJ je ze zákona nezastupitelná). Václav Hodek realizoval pouze vybrané akce, které se mu hodily, a ve spolupráci s Vítězslavem Husárkem nastavoval svévolná pravidla. V případě nesouhlasu vlastníků docházelo k sankcím, např. k zadržování přeplatků ve výši 27 000 Kč kvůli hotovostnímu fondu oprav 3 000 Kč.</p>",
+                "aktualni_stav": "<p>Dlouhodobě zanedbaná správa domu a havarijní stav obvodového pláště a balkónů (kuchyň a obývák včetně dlažeb). Pan Hodek st. si svévolně vybíral, co se bude realizovat a co ne (dlouholeté ignorování zateplení a stavu kotelny přes opakovaná upozornění). Vyhrožování Pavlem Hodkem při dotazech na opravy. Chybí transparentní zápisy a vyúčtování.</p>",
+                "ocekavany_stav": "<p>Zajištění řádného statutárního fungování SVJ v souladu se zákonem bez neplatného zastupování plnou mocí. Předložení originálních zápisů ze schůzí SVJ k nahlédnutí, vrácení neoprávněně zadržených přeplatků, ukončení hotovostního fondu oprav a zahájení odborných oprav obvodového pláště a havarijních balkónů.</p>"
               },
               "timelineLabel": "bez odezvy SVJ",
               "claims": [
                 {
-                  "html": "výzva k předložení podkladů a vysvětlení",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Předžalobní výzva výboru SVJ k ukončení neplatného zastupování a předložení originálních zápisů ze shromáždění.</p>",
+                  "done": false
                 },
                 {
-                  "html": "vydání zadrženého přeplatku / zaplacení dlužné částky",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Žaloba na vydání neoprávněně zadrženého přeplatku ve výši 27 000 Kč s příslušenstvím dle zákona č. 67/2013 Sb.</p>",
+                  "done": false
                 },
                 {
-                  "html": "přepočet vyúčtování nebo určení nesprávnosti postupu",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Uplatnění nároku na zajištění opravy havarijního stavu obvodového pláště a balkonů ze společných prostředků.</p>",
+                  "done": false
                 },
                 {
-                  "html": "případně úroky z prodlení",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Podnět rejstříkovému soudu k nápravě zápisu statutárního orgánu a fungování SVJ.</p>",
+                  "done": false
                 }
               ],
               "related": [],
@@ -4991,28 +4991,28 @@
               ],
               "category": "Vyúčtování, zálohy, přeplatky a energie",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Mělo by se jednat o: Působení předsedy Pavla Hodka od roku 2011 v zástupu jeho otcem Václave Hodkem, kdy jeho jménem otec realizoval pouze ty věci, které se mu hodily. Vytvářel ve spolupráci s Vítězslavem Husárkem pravidla, která pokdu někdo nerespektoval, byl potrestán, viz. zadržování přeplatků ve výši 27000 Kč vs. příspěvek do \"hotovostního\" fondu oprav ve výši 3 tis. Kč. Odhlasováno na schůzi SVJ a tak by mělo být v zápise, který chceme vidět. Havarijní stav obvodového plášťě a balkónů kuchyň a obývák včetně dlažeb. Vyhrožování Pavlem Hodkem. MASTER ŠABLONA PRO CELÝ PŘÍPAD (hlavní dokument, který shrnuje všechny incidenty, právní vady, požadavky a návrhy) md # MASTER DOKUMENT – Kompletní…",
+              "summary": "Jak daný stav nastal: Působení předsedy Pavla Hodka min. od roku 2011 v nezákonném zástupu jeho otcem Václavem Hodkem na základě plné moci (role předsedy SVJ je ze zákona nezastupitelná). Václav Hodek realizoval pouze vybrané akce, které se mu hodily, a ve spolupráci s Vítězslavem Husárkem nastavoval svévolná pravidla. V případě nesouhlasu vlastníků docházelo k sankcím, např. k zadržování přeplatků ve výši 27 000 Kč kvůli hotovostnímu fondu oprav 3 000 Kč. Aktuální stav: Dlouhodobě zanedbaná správa domu a havarijní stav obvodového pláště a balkónů (kuchyň a obývák včetně dlažeb). Pan Hodek st. si svévolně vybíral, co se bude realizovat a co ne (dlouholeté ignorování zateplení a stavu kotelny přes opakovaná upozornění). Vyhrožování Pavlem Hodkem při dotazech na opravy. Chybí transparentní zápisy a vyúčtování. Očekávaný stav: Zajištění řádného statutárního fungování SVJ v souladu se zákonem bez neplatného zastupování plnou mocí. Předložení originálních zápisů ze schůzí SVJ k nahlédnutí, vrácení neoprávněně zadržených přeplatků, ukončení hotovostního fondu oprav a zahájení odborných oprav obvodového pláště a havarijních balkónů.",
               "timelineVisible": true,
               "comments": [],
               "sourcePath": "stiznosti",
               "missingDocuments": [
                 {
-                  "html": "kompletní vyúčtování za dotčené roky",
+                  "html": "<p>Plná moc udělená Václavu Hodkovi a zápisy z jednání SVJ, kde vystupoval jako zástupce.</p>",
+                  "done": true,
+                  "files": []
+                },
+                {
+                  "html": "<p>Fotodokumentace havarijního stavu obvodového pláště a balkonů.</p>",
                   "done": false,
                   "files": []
                 },
                 {
-                  "html": "předpisy záloh a bankovní platby",
+                  "html": "<p>Doklad o vyúčtování služeb prokazující přeplatek 27 000 Kč.</p>",
                   "done": false,
                   "files": []
                 },
                 {
-                  "html": "smlouvy a faktury dodavatelů energií/služeb",
-                  "done": false,
-                  "files": []
-                },
-                {
-                  "html": "doručenky výzev a odpovědi SVJ",
+                  "html": "<p>Zápis ze shromáždění s hlasováním o hotovostním fondu oprav.</p>",
                   "done": false,
                   "files": []
                 }
@@ -5030,19 +5030,20 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Plní SVJ povinnost řádné správy společných částí?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Jsou balkony a stříšky společnými částmi domu, za jejichž technický stav a opravy ze zákona odpovídá SVJ dle § 1189 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly havárie a opravy řešeny včas, hospodárně a transparentně?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Může výbor SVJ přenést odpovědnost a náklady za opravy balkonů na jednotlivé vlastníky bez platné změny prohlášení vlastníka?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly náklady přiřazeny správným osobám/jednotkám?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Porušil výbor SVJ péči řádného hospodáře dle § 159 NOZ nedodržením sjednané 2měsíční lhůty k zahájení oprav havarijních balkonů?</p>",
+                  "done": true
+                },
+                {
+                  "html": "<p>Má vlastník právo na náhradu škody vzniklé zatékáním a vadami neodborně provedených oprav stříšek?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -5124,24 +5125,24 @@
               "legalStatus": null,
               "title": "Balkony",
               "edits": {
-                "popis": "Odeslaná zpráva - Detail zprávy Předmět: Výzva k podání aktuálního stavu řešení úkolů ID zprávy: 1614812583 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 3. 12. 2025 v 12:36:34 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.: Nezadáno K rukám: Nezadáno Do vlastních rukou: Ne Přílohy: Textová zpráva.PDF (14,48 kB) Události zprávy: 3. 12. 2025 v 12:36:34 EV0: Datová zpráva byla podána. 3. 12. 2025 v 12:36:34 EV5: Datová zpráva byla dodána do datové schránky příjemce. Datová schránka: 8fjemzp, Petr Ullmann Uživatel: Petr Ullmann 12/3/25, 12:36 PM Datové schránky https://www.mojedatovaschranka.cz/portal/ISDS/op/tisk/zprava?inbox=false&amp;msgid=1614812583&amp;XCSRF=043fe3…"
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Václav Hodek se prokazoval prohlášením vlastníků a tvrdil, že vlastníci jsou za balkony a stříšky zodpovědní sami, ačkoliv balkony jsou společnou částí domu a změna prohlášení na stavebním úřadě nebyla provedena ani nebyla ze zákona možná. Na schůzi za přítomnosti advokáta byla dohodnuta 2měsíční lhůta k zahájení oprav, která nebyla dodržena. Dne 3. 12. 2025 byla odeslána datová zpráva ID 1614812583 s výzvou k podání aktuálního stavu řešení úkolů.</p><h3>Aktuální stav:</h3><p>Balkony jsou v havarijním stavu a hrozí další škody i ohrožení bezpečnosti. Výbor SVJ nepodnikl kroky k výběru dodavatele, na výzvu z datové schránky neodpověděl a tvrdí, že se oprava tento rok nestihne. Provedené opravy stříšek navíc vykazují vady (oddělování rohů pod zaplechováním).</p><h3>Očekávaný stav:</h3><p>Uznání opravy balkonů jako povinnosti SVJ hrazené ze společných prostředků, bezodkladný výběr dodavatele, zahájení stavebních oprav havarijního stavu balkonů a vyřešení reklamace vad na stříškách.</p>",
+                "jak_nastal": "<p>Václav Hodek se prokazoval prohlášením vlastníků a tvrdil, že vlastníci jsou za balkony a stříšky zodpovědní sami, ačkoliv balkony jsou společnou částí domu a změna prohlášení na stavebním úřadě nebyla provedena ani nebyla ze zákona možná. Na schůzi za přítomnosti advokáta byla dohodnuta 2měsíční lhůta k zahájení oprav, která nebyla dodržena. Dne 3. 12. 2025 byla odeslána datová zpráva ID 1614812583 s výzvou k podání aktuálního stavu řešení úkolů.</p>",
+                "aktualni_stav": "<p>Balkony jsou v havarijním stavu a hrozí další škody i ohrožení bezpečnosti. Výbor SVJ nepodnikl kroky k výběru dodavatele, na výzvu z datové schránky neodpověděl a tvrdí, že se oprava tento rok nestihne. Provedené opravy stříšek navíc vykazují vady (oddělování rohů pod zaplechováním).</p>",
+                "ocekavany_stav": "<p>Uznání opravy balkonů jako povinnosti SVJ hrazené ze společných prostředků, bezodkladný výběr dodavatele, zahájení stavebních oprav havarijního stavu balkonů a vyřešení reklamace vad na stříškách.</p>"
               },
               "timelineLabel": null,
               "claims": [
                 {
-                  "html": "výzva k nápravě a předložení technických/účetních podkladů",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Výzva k výběru dodavatele a bezodkladnému zahájení stavebních oprav havarijního stavu balkonů ze společných prostředků.</p>",
+                  "done": false
                 },
                 {
-                  "html": "uložení povinnosti konat nebo zdržet se vadného postupu",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Reklamace vad provedených oprav stříšek (oddělování rohů pod zaplechováním) s požadavkem na bezplatnou opravu.</p>",
+                  "done": false
                 },
                 {
-                  "html": "náhrada škody nebo finanční vyrovnání, pokud vznikla újma",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Předžalobní výzva s výstrahou podání žaloby na uložení povinnosti provést nezbytné opravy společných částí domu.</p>",
+                  "done": false
                 }
               ],
               "related": [],
@@ -5158,28 +5159,28 @@
               ],
               "category": "Řádná správa domu, opravy a technický stav",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Odeslaná zpráva - Detail zprávy Předmět: Výzva k podání aktuálního stavu řešení úkolů ID zprávy: 1614812583 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 3. 12. 2025 v 12:36:34 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.: Nezadáno K rukám: Nezadáno Do vlastních rukou: Ne Přílohy: Textová zpráva.PDF (14,48 kB) Události zprávy: 3. 12. 2025 v 12:36:34 EV0: Datová zpráva byla podána. 3. 12. 2025 v 12:36:34 EV5: Datová zpráva byla dodána do datové schránky příjemce. Datová schránka: 8fjemzp, Petr Ullmann Uživatel: Petr Ullmann 12/3/25, 12:36 PM Datové schránky https://www.mojedatovaschranka.cz/portal/ISDS/op/tisk/zprava?inbox=false&msgid=1614812583&XCSRF=043fe3…",
+              "summary": "Jak daný stav nastal: Václav Hodek se prokazoval prohlášením vlastníků a tvrdil, že vlastníci jsou za balkony a stříšky zodpovědní sami, ačkoliv balkony jsou společnou částí domu a změna prohlášení na stavebním úřadě nebyla provedena ani nebyla ze zákona možná. Na schůzi za přítomnosti advokáta byla dohodnuta 2měsíční lhůta k zahájení oprav, která nebyla dodržena. Dne 3. 12. 2025 byla odeslána datová zpráva ID 1614812583 s výzvou k podání aktuálního stavu řešení úkolů. Aktuální stav: Balkony jsou v havarijním stavu a hrozí další škody i ohrožení bezpečnosti. Výbor SVJ nepodnikl kroky k výběru dodavatele, na výzvu z datové schránky neodpověděl a tvrdí, že se oprava tento rok nestihne. Provedené opravy stříšek navíc vykazují vady (oddělování rohů pod zaplechováním). Očekávaný stav: Uznání opravy balkonů jako povinnosti SVJ hrazené ze společných prostředků, bezodkladný výběr dodavatele, zahájení stavebních oprav havarijního stavu balkonů a vyřešení reklamace vad na stříškách.",
               "timelineVisible": true,
               "comments": [],
               "sourcePath": "stiznosti/balkony",
               "missingDocuments": [
                 {
-                  "html": "fotodokumentace s daty",
+                  "html": "<p>Doručenka / potvrzení odeslání datové zprávy ID 1614812583 ze dne 3. 12. 2025.</p>",
+                  "done": true,
+                  "files": []
+                },
+                {
+                  "html": "<p>Prohlášení vlastníka vymezující balkony a společné části domu.</p>",
                   "done": false,
                   "files": []
                 },
                 {
-                  "html": "nabídky, objednávky a faktury",
+                  "html": "<p>Fotodokumentace vad stříšek a poškození dlažeb a konstrukcí balkonů.</p>",
                   "done": false,
                   "files": []
                 },
                 {
-                  "html": "revizní/technické zprávy",
-                  "done": false,
-                  "files": []
-                },
-                {
-                  "html": "zápisy a rozhodnutí SVJ k opravám",
+                  "html": "<p>Zápis ze schůze SVJ za účasti advokáta s ujednáním 2měsíční lhůty.</p>",
                   "done": false,
                   "files": []
                 }
@@ -5193,16 +5194,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Došlo k zásahu do práv vlastníka nebo užívání společných částí?",
-                  "done": false
+                  "html": "<p>Představuje fasáda domu společnou část ve spoluvlastnictví všech členů SVJ dle § 1160 a § 1175 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je incident relevantní jako samostatný nárok, nebo podpůrný kontext k vadné správě SVJ?",
-                  "done": false
+                  "html": "<p>Je umístění firemní cedulky cizí společnosti na společnou fasádu bez souhlasu vlastníků a bez nájemní smlouvy neoprávněným zásahem?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Existují svědci, fotografie nebo doručená komunikace?",
-                  "done": false
+                  "html": "<p>Vzniká cizí společnosti bezdůvodné obohacení z bezplatného užívání společné části domu dle § 2991 NOZ?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -5311,23 +5312,24 @@
               ],
               "legalStatus": "",
               "title": "Cedulka na fasade",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Pan Vítězslav Husárek nechal na fasádu domu umístit firemní označení cizí obchodní společnosti (firmy jedné z dcer) s odůvodněním, že to vyžaduje policie a úřady. Fasáda domu je však společnou částí všech vlastníků a k umístění nedošlo na základě schválení shromážděním ani nájemní smlouvy. Dne 3. 12. 2025 byla odeslána výzva datovou schránkou ID 1614809866 k odstranění označení cizí společnosti.</p>",
+                "aktualni_stav": "<p>Firemní cedulka cizí společnosti se nadále neoprávněně nachází na společné fasádě domu. Výbor SVJ věc odsouvá a na doručenou výzvu z datové schránky adekvátně nezjednal nápravu.</p>",
+                "ocekavany_stav": "<p>Okamžité odstranění neoprávněného firemního označení ze společné fasády domu a uvedení do původního stavu, případně řádné schválení nájemního užívání shromážděním vlastníků za tržní nájemné ve prospěch SVJ.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Pan Vítězslav Husárek nechal na fasádu domu umístit firemní označení cizí obchodní společnosti (firmy jedné z dcer) s odůvodněním, že to vyžaduje policie a úřady. Fasáda domu je však společnou částí všech vlastníků a k umístění nedošlo na základě schválení shromážděním ani nájemní smlouvy. Dne 3. 12. 2025 byla odeslána výzva datovou schránkou ID 1614809866 k odstranění označení cizí společnosti.</p><h3>Aktuální stav:</h3><p>Firemní cedulka cizí společnosti se nadále neoprávněně nachází na společné fasádě domu. Výbor SVJ věc odsouvá a na doručenou výzvu z datové schránky adekvátně nezjednal nápravu.</p><h3>Očekávaný stav:</h3><p>Okamžité odstranění neoprávněného firemního označení ze společné fasády domu a uvedení do původního stavu, případně řádné schválení nájemního užívání shromážděním vlastníků za tržní nájemné ve prospěch SVJ.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k nápravě / zdržení se jednání",
+                  "html": "<p>Předžalobní výzva k okamžitému odstranění firemního označení a uvedení fasády do původního stavu.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání věci nebo zpřístupnění podkladů",
+                  "html": "<p>Uplatnění nároku na vydání bezdůvodného obohacení za neoprávněné užívání fasády pro komerční účely.</p>",
                   "done": false
                 },
                 {
-                  "html": "omluva nebo náhrada škody, pokud je prokazatelná",
-                  "done": false
-                },
-                {
-                  "html": "podpůrný důkaz k širšímu sporu o správu SVJ",
+                  "html": "<p>Žaloba na odstranění neoprávněného zásahu do společných částí domu.</p>",
                   "done": false
                 }
               ],
@@ -5345,25 +5347,24 @@
               ],
               "category": "Jednotlivé incidenty, zásahy do práv vlastníka a podpůrné důkazy",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Odeslaná zpráva - Detail zprávy Předmět: Žádost o odstranění označení cizí společnosti ze společných částí domu ID zprávy: 1614809866 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 3. 12. 2025 v 12:33:14 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.: Nezadáno K rukám: Nezadáno Do vlastních rukou: Ne Přílohy: Textová zpráva.PDF (14,27 kB) Události zprávy: 3. 12. 2025 v 12:33:14 EV0: Datová zpráva byla podána. 3. 12. 2025 v 12:33:14 EV5: Datová zpráva byla dodána do datové schránky příjemce. Datová schránka: 8fjemzp, Petr Ullmann Uživatel: Petr Ullmann 12/3/25, 12:33 PM Datové schránky https://www.mojedatovaschranka.cz/portal/ISDS/op/tisk/zprava?inbox=false&msg…",
+              "summary": "Jak daný stav nastal: Pan Vítězslav Husárek nechal na fasádu domu umístit firemní označení cizí obchodní společnosti (firmy jedné z dcer) s odůvodněním, že to vyžaduje policie a úřady. Fasáda domu je však společnou částí všech vlastníků a k umístění nedošlo na základě schválení shromážděním ani nájemní smlouvy. Dne 3. 12. 2025 byla odeslána výzva datovou schránkou ID 1614809866 k odstranění označení cizí společnosti. Aktuální stav: Firemní cedulka cizí společnosti se nadále neoprávněně nachází na společné fasádě domu. Výbor SVJ věc odsouvá a na doručenou výzvu z datové schránky adekvátně nezjednal nápravu. Očekávaný stav: Okamžité odstranění neoprávněného firemního označení ze společné fasády domu a uvedení do původního stavu, případně řádné schválení nájemního užívání shromážděním vlastníků za tržní nájemné ve prospěch SVJ.",
               "comments": [],
               "sourcePath": "stiznosti/cedulka-na-fasade",
               "missingDocuments": [
                 {
-                  "html": "svědci incidentu",
-                  "done": false
+                  "html": "<p>Doručenka datové zprávy ID 1614809866 ze dne 3. 12. 2025.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "fotografie / datové zprávy / SMS",
-                  "done": false
+                  "html": "<p>Fotodokumentace neoprávněně umístěné cedulky na fasádě domu.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "čas a místo události",
-                  "done": false
-                },
-                {
-                  "html": "vyčíslení škody nebo újmy",
-                  "done": false
+                  "html": "<p>Výpis z veřejného rejstříku dotčené obchodní společnosti dcery.</p>",
+                  "done": true,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -5375,16 +5376,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Má SVJ právní titul k navýšení záloh nebo zadržení přeplatku?",
-                  "done": false
+                  "html": "<p>Je výbor SVJ oprávněn skokově navýšit měsíční zálohy na energie bez doložení kalkulace skutečných nákladů dle zákona č. 67/2013 Sb.?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly předloženy podklady k vyúčtování, smlouvám a skutečným nákladům?",
-                  "done": false
+                  "html": "<p>Má vlastník jednotky právo na předložení smluv s dodavateli (PVK, PRE, PPAS) a podkladů pro stanovení záloh dle § 1179 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je rozúčtování služeb přezkoumatelné a v souladu se stanovami a právní úpravou?",
-                  "done": false
+                  "html": "<p>Představuje paušální navyšování záloh v rozporu se skutečnou spotřebou porušení pravidel spravedlivého rozúčtování?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -5693,24 +5694,23 @@
               "legalStatus": "",
               "title": "Energie",
               "edits": {
-                "popis": "Od roku 2021 jsem platil pravidelně jak příspěvek do \"hotovostního\" fondu oprav, tak i vyměřenou výši předepsané výše záloh, které kromě jiného zahrnují SVJ vyměřené výše záloh za vodu a topení. V roce 2024 jsem si všiml, že stále platím stejnou výši záloh za vodu jako v případě jednotky, kde spotřeba je objektivně vyšší v nepoměru k mé spotřebě.&nbsp;Na toto jsem se informoval u pana V. Hodka, který zprvu mou připomínku odmítl a až později na mé opakované žádosti změnu provedl a snížil u mne a obecně i u ostatních jednotek výši záloh. Nicméně v následujícím roce 2025 došlo k navýšení, které nebylo objektivně podloženo."
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Od roku 2021 byly řádně hrazeny předepsané zálohy na vodu a topení i hotovostní fond. V roce 2024 bylo zjištěno paušální placení záloh za vodu v nepoměru ke spotřebě. Po urgencích u V. Hodka došlo ke snížení, avšak pro rok 2025 výbor SVJ opět skokově navýšil zálohy o cca 400 Kč měsíčně bez objektivního podkladu. Dne 3. 12. 2025 byla zaslána datová zpráva ID 1614775797 se žádostí o doložení kalkulace a vysvětlení navýšení záloh.</p><h3>Aktuální stav:</h3><p>Výbor SVJ odmítá předložit podklady, kalkulace i smlouvy s dodavateli (PVK, PRE, PPAS). Navýšení záloh je nepřezkoumatelné a v rozporu se skutečným vývojem regulovaných cen energií i zákonem č. 67/2013 Sb.</p><h3>Očekávaný stav:</h3><p>Doložení řádné kalkulace záloh vycházející ze skutečných nákladů a spotřeby předchozího období, předložení vyúčtování a smluv s dodavateli energií a úprava předpisu záloh do odpovídající výše.</p>",
+                "jak_nastal": "<p>Od roku 2021 byly řádně hrazeny předepsané zálohy na vodu a topení i hotovostní fond. V roce 2024 bylo zjištěno paušální placení záloh za vodu v nepoměru ke spotřebě. Po urgencích u V. Hodka došlo ke snížení, avšak pro rok 2025 výbor SVJ opět skokově navýšil zálohy o cca 400 Kč měsíčně bez objektivního podkladu. Dne 3. 12. 2025 byla zaslána datová zpráva ID 1614775797 se žádostí o doložení kalkulace a vysvětlení navýšení záloh.</p>",
+                "aktualni_stav": "<p>Výbor SVJ odmítá předložit podklady, kalkulace i smlouvy s dodavateli (PVK, PRE, PPAS). Navýšení záloh je nepřezkoumatelné a v rozporu se skutečným vývojem regulovaných cen energií i zákonem č. 67/2013 Sb.</p>",
+                "ocekavany_stav": "<p>Doložení řádné kalkulace záloh vycházející ze skutečných nákladů a spotřeby předchozího období, předložení vyúčtování a smluv s dodavateli energií a úprava předpisu záloh do odpovídající výše.</p>"
               },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k předložení podkladů a vysvětlení",
+                  "html": "<p>Písemná výzva výboru SVJ k předložení podrobné kalkulace a podkladů pro navýšení záloh na energie.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání zadrženého přeplatku / zaplacení dlužné částky",
+                  "html": "<p>Úprava předpisu měsíčních záloh na částku odpovídající skutečné spotřebě a vývoji cen dodavatelů.</p>",
                   "done": false
                 },
                 {
-                  "html": "přepočet vyúčtování nebo určení nesprávnosti postupu",
-                  "done": false
-                },
-                {
-                  "html": "případně úroky z prodlení",
+                  "html": "<p>Předžalobní výzva k vyúčtování a vrácení neoprávněně inkasovaných navýšených záloh.</p>",
                   "done": false
                 }
               ],
@@ -5744,25 +5744,29 @@
               ],
               "category": "Vyúčtování, zálohy, přeplatky a energie",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Ověř zda se zvýšily ceny enerigií u Pražské vodárenské a Pražské energetiky a Pražské plynárenské oproti cenám z minulému roku. Naše SVJ z ničeho nic zvýšilo ceny těchto energií v souhrnu o cca. 400,- Kč měsíčně. Shrnutí: Ano, ceny u Pražské vodárenské (PVK) a Pražské plynárenské (PPAS) se meziročně zvýšily, zatímco u Pražské energetiky (PRE) došlo spíše ke snížení obchodní složky elektřiny. Zvýšení o cca 400 Kč měsíčně ve vašem SVJ tedy neodpovídá jen oficiálním ceníkům, ale může být kombinací vyšších regulovaných poplatků, záloh nebo interního přerozdělení nákladů. --- 📊 Přehled změn cen 2024 → 2025 Dodavatel 2024 2025 Meziroční změna Pražská vodárenská (PVK) cca 129,40 Kč/m³ (vč. DPH) 151,27 Kč/m³ (vč. DPH) +4,4 % (cca +20 Kč/měsíc na domácnost) Pražská energetika (PRE) Vysoké ceny elektřiny po energetické krizi Obchodní složka elektřiny dále zlevnila Pokles cen elektřiny, ale regulov… # Žádost o doložení důvodů navýšení cen energií Vážení členové výboru SVJ, obracím se na Vás s žádostí o písemné vysvětlení a doložení důvodů, proč byly od [uveďte měsíc/rok] navýšeny měsíční zálohy na energie (voda, elektřina, plyn, případně teplo) o cca 400 Kč na jednotku. ## Právní rámec Podle § 1208 písm. d) občanského zákoníku má každý vlastník jednotky právo: - být informován o hospodaření společenství vlastníků, - nahlížet do dokladů týkajících se správy domu a pozemku, - žádat vysvětlení ohledně účtovaných nákladů. ## Požadované informace Žádám proto o: - předložení faktur od dodavatelů energií (Pražská vodárenská, Pražská energetika, Pražská plynárenská, případně Pražská teplárenská), - uvedení konkrétních částek a meziročního srovnání, - vysvětlení, zda navýšení vychází z reálného zvýšení cen dodavatelů, nebo z interního rozhodnutí SVJ (např. navýšení záloh, přerozdělení náklad… Oficiální stížnost na nevrácení přeplatku měsíčních záloh za rok 2025 Odesílatel: Ullmann Petr U Beránky 2140/4, Praha 6, 160 00 Adresát: Společenství vlastníků jednotek U Beránky 2140/4, Praha 6, 160 00 K rukám Václava Hodka Datum: 21. 7. 2025 Věc: Upozornění na nevrácení přeplatku záloh za rok 2025 ve výši 2 400 Kč a porušení povinností dle zákona o vlastnictví bytů Vážený pane Hodku, obrací",
+              "summary": "Jak daný stav nastal: Od roku 2021 byly řádně hrazeny předepsané zálohy na vodu a topení i hotovostní fond. V roce 2024 bylo zjištěno paušální placení záloh za vodu v nepoměru ke spotřebě. Po urgencích u V. Hodka došlo ke snížení, avšak pro rok 2025 výbor SVJ opět skokově navýšil zálohy o cca 400 Kč měsíčně bez objektivního podkladu. Dne 3. 12. 2025 byla zaslána datová zpráva ID 1614775797 se žádostí o doložení kalkulace a vysvětlení navýšení záloh. Aktuální stav: Výbor SVJ odmítá předložit podklady, kalkulace i smlouvy s dodavateli (PVK, PRE, PPAS). Navýšení záloh je nepřezkoumatelné a v rozporu se skutečným vývojem regulovaných cen energií i zákonem č. 67/2013 Sb. Očekávaný stav: Doložení řádné kalkulace záloh vycházející ze skutečných nákladů a spotřeby předchozího období, předložení vyúčtování a smluv s dodavateli energií a úprava předpisu záloh do odpovídající výše.",
               "comments": [],
               "sourcePath": "stiznosti/energie",
               "missingDocuments": [
                 {
-                  "html": "kompletní vyúčtování za dotčené roky",
-                  "done": false
+                  "html": "<p>Doručenka datové zprávy ID 1614775797 ze dne 3. 12. 2025.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "předpisy záloh a bankovní platby",
-                  "done": false
+                  "html": "<p>Předpisy záloh za roky 2024 a 2025 s vyznačeným navýšením.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "smlouvy a faktury dodavatelů energií/služeb",
-                  "done": false
+                  "html": "<p>Ceníky a srovnání vývoje cen dodavatelů PVK, PRE a PPAS.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "doručenky výzev a odpovědi SVJ",
-                  "done": false
+                  "html": "<p>Roční vyúčtování energií za předchozí zúčtovací období.</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -5774,16 +5778,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Byl hotovostní fond schválen platným usnesením?",
-                  "done": false
+                  "html": "<p>Je vybírání příspěvků na správu domu v hotovosti v rozporu se zákonem o účetnictví č. 563/1991 Sb. a stanovami SVJ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je příspěvek vybírán a účtován transparentně?",
-                  "done": false
+                  "html": "<p>Je jednostranné oznámení termínu splatnosti vyvěšením na nástěnce bez platného usnesení shromáždění právně závazné?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Lze zadržet přeplatek služeb kvůli jiné údajné povinnosti?",
-                  "done": false
+                  "html": "<p>Má vlastník právo hradit příspěvky výhradně bezhotovostním převodem na bankovní účet SVJ?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -5976,19 +5980,24 @@
               ],
               "legalStatus": "",
               "title": "Fond oprav hotovostni",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Výbor SVJ (zejména Václav Hodek) zavedl praxi vybírání příspěvků na správu domu a pozemku (tzv. fondu oprav) v hotovosti mimo transparentní bankovní účet SVJ. Termíny splatnosti byly oznamovány ad hoc vyvěšením na nástěnce v polovině měsíce a z vybrané hotovosti byly hrazeny různé provozní výdaje (revize, sekání trávy, pojištění apod.) bez řádného schválení shromážděním.</p>",
+                "aktualni_stav": "<p>Platby v hotovosti jsou nadále vymáhány pod nátlakem a sankcemi (zadržování přeplatků za energie). Tento postup porušuje zákon o účetnictví č. 563/1991 Sb. i občanský zákoník (§ 1180 a § 1208 NOZ) a představuje neprůhlednou a rizikovou správu financí SVJ.</p>",
+                "ocekavany_stav": "<p>Ukončení výběru peněz v hotovosti, vedení veškerých příspěvků a záloh výhradně bezhotovostním převodem na transparentní bankovní účet SVJ, předložení řádného účetnictví a schválení výše a termínů plateb shromážděním vlastníků.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Výbor SVJ (zejména Václav Hodek) zavedl praxi vybírání příspěvků na správu domu a pozemku (tzv. fondu oprav) v hotovosti mimo transparentní bankovní účet SVJ. Termíny splatnosti byly oznamovány ad hoc vyvěšením na nástěnce v polovině měsíce a z vybrané hotovosti byly hrazeny různé provozní výdaje (revize, sekání trávy, pojištění apod.) bez řádného schválení shromážděním.</p><h3>Aktuální stav:</h3><p>Platby v hotovosti jsou nadále vymáhány pod nátlakem a sankcemi (zadržování přeplatků za energie). Tento postup porušuje zákon o účetnictví č. 563/1991 Sb. i občanský zákoník (§ 1180 a § 1208 NOZ) a představuje neprůhlednou a rizikovou správu financí SVJ.</p><h3>Očekávaný stav:</h3><p>Ukončení výběru peněz v hotovosti, vedení veškerých příspěvků a záloh výhradně bezhotovostním převodem na transparentní bankovní účet SVJ, předložení řádného účetnictví a schválení výše a termínů plateb shromážděním vlastníků.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "předložení účetnictví a usnesení",
+                  "html": "<p>Oficiální stížnost výboru SVJ proti hotovostní formě výběru příspěvků a požadavku ad-hoc splatnosti.</p>",
                   "done": false
                 },
                 {
-                  "html": "zrušení nebo náprava netransparentního hotovostního režimu",
+                  "html": "<p>Požadavek na stanovení platby převodem na transparentní bankovní účet SVJ.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání neoprávněně zadržených částek",
+                  "html": "<p>Předložení účetní závěrky a dokladů o nakládání s dosud vybranými hotovostními prostředky.</p>",
                   "done": false
                 }
               ],
@@ -6030,25 +6039,24 @@
               ],
               "category": "Fond oprav, hotovostní platby a hospodaření",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Pojistka na dům - členství za 1500 - ročně Revize hromosvodů - 1x za 5 let Revize hasicích a hydrantů - Revize plynu 1x za 3 roky - hotovo v lednu 2023 = 4000 - 25.ledna 2023 Veřejný rejstřík 5500 Sekačka servis 800,- Je v pořádku, aby byl fond oprav u SVJ byl v hotovosti? Ne, fond oprav u SVJ by neměl být veden v hotovosti. Podle právní úpravy a doporučené praxe musí být příspěvky na správu domu a pozemku (tzv. fond oprav) vedeny na bankovním účtu SVJ, nikoli v pokladně v hotovosti. Hotovostní správa je riziková, neprůhledná a může být v rozporu s povinnostmi SVJ vůči členům. 🔑 Proč fond oprav nemá být v hotovosti - Oficiální název fondu oprav je „příspěvek na správu domu a pozemku“ podle občanského zákoníku. - Účel fondu: zajištění prostředků na opravy, údržbu, modernizace a správu společných částí domu (střecha, fasáda, výtahy, rozvody, společné prostory apod.). - Transparentnost a kontrola: vedení fondu na bankovním účtu umožňuje jasnou evidenci, účetní kontrolu a dohled vlastníků. Hotovostní fond je obtížně kontrolovatelný a zvyšuje riziko zneužití. - Účetní povinnost SVJ: SVJ musí vést účetnictv… 📄 Návrh stížnosti k příspěvkům SVJ Věc: Stížnost K Formě A Termínu Úhrady Příspěvků Na Správu Domu (Fond Oprav) Tímto podávám oficiální stížnost vůči způsobu vybírání příspěvků na správu domu a pozemku, tzv. fond oprav, v našem Společenství vlastníků jednotek. 1. Nesouhlasím s požadavkem na platbu v hotovosti. 1. SVJ je účetní jednotkou a příspěvky mají být vedeny transparentně na bankovním účtu. Hotovostní forma je neprůhledná, riziková a neodpovídá řádné správě. 2. Nesouhlasím s termínem splatnosti oznámeným ad hoc vyvěšením v polovině měsíce. 3. Termíny příspěvků musí být jasně stanoveny ve stanovách SVJ nebo odsouhlaseny shromážděním. Oznámení jednotlivce bez řádného rozhodnutí není závazné. 4. Požaduji předložení odsouhlasených stanov SVJ, kde je výše a splatnost příspěvků jednoznačně určena. Pokud takové ustanovení neexistuje, nelze po vlastnících požadovat platbu v termínech určen… Vážení členové výboru SVJ, navrhuji zrušení tzv. hotovostního fondu, který byl zřízen před více než 50 lety v době stavby domu. Tento fond je v současné době zastaralý, netranspa",
+              "summary": "Jak daný stav nastal: Výbor SVJ (zejména Václav Hodek) zavedl praxi vybírání příspěvků na správu domu a pozemku (tzv. fondu oprav) v hotovosti mimo transparentní bankovní účet SVJ. Termíny splatnosti byly oznamovány ad hoc vyvěšením na nástěnce v polovině měsíce a z vybrané hotovosti byly hrazeny různé provozní výdaje (revize, sekání trávy, pojištění apod.) bez řádného schválení shromážděním. Aktuální stav: Platby v hotovosti jsou nadále vymáhány pod nátlakem a sankcemi (zadržování přeplatků za energie). Tento postup porušuje zákon o účetnictví č. 563/1991 Sb. i občanský zákoník (§ 1180 a § 1208 NOZ) a představuje neprůhlednou a rizikovou správu financí SVJ. Očekávaný stav: Ukončení výběru peněz v hotovosti, vedení veškerých příspěvků a záloh výhradně bezhotovostním převodem na transparentní bankovní účet SVJ, předložení řádného účetnictví a schválení výše a termínů plateb shromážděním vlastníků.",
               "comments": [],
               "sourcePath": "stiznosti/fond-oprav-hotovostni",
               "missingDocuments": [
                 {
-                  "html": "zápis ze schůze, která fond schválila",
-                  "done": false
+                  "html": "<p>Fotokopie oznámení o platbách vyvěšeného na nástěnce.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "pokladní kniha / účetní evidence",
-                  "done": false
+                  "html": "<p>Stanovy SVJ upravující placení příspěvků na správu domu.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "příjmové/výdajové doklady",
-                  "done": false
-                },
-                {
-                  "html": "stav fondu podle vlastníků",
-                  "done": false
+                  "html": "<p>Bankovní potvrzení o platbách a příjmové doklady z hotovostního fondu.</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -6060,19 +6068,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Plní SVJ povinnost řádné správy společných částí?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Představuje nepředání klíčů ke společným prostorám (kotelna, kočárkárna, prádelna, branka) neoprávněné omezení spoluvlastnického práva dle § 1175 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly havárie a opravy řešeny včas, hospodárně a transparentně?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Je výbor SVJ ze zákona povinen zajistit přístup každého vlastníka ke společným částem domu dle § 1208 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly náklady přiřazeny správným osobám/jednotkám?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Lze se soudně domáhat vydání klíčů formou žaloby na splnění povinnosti?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -6125,24 +6130,24 @@
               "legalStatus": null,
               "title": "Klice",
               "edits": {
-                "popis": "Vážení členové výboru SVJ, obracím se na Vás s výzvou k nápravě situace ohledně přístupu ke společným částem domu. Dosud mi nebyly předány klíče k následujícím prostorám, které jsou společnými částmi domu: 1. kotelna 2. kočárkárna 3. prádelna 4. branka na zahradu Podle právní úpravy: - **§ 1189 občanského zákoníku (zákon č. 89/2012 Sb.)** – SVJ je povinno spravovat společné části domu a pozemku. - **§ 1208 občanského zákoníku** – výbor SVJ je povinen zajistit řádnou správu domu a umožnit vlastníkům jednotek užívání společných částí. - **§ 1175 občanského zákoníku** – vlastník jednotky má právo užívat společné části domu v rozsahu odpovídajícím jeho spoluvlastnickému podílu. Nepředání klíčů znemožňuje výkon tohoto práva a představuje neoprávněné omezení přístupu ke společným částem domu. Na základě výše uvedeného Vás tímto vyzývám, abyste: 1. Zajistili předání kopií klíčů k uvedeným prost…"
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Vlastníkovi jednotky nebyly statutárním orgánem SVJ ani správcem předány klíče ke společným částem domu. Byla odeslána písemná výzva výboru SVJ k nápravě a předání klíčů ke kotelně, kočárkárně, prádelně a brance na zahradu s odkazem na § 1175, § 1189 a § 1208 občanského zákoníku.</p><h3>Aktuální stav:</h3><p>Klíče k uvedeným společným prostorám (kotelna, kočárkárna, prádelna, zahradní branka) stále nebyly předány. Dochází k trvajícímu protiprávnímu omezování přístupu ke společným částem domu a porušování práv spoluvlastníka.</p><h3>Očekávaný stav:</h3><p>Bezodkladné předání kopií klíčů ke všem uvedeným společným prostorám domu (kotelna, kočárkárna, prádelna, zahradní branka) a zajištění neomezeného přístupu vlastníka ke společným částem domu.</p>",
+                "jak_nastal": "<p>Vlastníkovi jednotky nebyly statutárním orgánem SVJ ani správcem předány klíče ke společným částem domu. Byla odeslána písemná výzva výboru SVJ k nápravě a předání klíčů ke kotelně, kočárkárně, prádelně a brance na zahradu s odkazem na § 1175, § 1189 a § 1208 občanského zákoníku.</p>",
+                "aktualni_stav": "<p>Klíče k uvedeným společným prostorám (kotelna, kočárkárna, prádelna, zahradní branka) stále nebyly předány. Dochází k trvajícímu protiprávnímu omezování přístupu ke společným částem domu a porušování práv spoluvlastníka.</p>",
+                "ocekavany_stav": "<p>Bezodkladné předání kopií klíčů ke všem uvedeným společným prostorám domu (kotelna, kočárkárna, prádelna, zahradní branka) a zajištění neomezeného přístupu vlastníka ke společným částem domu.</p>"
               },
               "timelineLabel": null,
               "claims": [
                 {
-                  "html": "výzva k nápravě a předložení technických/účetních podkladů",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Předžalobní výzva výboru SVJ k předání funkčních kopií klíčů k uvedeným prostorám ve lhůtě 15 dnů.</p>",
+                  "done": false
                 },
                 {
-                  "html": "uložení povinnosti konat nebo zdržet se vadného postupu",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Žaloba na uložení povinnosti vydat klíče a zdržet se omezování přístupu ke společným částem domu.</p>",
+                  "done": false
                 },
                 {
-                  "html": "náhrada škody nebo finanční vyrovnání, pokud vznikla újma",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Uplatnění nároku na náhradu nákladů spojených s vymáháním přístupu.</p>",
+                  "done": false
                 }
               ],
               "related": [],
@@ -6159,28 +6164,23 @@
               ],
               "category": "Řádná správa domu, opravy a technický stav",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Vážení členové výboru SVJ, obracím se na Vás s výzvou k nápravě situace ohledně přístupu ke společným částem domu. Dosud mi nebyly předány klíče k následujícím prostorám, které jsou společnými částmi domu: 1. kotelna 2. kočárkárna 3. prádelna 4. branka na zahradu Podle právní úpravy: - **§ 1189 občanského zákoníku (zákon č. 89/2012 Sb.)** – SVJ je povinno spravovat společné části domu a pozemku. - **§ 1208 občanského zákoníku** – výbor SVJ je povinen zajistit řádnou správu domu a umožnit vlastníkům jednotek užívání společných částí. - **§ 1175 občanského zákoníku** – vlastník jednotky má právo užívat společné části domu v rozsahu odpovídajícím jeho spoluvlastnickému podílu. Nepředání klíčů znemožňuje výkon tohoto práva a představuje neoprávněné omezení přístupu ke společným částem domu. Na základě výše uvedeného Vás tímto vyzývám, abyste: 1. Zajistili předání kopií klíčů k uvedeným prost…",
+              "summary": "Jak daný stav nastal: Vlastníkovi jednotky nebyly statutárním orgánem SVJ ani správcem předány klíče ke společným částem domu. Byla odeslána písemná výzva výboru SVJ k nápravě a předání klíčů ke kotelně, kočárkárně, prádelně a brance na zahradu s odkazem na § 1175, § 1189 a § 1208 občanského zákoníku. Aktuální stav: Klíče k uvedeným společným prostorám (kotelna, kočárkárna, prádelna, zahradní branka) stále nebyly předány. Dochází k trvajícímu protiprávnímu omezování přístupu ke společným částem domu a porušování práv spoluvlastníka. Očekávaný stav: Bezodkladné předání kopií klíčů ke všem uvedeným společným prostorám domu (kotelna, kočárkárna, prádelna, zahradní branka) a zajištění neomezeného přístupu vlastníka ke společným částem domu.",
               "timelineVisible": true,
               "comments": [],
               "sourcePath": "stiznosti/klice",
               "missingDocuments": [
                 {
-                  "html": "fotodokumentace s daty",
+                  "html": "<p>Odeslaná písemná výzva výboru SVJ k předání klíčů.</p>",
+                  "done": true,
+                  "files": []
+                },
+                {
+                  "html": "<p>Prohlášení vlastníka dokládající, že prostory jsou společnými částmi domu.</p>",
                   "done": false,
                   "files": []
                 },
                 {
-                  "html": "nabídky, objednávky a faktury",
-                  "done": false,
-                  "files": []
-                },
-                {
-                  "html": "revizní/technické zprávy",
-                  "done": false,
-                  "files": []
-                },
-                {
-                  "html": "zápisy a rozhodnutí SVJ k opravám",
+                  "html": "<p>Doklad o vlastnictví bytové jednotky (výpis z KN).</p>",
                   "done": false,
                   "files": []
                 }
@@ -6194,16 +6194,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Plní SVJ povinnost řádné správy společných částí?",
-                  "done": false
+                  "html": "<p>Je SVJ povinno udržovat plynovou kotelnu v bezpečném a provozuschopném stavu a zajistit pravidelné revize dle technických norem?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly havárie a opravy řešeny včas, hospodárně a transparentně?",
-                  "done": false
+                  "html": "<p>Má vlastník jednotky právo na nahlížení do revizních zpráv kotelny a energetického štítku PENB dle § 1179 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly náklady přiřazeny správným osobám/jednotkám?",
-                  "done": false
+                  "html": "<p>Lze po výboru SVJ požadovat předložení projektové dokumentace k vytápění k ověření instalovaného výkonu kotle?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -6255,19 +6255,24 @@
               ],
               "legalStatus": "",
               "title": "Kotelna",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Na zanedbaný technický stav plynové kotelny a nutnost její opravy a modernizace bylo členy společenství upozorňováno řadu let (např. pan Martinec). V prohlášení vlastníka je kotelna vedena jako společná část domu, ale chybí jakékoliv technické parametry nebo doložení instalovaného výkonu.</p>",
+                "aktualni_stav": "<p>Výbor SVJ nepředložil projektovou dokumentaci k vytápění, revizní zprávy plynové kotelny ani energetický štítek budovy (PENB). K samotné kotelně nebyl navíc umožněn přístup (nepředány klíče), takže nelze ověřit stav zařízení a jeho bezpečný provoz.</p>",
+                "ocekavany_stav": "<p>Zpřístupnění kotelny, předložení platných revizních zpráv a technické dokumentace kotle k nahlédnutí a zajištění odborné správy a bezpečného provozu topné soustavy v souladu s právními předpisy.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Na zanedbaný technický stav plynové kotelny a nutnost její opravy a modernizace bylo členy společenství upozorňováno řadu let (např. pan Martinec). V prohlášení vlastníka je kotelna vedena jako společná část domu, ale chybí jakékoliv technické parametry nebo doložení instalovaného výkonu.</p><h3>Aktuální stav:</h3><p>Výbor SVJ nepředložil projektovou dokumentaci k vytápění, revizní zprávy plynové kotelny ani energetický štítek budovy (PENB). K samotné kotelně nebyl navíc umožněn přístup (nepředány klíče), takže nelze ověřit stav zařízení a jeho bezpečný provoz.</p><h3>Očekávaný stav:</h3><p>Zpřístupnění kotelny, předložení platných revizních zpráv a technické dokumentace kotle k nahlédnutí a zajištění odborné správy a bezpečného provozu topné soustavy v souladu s právními předpisy.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k nápravě a předložení technických/účetních podkladů",
+                  "html": "<p>Žádost o předložení platných revizních zpráv plynové kotelny a energetického průkazu PENB k nahlédnutí.</p>",
                   "done": false
                 },
                 {
-                  "html": "uložení povinnosti konat nebo zdržet se vadného postupu",
+                  "html": "<p>Požadavek na odbornou technickou prohlídku topné soustavy a vyčíslení potřebných oprav.</p>",
                   "done": false
                 },
                 {
-                  "html": "náhrada škody nebo finanční vyrovnání, pokud vznikla újma",
+                  "html": "<p>Podnět příslušným kontrolním orgánům při zjištění absence zákonných revizí plynových zařízení.</p>",
                   "done": false
                 }
               ],
@@ -6293,25 +6298,24 @@
               ],
               "category": "Řádná správa domu, opravy a technický stav",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) Jaký výkon v kW může mít kotel v našem domě. https://www.google.com/maps/place/U+Ber%C3%A1nky+2140%2F4,+160+00+Praha+6-Dejvice/@50.1006848,14.3632275,17z/data=!3m1!4b1!4m6!3m5!1s0x470b9542e74fca15:0xb8e7026bc5d73c80!8m2!3d50.1006814!4d14.3658024!16s%2Fg%2F11cplqm7b0?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D Zobrazit moje přemýšlení V tom prohlášení vlastníka, které jste poslal, žádný údaj o výkonu kotle není. O kotelně se tam mluví jen obecně jako o společné části domu: > „kotelna“ „rozvody studené vody, tepla a teplé vody…“ Takže z tohohle dokumentu se výkon kotle bohužel vyčíst nedá. Reálně ho zjistíte jen z těchto zdrojů: - **Štítek přímo na kotli** – na tělese kotle (v kotelně) bývá uveden jmenovitý tepelný výkon v kW. - **Projektová dokumentace / technická zpráva k vytápění** – uloženo čast…",
+              "summary": "Jak daný stav nastal: Na zanedbaný technický stav plynové kotelny a nutnost její opravy a modernizace bylo členy společenství upozorňováno řadu let (např. pan Martinec). V prohlášení vlastníka je kotelna vedena jako společná část domu, ale chybí jakékoliv technické parametry nebo doložení instalovaného výkonu. Aktuální stav: Výbor SVJ nepředložil projektovou dokumentaci k vytápění, revizní zprávy plynové kotelny ani energetický štítek budovy (PENB). K samotné kotelně nebyl navíc umožněn přístup (nepředány klíče), takže nelze ověřit stav zařízení a jeho bezpečný provoz. Očekávaný stav: Zpřístupnění kotelny, předložení platných revizních zpráv a technické dokumentace kotle k nahlédnutí a zajištění odborné správy a bezpečného provozu topné soustavy v souladu s právními předpisy.",
               "comments": [],
               "sourcePath": "stiznosti/kotelna",
               "missingDocuments": [
                 {
-                  "html": "fotodokumentace s daty",
-                  "done": false
+                  "html": "<p>Odborný výpočet orientačního potřebného výkonu kotle pro dům.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "nabídky, objednávky a faktury",
-                  "done": false
+                  "html": "<p>Prohlášení vlastníka s vymezením kotelny jako společné části.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "revizní/technické zprávy",
-                  "done": false
-                },
-                {
-                  "html": "zápisy a rozhodnutí SVJ k opravám",
-                  "done": false
+                  "html": "<p>Protokoly z posledních známých revizí plynu a spalinových cest.</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -6323,16 +6327,12 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Došlo k zásahu do práv vlastníka nebo užívání společných částí?",
-                  "done": false
+                  "html": "<p>Má výbor SVJ oprávnění svévolně omezovat užívání společných prostor a pozemku bez opory v domovním řádu nebo stanovách?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je incident relevantní jako samostatný nárok, nebo podpůrný kontext k vadné správě SVJ?",
-                  "done": false
-                },
-                {
-                  "html": "Existují svědci, fotografie nebo doručená komunikace?",
-                  "done": false
+                  "html": "<p>Představují selektivní zákazy a výtky šikanózní výkon práva a porušení rovného zacházení s vlastníky dle § 1176 NOZ?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -6385,23 +6385,20 @@
               ],
               "legalStatus": "",
               "title": "Odpadkovy kos",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Incident ohledně umístění a užívání odpadkového koše ve společných prostorách domu a na pozemku SVJ, který byl zástupci výboru využit k neodůvodněným výtkám a selektivnímu omezování užívání společných částí.</p>",
+                "aktualni_stav": "<p>Přetrvávající sporný přístup výboru k užívání společných prostor, kdy jsou běžné provozní záležitosti řešeny šikanózně a bez opory v domovním řádu nebo rozhodnutí shromáždění.</p>",
+                "ocekavany_stav": "<p>Jasné a rovné vymezení pravidel užívání společných prostor a úklidu v souladu se stanovami a domovním řádem bez selektivního omezování jednotlivých vlastníků.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Incident ohledně umístění a užívání odpadkového koše ve společných prostorách domu a na pozemku SVJ, který byl zástupci výboru využit k neodůvodněným výtkám a selektivnímu omezování užívání společných částí.</p><h3>Aktuální stav:</h3><p>Přetrvávající sporný přístup výboru k užívání společných prostor, kdy jsou běžné provozní záležitosti řešeny šikanózně a bez opory v domovním řádu nebo rozhodnutí shromáždění.</p><h3>Očekávaný stav:</h3><p>Jasné a rovné vymezení pravidel užívání společných prostor a úklidu v souladu se stanovami a domovním řádem bez selektivního omezování jednotlivých vlastníků.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k nápravě / zdržení se jednání",
+                  "html": "<p>Výzva výboru k dodržování rovných pravidel užívání společných prostor a zdržení se šikanózních výtek.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání věci nebo zpřístupnění podkladů",
-                  "done": false
-                },
-                {
-                  "html": "omluva nebo náhrada škody, pokud je prokazatelná",
-                  "done": false
-                },
-                {
-                  "html": "podpůrný důkaz k širšímu sporu o správu SVJ",
+                  "html": "<p>Návrh na řádné projednání a schválení domovního řádu a pravidel užívání shromážděním vlastníků.</p>",
                   "done": false
                 }
               ],
@@ -6419,25 +6416,19 @@
               ],
               "category": "Jednotlivé incidenty, zásahy do práv vlastníka a podpůrné důkazy",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "",
+              "summary": "Jak daný stav nastal: Incident ohledně umístění a užívání odpadkového koše ve společných prostorách domu a na pozemku SVJ, který byl zástupci výboru využit k neodůvodněným výtkám a selektivnímu omezování užívání společných částí. Aktuální stav: Přetrvávající sporný přístup výboru k užívání společných prostor, kdy jsou běžné provozní záležitosti řešeny šikanózně a bez opory v domovním řádu nebo rozhodnutí shromáždění. Očekávaný stav: Jasné a rovné vymezení pravidel užívání společných prostor a úklidu v souladu se stanovami a domovním řádem bez selektivního omezování jednotlivých vlastníků.",
               "comments": [],
               "sourcePath": "stiznosti/odpadkovy-kos",
               "missingDocuments": [
                 {
-                  "html": "svědci incidentu",
-                  "done": false
+                  "html": "<p>Komunikace a záznamy výtek výboru ohledně odpadkového koše.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "fotografie / datové zprávy / SMS",
-                  "done": false
-                },
-                {
-                  "html": "čas a místo události",
-                  "done": false
-                },
-                {
-                  "html": "vyčíslení škody nebo újmy",
-                  "done": false
+                  "html": "<p>Fotodokumentace umístění koše a společných prostor.</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -6449,16 +6440,12 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Plní SVJ povinnost řádné správy společných částí?",
-                  "done": false
+                  "html": "<p>Představují nepodložená obvinění a stížnosti na štěkání psa nepřiměřené vměšování do soukromého a rodinného života dle § 81 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly havárie a opravy řešeny včas, hospodárně a transparentně?",
-                  "done": false
-                },
-                {
-                  "html": "Byly náklady přiřazeny správným osobám/jednotkám?",
-                  "done": false
+                  "html": "<p>Prokázal vlastník jednotky řádné užívání bytu bez překročení obvyklé míry imisí dle § 1013 NOZ předložením kamerových záznamů a časového přehledu?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -6539,19 +6526,20 @@
               ],
               "legalStatus": "",
               "title": "Pes",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Pan Martinec vznesl neoprávněné stížnosti na štěkání psa v bytové jednotce a nepravdivě tvrdil, že pes je v bytě sám celý den. K vyvrácení byl předložen časový přehled pohybu a byl pořízen kamerový monitoring bytu s chůvičkou prokazující klidný režim.</p>",
+                "aktualni_stav": "<p>Nepřiměřené vměšování do soukromého a rodinného života vlastníka ze strany souseda / představitelů domu bez reálného důkazního podkladu.</p>",
+                "ocekavany_stav": "<p>Zdržení se nepodložených obvinění, šikanózních výtek a neoprávněných zásahů do soukromí a pokojného užívání bytu.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Pan Martinec vznesl neoprávněné stížnosti na štěkání psa v bytové jednotce a nepravdivě tvrdil, že pes je v bytě sám celý den. K vyvrácení byl předložen časový přehled pohybu a byl pořízen kamerový monitoring bytu s chůvičkou prokazující klidný režim.</p><h3>Aktuální stav:</h3><p>Nepřiměřené vměšování do soukromého a rodinného života vlastníka ze strany souseda / představitelů domu bez reálného důkazního podkladu.</p><h3>Očekávaný stav:</h3><p>Zdržení se nepodložených obvinění, šikanózních výtek a neoprávněných zásahů do soukromí a pokojného užívání bytu.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k nápravě a předložení technických/účetních podkladů",
+                  "html": "<p>Výzva k zdržení se nepodložených stížností, šikanózních výtek a zásahů do soukromí.</p>",
                   "done": false
                 },
                 {
-                  "html": "uložení povinnosti konat nebo zdržet se vadného postupu",
-                  "done": false
-                },
-                {
-                  "html": "náhrada škody nebo finanční vyrovnání, pokud vznikla újma",
+                  "html": "<p>Upozornění na možnost podání žaloby na ochranu osobnosti při pokračujícím obtěžování.</p>",
                   "done": false
                 }
               ],
@@ -6577,25 +6565,24 @@
               ],
               "category": "Řádná správa domu, opravy a technický stav",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "# Martinec – pes, vměšování do soukromí a doložení pohybu Přikládám rovněž další příklad komunikace pana Martince, kterou považuji za nepřiměřené vměšování do mého soukromého života. Není mi zřejmé, z jakého důvodu se vyjadřuje k mému psovi, obzvlášť za situace, kdy se svého vlastního psa sám zbavil. Pro úplnost zasílám také přesný časový přehled svého pohybu, včetně míst a časů. Tento přehled vyvrací tvrzení, že bych byl mimo domov celý den. Další otázky k této věci si ponechám na schůzi SVJ. Zároveň uvádím, že jsme si pořídili robotickou chůvičku / kamerový monitoring bytu, díky kterému máme přesný přehled o dění v jednotlivých místnostech. Z dostupných informací nemám za to, že by se jednalo o situaci obdobnou dřívějším případům, kdy pes štěkal skutečně dlouhodobě, například celý den. Děkuji za upozornění. V době Vaší zprávy jsem již byl fakticky na cestě zpět. ## Příloha - Screenshot…",
+              "summary": "Jak daný stav nastal: Pan Martinec vznesl neoprávněné stížnosti na štěkání psa v bytové jednotce a nepravdivě tvrdil, že pes je v bytě sám celý den. K vyvrácení byl předložen časový přehled pohybu a byl pořízen kamerový monitoring bytu s chůvičkou prokazující klidný režim. Aktuální stav: Nepřiměřené vměšování do soukromého a rodinného života vlastníka ze strany souseda / představitelů domu bez reálného důkazního podkladu. Očekávaný stav: Zdržení se nepodložených obvinění, šikanózních výtek a neoprávněných zásahů do soukromí a pokojného užívání bytu.",
               "comments": [],
               "sourcePath": "stiznosti/pes",
               "missingDocuments": [
                 {
-                  "html": "fotodokumentace s daty",
-                  "done": false
+                  "html": "<p>Časový přehled pohybu vyvracející tvrzení o celodenní nepřítomnosti.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "nabídky, objednávky a faktury",
-                  "done": false
+                  "html": "<p>Záznamy z kamerového monitoringu bytu prokazující klidový režim.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "revizní/technické zprávy",
-                  "done": false
-                },
-                {
-                  "html": "zápisy a rozhodnutí SVJ k opravám",
-                  "done": false
+                  "html": "<p>Písemná komunikace a zprávy pana Martince.</p>",
+                  "done": true,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -6607,16 +6594,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Došlo k zásahu do práv vlastníka nebo užívání společných částí?",
-                  "done": false
+                  "html": "<p>Je SVJ ze zákona povinno vést a zpřístupnit technickou a stavební dokumentaci domu a bytů dle § 1190 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je incident relevantní jako samostatný nárok, nebo podpůrný kontext k vadné správě SVJ?",
-                  "done": false
+                  "html": "<p>Má vlastník jednotky vymahatelný nárok na předání kopií plánů své jednotky z archivu SVJ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Existují svědci, fotografie nebo doručená komunikace?",
-                  "done": false
+                  "html": "<p>Lze se vydání dokumentace domáhat žalobou na splnění zákonné povinnosti správce domu?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -6725,23 +6712,24 @@
               ],
               "legalStatus": "",
               "title": "Plany bytu",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Vlastník jednotky opakovaně žádal výbor SVJ o poskytnutí technických výkresů a stavebních plánů bytu a návazných rozvodů, které má mít SVJ uloženy v dokumentaci domu. Dne 3. 12. 2025 byla výboru SVJ odeslána oficiální výzva prostřednictvím datové schránky (ID zprávy: 1614821582) k předání technických plánů bytu.</p>",
+                "aktualni_stav": "<p>Výbor SVJ technickou dokumentaci a stavební plány bytu dosud nepředal ani neumožnil jejich ofocení či nahlédnutí, čímž porušuje povinnost vést a zpřístupnit dokumentaci domu dle § 1190 a souvisejících ustanovení občanského zákoníku.</p>",
+                "ocekavany_stav": "<p>Předání kompletních kopií stavebních a technických plánů bytové jednotky nebo umožnění nahlédnutí do archivu stavební dokumentace domu a pořízení kopií na náklady SVJ.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Vlastník jednotky opakovaně žádal výbor SVJ o poskytnutí technických výkresů a stavebních plánů bytu a návazných rozvodů, které má mít SVJ uloženy v dokumentaci domu. Dne 3. 12. 2025 byla výboru SVJ odeslána oficiální výzva prostřednictvím datové schránky (ID zprávy: 1614821582) k předání technických plánů bytu.</p><h3>Aktuální stav:</h3><p>Výbor SVJ technickou dokumentaci a stavební plány bytu dosud nepředal ani neumožnil jejich ofocení či nahlédnutí, čímž porušuje povinnost vést a zpřístupnit dokumentaci domu dle § 1190 a souvisejících ustanovení občanského zákoníku.</p><h3>Očekávaný stav:</h3><p>Předání kompletních kopií stavebních a technických plánů bytové jednotky nebo umožnění nahlédnutí do archivu stavební dokumentace domu a pořízení kopií na náklady SVJ.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k nápravě / zdržení se jednání",
+                  "html": "<p>Předžalobní výzva výboru SVJ k předání kompletní stavební dokumentace a technických plánů bytu.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání věci nebo zpřístupnění podkladů",
+                  "html": "<p>Žaloba na vydání kopií technické dokumentace a plánů bytu na náklady SVJ.</p>",
                   "done": false
                 },
                 {
-                  "html": "omluva nebo náhrada škody, pokud je prokazatelná",
-                  "done": false
-                },
-                {
-                  "html": "podpůrný důkaz k širšímu sporu o správu SVJ",
+                  "html": "<p>Podnět stavebnímu úřadu k nahlédnutí a pořízení kopií z archivní dokumentace stavby.</p>",
                   "done": false
                 }
               ],
@@ -6759,25 +6747,24 @@
               ],
               "category": "Jednotlivé incidenty, zásahy do práv vlastníka a podpůrné důkazy",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Odeslaná zpráva - Detail zprávy Předmět: Věc: Výzva k předání technických plánů bytu ID zprávy: 1614821582 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 3. 12. 2025 v 12:49:40 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.: Nezadáno K rukám: Nezadáno Do vlastních rukou: Ne Přílohy: Textová zpráva.PDF (14,61 kB) Události zprávy: 3. 12. 2025 v 12:49:40 EV0: Datová zpráva byla podána. 3. 12. 2025 v 12:49:40 EV5: Datová zpráva byla dodána do datové schránky příjemce. Datová schránka: 8fjemzp, Petr Ullmann Uživatel: Petr Ullmann 12/3/25, 12:49 PM Datové schránky https://www.mojedatovaschranka.cz/portal/ISDS/op/tisk/zprava?inbox=false&msgid=1614821582&XCSRF=043fe3e…",
+              "summary": "Jak daný stav nastal: Vlastník jednotky opakovaně žádal výbor SVJ o poskytnutí technických výkresů a stavebních plánů bytu a návazných rozvodů, které má mít SVJ uloženy v dokumentaci domu. Dne 3. 12. 2025 byla výboru SVJ odeslána oficiální výzva prostřednictvím datové schránky (ID zprávy: 1614821582) k předání technických plánů bytu. Aktuální stav: Výbor SVJ technickou dokumentaci a stavební plány bytu dosud nepředal ani neumožnil jejich ofocení či nahlédnutí, čímž porušuje povinnost vést a zpřístupnit dokumentaci domu dle § 1190 a souvisejících ustanovení občanského zákoníku. Očekávaný stav: Předání kompletních kopií stavebních a technických plánů bytové jednotky nebo umožnění nahlédnutí do archivu stavební dokumentace domu a pořízení kopií na náklady SVJ.",
               "comments": [],
               "sourcePath": "stiznosti/plany-bytu",
               "missingDocuments": [
                 {
-                  "html": "svědci incidentu",
-                  "done": false
+                  "html": "<p>Doručenka datové zprávy ID 1614821582 ze dne 3. 12. 2025.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "fotografie / datové zprávy / SMS",
-                  "done": false
+                  "html": "<p>SMS komunikace s Václavem Hodkem ohledně plánů bytu.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "čas a místo události",
-                  "done": false
-                },
-                {
-                  "html": "vyčíslení škody nebo újmy",
-                  "done": false
+                  "html": "<p>Doklad o vlastnictví jednotky (výpis z KN).</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -6789,16 +6776,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Má SVJ právní titul k navýšení záloh nebo zadržení přeplatku?",
-                  "done": false
+                  "html": "<p>Je SVJ povinno vyplatit přeplatek z vyúčtování služeb ve lhůtě stanovené zákonem č. 67/2013 Sb.?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly předloženy podklady k vyúčtování, smlouvám a skutečným nákladům?",
-                  "done": false
+                  "html": "<p>Může SVJ zadržovat přeplatek za energie jako zástavu pro sporný hotovostní fond oprav?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je rozúčtování služeb přezkoumatelné a v souladu se stanovami a právní úpravou?",
-                  "done": false
+                  "html": "<p>Vzniká vlastníkovi nárok na zákonný poplatek z prodlení dle § 13 zákona č. 67/2013 Sb. a úrok z prodlení?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -7107,23 +7094,24 @@
               ],
               "legalStatus": "",
               "title": "Preplatky",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Z řádného ročního vyúčtování služeb a energií vznikl vlastníkovi jednotky finanční přeplatek ve výši cca 27 000 Kč. Výbor SVJ (Václav Hodek a Jaroslav Husárek) však výplatu přeplatku svévolně podmínil zaplacením sporného hotovostního příspěvku do fondu oprav ve výši 3 000 Kč. Dne 21. 7. 2025 byla odeslána oficiální předžalobní výzva datovou schránkou ID 1554851272 k bezodkladnému vrácení přeplatku.</p>",
+                "aktualni_stav": "<p>Přeplatek z vyúčtování je ze strany SVJ nadále protiprávně zadržován. Jedná se o bezdůvodné obohacení a porušení zákona č. 67/2013 Sb., kde je stanovena přísná lhůta a sankce (poplatek z prodlení) za nevrácení přeplatku.</p>",
+                "ocekavany_stav": "<p>Okamžité vyplacení celého zadržovaného přeplatku na bankovní účet vlastníka včetně zákonného úroku a poplatku z prodlení dle zákona č. 67/2013 Sb.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Z řádného ročního vyúčtování služeb a energií vznikl vlastníkovi jednotky finanční přeplatek ve výši cca 27 000 Kč. Výbor SVJ (Václav Hodek a Jaroslav Husárek) však výplatu přeplatku svévolně podmínil zaplacením sporného hotovostního příspěvku do fondu oprav ve výši 3 000 Kč. Dne 21. 7. 2025 byla odeslána oficiální předžalobní výzva datovou schránkou ID 1554851272 k bezodkladnému vrácení přeplatku.</p><h3>Aktuální stav:</h3><p>Přeplatek z vyúčtování je ze strany SVJ nadále protiprávně zadržován. Jedná se o bezdůvodné obohacení a porušení zákona č. 67/2013 Sb., kde je stanovena přísná lhůta a sankce (poplatek z prodlení) za nevrácení přeplatku.</p><h3>Očekávaný stav:</h3><p>Okamžité vyplacení celého zadržovaného přeplatku na bankovní účet vlastníka včetně zákonného úroku a poplatku z prodlení dle zákona č. 67/2013 Sb.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k předložení podkladů a vysvětlení",
+                  "html": "<p>Předžalobní výzva k úhradě dlužného přeplatku 27 000 Kč s poplatkem z prodlení a úroky.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání zadrženého přeplatku / zaplacení dlužné částky",
+                  "html": "<p>Žaloba na zaplacení dlužného přeplatku ze služeb s příslušenstvím.</p>",
                   "done": false
                 },
                 {
-                  "html": "přepočet vyúčtování nebo určení nesprávnosti postupu",
-                  "done": false
-                },
-                {
-                  "html": "případně úroky z prodlení",
+                  "html": "<p>Započtení pohledávky z přeplatku proti běžným zálohám, je-li to právně přípustné.</p>",
                   "done": false
                 }
               ],
@@ -7149,25 +7137,24 @@
               ],
               "category": "Vyúčtování, zálohy, přeplatky a energie",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Odeslaná zpráva - Detail zprávy Předmět: Výzva k vrácení přeplatku ID zprávy: 1554851272 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 21. 7. 2025 v 15:08:31 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.: Nezadáno K rukám: Václav Hodek Do vlastních rukou: Ne Přílohy: Vyzva k vraceni preplatku.pages.pdf (72,49 kB) Vyzva k vraceni preplatku.pages.pdf (72,49 kB) Události zprávy: 21. 7. 2025 v 15:08:31 EV0: Datová zpráva byla podána. 21. 7. 2025 v 15:08:31 EV5: Datová zpráva byla dodána do datové schránky příjemce. Datová schránka: 8fjemzp, Petr Ullmann Uživatel: Petr Ullmann Vážení členové výboru SVJ, podávám tímto stížnost na postup SVJ při správě záloh na energie a související požadavky na hotovostní platby. V minulém roce mi byly zadrženy přeplatky z vyúčtování energií s odůvodněním, že jsem neuhradil příspěvek do hotovostního fondu včas. Tento postup je v rozporu se zákonnou povinností SVJ vracet přeplatky z vyúčtování služeb spojených s užíváním bytů. Odkazy na právní úpravu: - **§ 7 odst. 1 zákona č. 67/2013 Sb.** – poskytovatel služeb je povinen vrátit přeplatek do 4 měsíců od doručení vyúčtování. - **§ 1208 občanského zákoníku (zákon č. 89/2012 Sb.)** – výbor SVJ je povinen hospodařit s péčí řádného hospodáře. - **§ 209 trestního zákoníku (zákon č. 40/2009 Sb.)** – neoprávněné zadržování finančních prostředků může naplnit skutkovou podstatu vydírání či nátlaku. Požaduji, aby výbor SVJ: 1. Okamžitě ukončil praktiku zadržování přeplatků z vyúčtování en… **Chci požádat svého právního zástupce o otevření věci \"Nepoměrného zadržování finančních přeplatků za energie, podmíněné příspěvkem do SVJ\". Jsem majitelem bytové jednotky SVJ zastupované, Václavem Hodkem a Jaroslavem Husárkem. Jsem takžtéž jako zmínění Husárek a Hodek, členem SVJ s podpisovým právem. Oba zmiňovaní se podíleli na postupném vydírání, viz. níže. S panem Hodkem jsem uzavřel ústní dohodu, která byla uzavřena v době, až když přišlo vyúčtování za energie a který se týk",
+              "summary": "Jak daný stav nastal: Z řádného ročního vyúčtování služeb a energií vznikl vlastníkovi jednotky finanční přeplatek ve výši cca 27 000 Kč. Výbor SVJ (Václav Hodek a Jaroslav Husárek) však výplatu přeplatku svévolně podmínil zaplacením sporného hotovostního příspěvku do fondu oprav ve výši 3 000 Kč. Dne 21. 7. 2025 byla odeslána oficiální předžalobní výzva datovou schránkou ID 1554851272 k bezodkladnému vrácení přeplatku. Aktuální stav: Přeplatek z vyúčtování je ze strany SVJ nadále protiprávně zadržován. Jedná se o bezdůvodné obohacení a porušení zákona č. 67/2013 Sb., kde je stanovena přísná lhůta a sankce (poplatek z prodlení) za nevrácení přeplatku. Očekávaný stav: Okamžité vyplacení celého zadržovaného přeplatku na bankovní účet vlastníka včetně zákonného úroku a poplatku z prodlení dle zákona č. 67/2013 Sb.",
               "comments": [],
               "sourcePath": "stiznosti/preplatky",
               "missingDocuments": [
                 {
-                  "html": "kompletní vyúčtování za dotčené roky",
-                  "done": false
+                  "html": "<p>Doručenka předžalobní výzvy datovou schránkou ID 1554851272 ze dne 21. 7. 2025.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "předpisy záloh a bankovní platby",
-                  "done": false
+                  "html": "<p>Písemné roční vyúčtování služeb prokazující vznik přeplatku 27 000 Kč.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "smlouvy a faktury dodavatelů energií/služeb",
-                  "done": false
-                },
-                {
-                  "html": "doručenky výzev a odpovědi SVJ",
-                  "done": false
+                  "html": "<p>Bankovní výpisy prokazující neuhrazení přeplatku.</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -7179,16 +7166,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Má SVJ právní titul k navýšení záloh nebo zadržení přeplatku?",
-                  "done": false
+                  "html": "<p>Porušuje výbor SVJ povinnost péče řádného hospodáře dle § 159 NOZ netransparentním rozhodováním a nezákonným zastupováním?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly předloženy podklady k vyúčtování, smlouvám a skutečným nákladům?",
-                  "done": false
+                  "html": "<p>Jsou rozhodnutí přijatá v rozporu se stanovami a bez shromáždění vlastníků právně neúčinná?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je rozúčtování služeb přezkoumatelné a v souladu se stanovami a právní úpravou?",
-                  "done": false
+                  "html": "<p>Má vlastník právo nahlížet do všech účetních a provozních dokladů SVJ dle § 1179 NOZ?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -8103,23 +8090,24 @@
               ],
               "legalStatus": "",
               "title": "Svj fungovani",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>Dlouhodobý stav, kdy statutární orgán SVJ nefunguje v souladu se zákonem a stanovami. Správu domu fakticky ovládal Václav Hodek bez volené funkce na základě plné moci od syna Pavla Hodka. Rozhodnutí byla přijímána netransparentně v úzkém kruhu (V. Hodek, V. Husárek), bez řádného svolávání shromáždění a bez zápisů. Dne 3. 12. 2025 byla zaslána datová zpráva ID 1614775797 žádající vysvětlení.</p>",
+                "aktualni_stav": "<p>Porušování základních zákonných povinností SVJ při správě cizího majetku a péče řádného hospodáře (§ 159 NOZ). Netransparentní účetnictví, neplatné plné moci, omezování práv jednotlivých vlastníků a absence přezkoumatelných podkladů pro rozhodování.</p>",
+                "ocekavany_stav": "<p>Zajištění řádného, transparentního a zákonného chodu SVJ, volba způsobilých členů statutárního orgánu bez zástupných plných mocí, vedení účetnictví podle zákona a zpřístupnění veškerých zápisů a dokladů všem vlastníkům.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Dlouhodobý stav, kdy statutární orgán SVJ nefunguje v souladu se zákonem a stanovami. Správu domu fakticky ovládal Václav Hodek bez volené funkce na základě plné moci od syna Pavla Hodka. Rozhodnutí byla přijímána netransparentně v úzkém kruhu (V. Hodek, V. Husárek), bez řádného svolávání shromáždění a bez zápisů. Dne 3. 12. 2025 byla zaslána datová zpráva ID 1614775797 žádající vysvětlení.</p><h3>Aktuální stav:</h3><p>Porušování základních zákonných povinností SVJ při správě cizího majetku a péče řádného hospodáře (§ 159 NOZ). Netransparentní účetnictví, neplatné plné moci, omezování práv jednotlivých vlastníků a absence přezkoumatelných podkladů pro rozhodování.</p><h3>Očekávaný stav:</h3><p>Zajištění řádného, transparentního a zákonného chodu SVJ, volba způsobilých členů statutárního orgánu bez zástupných plných mocí, vedení účetnictví podle zákona a zpřístupnění veškerých zápisů a dokladů všem vlastníkům.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k předložení podkladů a vysvětlení",
+                  "html": "<p>Výzva ke svolání řádného shromáždění vlastníků jednotek s programem volby nového statutárního orgánu.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání zadrženého přeplatku / zaplacení dlužné částky",
+                  "html": "<p>Písemná žádost o zpřístupnění veškerých účetních knih, smluv a bankovních výpisů za uplynulá období.</p>",
                   "done": false
                 },
                 {
-                  "html": "přepočet vyúčtování nebo určení nesprávnosti postupu",
-                  "done": false
-                },
-                {
-                  "html": "případně úroky z prodlení",
+                  "html": "<p>Podnět rejstříkovému soudu k provedení dohledu a zjednání nápravy ve fungování statutárního orgánu SVJ.</p>",
                   "done": false
                 }
               ],
@@ -8145,25 +8133,24 @@
               ],
               "category": "Vyúčtování, zálohy, přeplatky a energie",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Odeslaná zpráva - Detail zprávy Předmět: Věc: Žádost o podání vysvětlení k navýšení záloh na energie ID zprávy: 1614775797 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 3. 12. 2025 v 11:59:10 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.: Nezadáno K rukám: Nezadáno Do vlastních rukou: Ne Přílohy: Textová zpráva.PDF (14,09 kB) Události zprávy: 3. 12. 2025 v 11:59:10 EV0: Datová zpráva byla podána. 3. 12. 2025 v 11:59:10 EV5: Datová zpráva byla dodána do datové schránky příjemce. Datová schránka: 8fjemzp, Petr Ullmann Uživatel: Petr Ullmann 12/3/25, 11:59 AM Datové schránky https://www.mojedatovaschranka.cz/portal/ISDS/op/tisk/zprava?inbox=false&msgid=16147757… Odeslaná zpráva - Detail zprávy Předmět: Stížnost na činnost Václava Hodka v rámci SVJ ID zprávy: 1554852371 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 21. 7. 2025 v 15:10:52 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.: Nezadáno K rukám: Nezadáno Do vlastních rukou: Ne Přílohy: Stížnost na činnost Václava Hodka v rámci SVJ.pages.pdf (200,67 kB) Události zprávy: 21. 7. 2025 v 15:10:52 EV0: Datová zpráva byla podána. 21. 7. 2025 v 15:10:52 EV5: Datová zpráva byla dodána do datové schránky příjemce. Datová schránka: 8fjemzp, Petr Ullmann Uživatel: Petr Ullmann Odeslaná zpráva - Detail zprávy Předmět: Oznámení o neplatnosti schůze SVJ, anulace hlasování a návrh na svolání nové schůze ID zprávy: 1705552301 Typ zprávy: Odeslaná PDZ Stav zprávy: Dodaná Datum a čas: 29. 5. 2026 v 16:53:00 Adresát: Společenství vlastníků domu U Beránky 2140, U Beránky 2140/4, Dejvice, 16000 Praha 6, CZ ID schránky: avmpfm3 Typ schránky: Právnická osoba Zmocnění: Nezadáno Naše čís. jednací: Nezadáno Naše spisová zn.: Nezadáno Vaše čís. jednací: Nezadáno Vaše spisová zn.",
+              "summary": "Jak daný stav nastal: Dlouhodobý stav, kdy statutární orgán SVJ nefunguje v souladu se zákonem a stanovami. Správu domu fakticky ovládal Václav Hodek bez volené funkce na základě plné moci od syna Pavla Hodka. Rozhodnutí byla přijímána netransparentně v úzkém kruhu (V. Hodek, V. Husárek), bez řádného svolávání shromáždění a bez zápisů. Dne 3. 12. 2025 byla zaslána datová zpráva ID 1614775797 žádající vysvětlení. Aktuální stav: Porušování základních zákonných povinností SVJ při správě cizího majetku a péče řádného hospodáře (§ 159 NOZ). Netransparentní účetnictví, neplatné plné moci, omezování práv jednotlivých vlastníků a absence přezkoumatelných podkladů pro rozhodování. Očekávaný stav: Zajištění řádného, transparentního a zákonného chodu SVJ, volba způsobilých členů statutárního orgánu bez zástupných plných mocí, vedení účetnictví podle zákona a zpřístupnění veškerých zápisů a dokladů všem vlastníkům.",
               "comments": [],
               "sourcePath": "stiznosti/svj-fungovani",
               "missingDocuments": [
                 {
-                  "html": "kompletní vyúčtování za dotčené roky",
-                  "done": false
+                  "html": "<p>Komplexní stížnost na jednání SVJ a zástupců výboru.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "předpisy záloh a bankovní platby",
-                  "done": false
+                  "html": "<p>Doručenka datové zprávy ID 1614775797 ze dne 3. 12. 2025.</p>",
+                  "done": true,
+                  "files": []
                 },
                 {
-                  "html": "smlouvy a faktury dodavatelů energií/služeb",
-                  "done": false
-                },
-                {
-                  "html": "doručenky výzev a odpovědi SVJ",
-                  "done": false
+                  "html": "<p>Aktuální výpis z rejstříku společenství vlastníků jednotek a stanovy SVJ.</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -8175,16 +8162,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Má SVJ právní titul k navýšení záloh nebo zadržení přeplatku?",
-                  "done": false
+                  "html": "<p>Je SVJ povinno rozúčtovat náklady na vodné a stočné podle skutečné spotřeby naměřené podružnými vodoměry dle zákona č. 67/2013 Sb.?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly předloženy podklady k vyúčtování, smlouvám a skutečným nákladům?",
-                  "done": false
+                  "html": "<p>Je rozúčtování nákladů za prokázaný únik vody na cizí jednotce ostatním vlastníkům neplatné a představuje bezdůvodné obohacení?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je rozúčtování služeb přezkoumatelné a v souladu se stanovami a právní úpravou?",
-                  "done": false
+                  "html": "<p>Má poškozený vlastník nárok na finanční vyrovnání a vrácení neoprávněně vyúčtovaných plateb za vodu?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -8294,23 +8281,24 @@
               ],
               "legalStatus": "",
               "title": "Voda",
-              "edits": {},
+              "edits": {
+                "jak_nastal": "<p>V domě se po několik let rozpočítávala celková faktura za vodu z vodáren paušálně mezi tři bytové jednotky bez odečtů podružných vodoměrů. Během tohoto období docházelo k masivnímu úniku vody. Po instalaci měřičů vody se prokázalo, že únik vody vznikal výhradně na jednotce pana Husárka, avšak náklady na uniklou vodu byly do té doby neoprávněně účtovány i ostatním vlastníkům.</p>",
+                "aktualni_stav": "<p>Neoprávněně naúčtované a zaplacené částky za cizí únik vody nebyly poškozeným vlastníkům dodnes vyrovnány ani správně přeúčtovány. Vedení SVJ odmítá provést historické finanční narovnání.</p>",
+                "ocekavany_stav": "<p>Provedení mimořádného vyúčtování a finančního narovnání nákladů na vodu za předmětná období, přičtení nákladů za prokázaný únik vody k tíži odpovědné jednotky a vrácení přeplatků neoprávněně zatíženým vlastníkům.</p>",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>V domě se po několik let rozpočítávala celková faktura za vodu z vodáren paušálně mezi tři bytové jednotky bez odečtů podružných vodoměrů. Během tohoto období docházelo k masivnímu úniku vody. Po instalaci měřičů vody se prokázalo, že únik vody vznikal výhradně na jednotce pana Husárka, avšak náklady na uniklou vodu byly do té doby neoprávněně účtovány i ostatním vlastníkům.</p><h3>Aktuální stav:</h3><p>Neoprávněně naúčtované a zaplacené částky za cizí únik vody nebyly poškozeným vlastníkům dodnes vyrovnány ani správně přeúčtovány. Vedení SVJ odmítá provést historické finanční narovnání.</p><h3>Očekávaný stav:</h3><p>Provedení mimořádného vyúčtování a finančního narovnání nákladů na vodu za předmětná období, přičtení nákladů za prokázaný únik vody k tíži odpovědné jednotky a vrácení přeplatků neoprávněně zatíženým vlastníkům.</p>"
+              },
               "timelineLabel": "",
               "claims": [
                 {
-                  "html": "výzva k předložení podkladů a vysvětlení",
+                  "html": "<p>Žádost o mimořádné přeúčtování nákladů na vodu za předmětná období podle naměřených hodnot.</p>",
                   "done": false
                 },
                 {
-                  "html": "vydání zadrženého přeplatku / zaplacení dlužné částky",
+                  "html": "<p>Předžalobní výzva k vrácení neoprávněně naúčtovaných částek za únik vody na cizí jednotce.</p>",
                   "done": false
                 },
                 {
-                  "html": "přepočet vyúčtování nebo určení nesprávnosti postupu",
-                  "done": false
-                },
-                {
-                  "html": "případně úroky z prodlení",
+                  "html": "<p>Žaloba na vydání bezdůvodného obohacení a náhradu škody proti SVJ, případně odpovědnému vlastníku.</p>",
                   "done": false
                 }
               ],
@@ -8336,25 +8324,24 @@
               ],
               "category": "Vyúčtování, zálohy, přeplatky a energie",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "V rámci vyúčtování za vodu v rámci SVJ zde dříve byl účet od vodáren zasílán jakožto úhr za celou spotřebu vody. Následně tento úhrnný účet za vodu byl rozpočítán na bytovou jednotku. Tento rozpočet vedl k tomu, že vzhledem k úniku vody u jedné z bytových jednotek došlo k rozpočítání nákladů za úrnnou spotřebu mezi 3 jednotky. Toto probíhalo několik let. Následně však ve chvíli, kdy měly být instalovány měříče vody na bytovou jednotku následně došlo k prokázání, že únik vody byl pouze u jedné z jednotek. Vlastník jednotky následně únik uhradil. Jednalo se však o uhrazení za pouze tuto jednu bytovou jednotku. Mám podezření, že vzhledem k tomu, že únik byl několik let došlo k neoprávněnému rozpočítání nákladů úhrnem formou rozpočítání těchto nákladů na únik vody mezi všechny jednotky na místo pouze nasměrování náklladů za celé období na místo pouze proplacených nákladů za 1 rok na místo uh…",
+              "summary": "Jak daný stav nastal: V domě se po několik let rozpočítávala celková faktura za vodu z vodáren paušálně mezi tři bytové jednotky bez odečtů podružných vodoměrů. Během tohoto období docházelo k masivnímu úniku vody. Po instalaci měřičů vody se prokázalo, že únik vody vznikal výhradně na jednotce pana Husárka, avšak náklady na uniklou vodu byly do té doby neoprávněně účtovány i ostatním vlastníkům. Aktuální stav: Neoprávněně naúčtované a zaplacené částky za cizí únik vody nebyly poškozeným vlastníkům dodnes vyrovnány ani správně přeúčtovány. Vedení SVJ odmítá provést historické finanční narovnání. Očekávaný stav: Provedení mimořádného vyúčtování a finančního narovnání nákladů na vodu za předmětná období, přičtení nákladů za prokázaný únik vody k tíži odpovědné jednotky a vrácení přeplatků neoprávněně zatíženým vlastníkům.",
               "comments": [],
               "sourcePath": "stiznosti/voda",
               "missingDocuments": [
                 {
-                  "html": "kompletní vyúčtování za dotčené roky",
-                  "done": false
+                  "html": "<p>Protokoly o montáži a odečtech podružných vodoměrů prokazující únik na konkrétní jednotce.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "předpisy záloh a bankovní platby",
-                  "done": false
+                  "html": "<p>Faktury za vodu z vodáren a historická vyúčtování rozúčtování vody pro jednotlivé byty.</p>",
+                  "done": false,
+                  "files": []
                 },
                 {
-                  "html": "smlouvy a faktury dodavatelů energií/služeb",
-                  "done": false
-                },
-                {
-                  "html": "doručenky výzev a odpovědi SVJ",
-                  "done": false
+                  "html": "<p>Zápisy ze schůzí SVJ dokumentující projednávání úniku vody.</p>",
+                  "done": false,
+                  "files": []
                 }
               ],
               "checklist": {},
@@ -8366,19 +8353,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Plní SVJ povinnost řádné správy společných částí?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Představuje agresivní vyhrožování a verbální útok statutárního zástupce SVJ porušení osobnostních práv a dobrých mravů dle § 81 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly havárie a opravy řešeny včas, hospodárně a transparentně?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Je jednání předsedy SVJ v rozporu s povinností jednat s péčí řádného hospodáře a důvodem pro odvolání z funkce dle § 159 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly náklady přiřazeny správným osobám/jednotkám?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Může být incident použit jako důkaz o nátlaku a šikanózním způsobu správy nemovitosti v navazujících sporech?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -8433,7 +8417,7 @@
               "title": "Vyhrožování Pavlem Hodkem",
               "edits": {
                 "title": "Vyhrozovani předsedou Pavlem Hodkem",
-                "popis": "Vyhrožování Pavlem Hodkem Pavel Hodek v rámci mého dotazu na stav řešení oprav balkonů mi vyhrožoval po předposlední schůzi SVJ v přítomnosti syna. Pavel mi již v afektu formou křičení před domem u aut sdělil, že mu nebudu říkat co má dělat. Odpověděl jsem, že to by měl dělat by měl vědět sám a ne si o tom nechat radit za zády od pana Husárka nebo jeho otce, který opravy rozporuje vzhledem k prohlášení které si kdyby odsouhlasili v rámci kterého si bude každý své balkony spravovat sám. K tomu by však potřeboval provést změnu na stavebním úřadě v prohlášení vlastníka. K tomu by však potřeboval plný počet hlasů, který tehdy neměl, respektive jsem o tom přesvědčen např. u paní Vodičkové, která svůj byt pronajímá a schůze nechodí a vyždy se omlouvala. Pokračoval jsem se synem dál v cestě, ale Pavel sedl do auta a dojel nás na rohu ulice, kde na mne křičel, \"Chceš v tomhle žít?\" a dále mi vyh…",
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Při dotazu na stav řešení havarijních oprav balkónů po předposlední schůzi SVJ došlo k verbálnímu útoku ze strany předsedy SVJ Pavla Hodka. Před domem u aut začal křičet, že mu nikdo nebude říkat, co má dělat. Když vlastník odcházel se synem po ulici, Pavel Hodek nasedl do auta, dojel je na rohu ulice a z okna auta výhružně křičel: „Chceš v tomhle žít?“ a pokračoval ve verbálním vyhrožování za přítomnosti nezletilého syna.</p><h3>Aktuální stav:</h3><p>Zastrašování a agresivní nátlak statutárního zástupce SVJ vůči vlastníkovi jednotky, který se domáhá plnění zákonných povinností při správě domu. Incident je zaznamenán jako podpůrný důkaz o protiprávním a osobním způsobu výkonu funkce.</p><h3>Očekávaný stav:</h3><p>Zdržení se jakéhokoliv agresivního, výhrůžného či zastrašujícího jednání, striktní vedení komunikace pouze v písemné a věcné rovině a vyvození odpovědnosti za nevhodné chování člena statutárního orgánu.</p>",
                 "problem": "Doplnit podle podkladů ve složce případu.",
                 "reakce_svj": "Doplnit podle podkladů ve složce případu.",
                 "uskutecnene_kroky": "Doplnit podle podkladů ve složce případu.",
@@ -8442,24 +8426,24 @@
                 "pravni_otazky": "",
                 "mozne_naroky": "",
                 "pravni_sablona": "",
-                "pravni_doplneni": ""
+                "pravni_doplneni": "",
+                "jak_nastal": "<p>Při dotazu na stav řešení havarijních oprav balkónů po předposlední schůzi SVJ došlo k verbálnímu útoku ze strany předsedy SVJ Pavla Hodka. Před domem u aut začal křičet, že mu nikdo nebude říkat, co má dělat. Když vlastník odcházel se synem po ulici, Pavel Hodek nasedl do auta, dojel je na rohu ulice a z okna auta výhružně křičel: „Chceš v tomhle žít?“ a pokračoval ve verbálním vyhrožování za přítomnosti nezletilého syna.</p>",
+                "aktualni_stav": "<p>Zastrašování a agresivní nátlak statutárního zástupce SVJ vůči vlastníkovi jednotky, který se domáhá plnění zákonných povinností při správě domu. Incident je zaznamenán jako podpůrný důkaz o protiprávním a osobním způsobu výkonu funkce.</p>",
+                "ocekavany_stav": "<p>Zdržení se jakéhokoliv agresivního, výhrůžného či zastrašujícího jednání, striktní vedení komunikace pouze v písemné a věcné rovině a vyvození odpovědnosti za nevhodné chování člena statutárního orgánu.</p>"
               },
               "timelineLabel": null,
               "claims": [
                 {
-                  "html": "výzva k nápravě a předložení technických/účetních podkladů",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Písemná výzva k zdržení se jakéhokoliv nevhodného či agresivního chování a k omluvě.</p>",
+                  "done": false
                 },
                 {
-                  "html": "uložení povinnosti konat nebo zdržet se vadného postupu",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Podání podnětu shromáždění vlastníků k projednání nevhodného chování předsedy a jeho odvolání.</p>",
+                  "done": false
                 },
                 {
-                  "html": "náhrada škody nebo finanční vyrovnání, pokud vznikla újma",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Založení záznamu o incidentu jako podpůrného důkazu o atmosféře nátlaku a vadné správě SVJ.</p>",
+                  "done": false
                 }
               ],
               "related": [],
@@ -8484,28 +8468,23 @@
               ],
               "category": "Řádná správa domu, opravy a technický stav",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Vyhrožování Pavlem Hodkem Pavel Hodek v rámci mého dotazu na stav řešení oprav balkonů mi vyhrožoval po předposlední schůzi SVJ v přítomnosti syna. Pavel mi již v afektu formou křičení před domem u aut sdělil, že mu nebudu říkat co má dělat. Odpověděl jsem, že to by měl dělat by měl vědět sám a ne si o tom nechat radit za zády od pana Husárka nebo jeho otce, který opravy rozporuje vzhledem k prohlášení které si kdyby odsouhlasili v rámci kterého si bude každý své balkony spravovat sám. K tomu by však potřeboval provést změnu na stavebním úřadě v prohlášení vlastníka. K tomu by však potřeboval plný počet hlasů, který tehdy neměl, respektive jsem o tom přesvědčen např. u paní Vodičkové, která svůj byt pronajímá a schůze nechodí a vyždy se omlouvala. Pokračoval jsem se synem dál v cestě, ale Pavel sedl do auta a dojel nás na rohu ulice, kde na mne křičel, \"Chceš v tomhle žít?\" a dále mi vyh…",
+              "summary": "Jak daný stav nastal: Při dotazu na stav řešení havarijních oprav balkónů po předposlední schůzi SVJ došlo k verbálnímu útoku ze strany předsedy SVJ Pavla Hodka. Před domem u aut začal křičet, že mu nikdo nebude říkat, co má dělat. Když vlastník odcházel se synem po ulici, Pavel Hodek nasedl do auta, dojel je na rohu ulice a z okna auta výhružně křičel: „Chceš v tomhle žít?“ a pokračoval ve verbálním vyhrožování za přítomnosti nezletilého syna. Aktuální stav: Zastrašování a agresivní nátlak statutárního zástupce SVJ vůči vlastníkovi jednotky, který se domáhá plnění zákonných povinností při správě domu. Incident je zaznamenán jako podpůrný důkaz o protiprávním a osobním způsobu výkonu funkce. Očekávaný stav: Zdržení se jakéhokoliv agresivního, výhrůžného či zastrašujícího jednání, striktní vedení komunikace pouze v písemné a věcné rovině a vyvození odpovědnosti za nevhodné chování člena statutárního orgánu.",
               "timelineVisible": true,
               "comments": [],
               "sourcePath": "stiznosti/vyhrozovani-pavlem-hodkem",
               "missingDocuments": [
                 {
-                  "html": "fotodokumentace s daty",
+                  "html": "<p>Svědecká výpověď přítomného syna a případných dalších svědků před domem.</p>",
                   "done": false,
                   "files": []
                 },
                 {
-                  "html": "nabídky, objednávky a faktury",
-                  "done": false,
+                  "html": "<p>Písemný záznam incidentu s přesným datem, časem a doslovnými výroky.</p>",
+                  "done": true,
                   "files": []
                 },
                 {
-                  "html": "revizní/technické zprávy",
-                  "done": false,
-                  "files": []
-                },
-                {
-                  "html": "zápisy a rozhodnutí SVJ k opravám",
+                  "html": "<p>Zápis z předcházející schůze SVJ, na které byl dotaz na balkony vznesen.</p>",
                   "done": false,
                   "files": []
                 }
@@ -8519,19 +8498,16 @@
             {
               "legalQuestions": [
                 {
-                  "html": "Má SVJ právní titul k navýšení záloh nebo zadržení přeplatku?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Je výkon funkce předsedy SVJ volenou statutární funkcí s osobní odpovědností dle § 159 a § 1205 NOZ?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Byly předloženy podklady k vyúčtování, smlouvám a skutečným nákladům?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Lze funkci statutárního orgánu dlouhodobě vykonávat na základě generální plné moci udělené třetí osobě?</p>",
+                  "done": true
                 },
                 {
-                  "html": "Je rozúčtování služeb přezkoumatelné a v souladu se stanovami a právní úpravou?",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Jsou rozhodnutí a smlouvy uzavřené zmocněncem bez voleného mandátu právně napadnutelné z důvodu nedostatku zástupčího oprávnění?</p>",
+                  "done": true
                 }
               ],
               "files": [
@@ -8586,29 +8562,24 @@
               "title": "Zastupovani predsedy svj otcem",
               "edits": {
                 "problem": "<div>Václav Hodek se prokazoval plnou mocí od syna Pavla Hodka min. od roku 2011<br>Pan Hodek st. V. si vyloženě po celou dobu vybíral co se bude realizovat a co ne, viz. zateplení a kotelna (Martinec na kotelnu upozorňoval mnoho let).</div>",
-                "popis": "Mělo by se jednat o: Působení předsedy Pavla Hodka od roku 2011 v zástupu jeho otcem Václave Hodkem, kdy jeho jménem otec realizoval pouze ty věci, které se mu hodily. Vytvářel ve spolupráci s Vítězslavem Husárkem pravidla, která pokdu někdo nerespektoval, byl potrestán, viz. zadržování přeplatků ve výši 27000 Kč vs. příspěvek do \"hotovostního\" fondu oprav ve výši 3 tis. Kč. Odhlasováno na schůzi SVJ a tak by mělo být v zápise, který chceme vidět. Havarijní stav obvodového plášťě a balkónů kuchyň a obývák včetně dlažeb. Vyhrožování Pavlem Hodkem."
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Předseda SVJ Pavel Hodek udělil generální plnou moc svému otci Václavu Hodkovi, který se jí prokazoval a fakticky vykonával funkci statutárního orgánu minimálně od roku 2011. Václav Hodek spolu s Vítězslavem Husárkem rozhodoval o správě domu bez voleného mandátu a realizoval pouze vybrané akce.</p><h3>Aktuální stav:</h3><p>Nezákonný stav zastoupení – výkon funkce voleného statutárního orgánu SVJ je dle občanského zákoníku osobní a nezastupitelný. Právní jednání činěná zástupcem na základě plné moci jsou právně vadná, což zpochybňuje platnost smluv, usnesení i vymáhání plateb.</p><h3>Očekávaný stav:</h3><p>Okamžité ukončení neplatného zastupování předsedy SVJ na základě plné moci, osobní výkon funkce zvoleným předsedou nebo volba nového statutárního orgánu, který bude jednat v souladu se zákonem.</p>",
+                "jak_nastal": "<p>Předseda SVJ Pavel Hodek udělil generální plnou moc svému otci Václavu Hodkovi, který se jí prokazoval a fakticky vykonával funkci statutárního orgánu minimálně od roku 2011. Václav Hodek spolu s Vítězslavem Husárkem rozhodoval o správě domu bez voleného mandátu a realizoval pouze vybrané akce.</p>",
+                "aktualni_stav": "<p>Nezákonný stav zastoupení – výkon funkce voleného statutárního orgánu SVJ je dle občanského zákoníku osobní a nezastupitelný. Právní jednání činěná zástupcem na základě plné moci jsou právně vadná, což zpochybňuje platnost smluv, usnesení i vymáhání plateb.</p>",
+                "ocekavany_stav": "<p>Okamžité ukončení neplatného zastupování předsedy SVJ na základě plné moci, osobní výkon funkce zvoleným předsedou nebo volba nového statutárního orgánu, který bude jednat v souladu se zákonem.</p>"
               },
               "timelineLabel": null,
               "claims": [
                 {
-                  "html": "výzva k předložení podkladů a vysvětlení",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Výzva výboru SVJ k okamžitému předložení originálu plné moci a ukončení nezákonného zastupování.</p>",
+                  "done": false
                 },
                 {
-                  "html": "vydání zadrženého přeplatku / zaplacení dlužné částky",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Návrh na svolání shromáždění za účelem volby nového předsedy vykonávajícího funkci osobně.</p>",
+                  "done": false
                 },
                 {
-                  "html": "přepočet vyúčtování nebo určení nesprávnosti postupu",
-                  "done": false,
-                  "files": []
-                },
-                {
-                  "html": "případně úroky z prodlení",
-                  "done": false,
-                  "files": []
+                  "html": "<p>Podnět rejstříkovému soudu k provedení kontroly zápisu a způsobu jednání statutárního orgánu SVJ.</p>",
+                  "done": false
                 }
               ],
               "related": [],
@@ -8633,7 +8604,7 @@
               ],
               "category": "Vyúčtování, zálohy, přeplatky a energie",
               "updatedAt": "2026-10-07T18:11:42+00:00",
-              "summary": "Mělo by se jednat o: Působení předsedy Pavla Hodka od roku 2011 v zástupu jeho otcem Václave Hodkem, kdy jeho jménem otec realizoval pouze ty věci, které se mu hodily. Vytvářel ve spolupráci s Vítězslavem Husárkem pravidla, která pokdu někdo nerespektoval, byl potrestán, viz. zadržování přeplatků ve výši 27000 Kč vs. příspěvek do \"hotovostního\" fondu oprav ve výši 3 tis. Kč. Odhlasováno na schůzi SVJ a tak by mělo být v zápise, který chceme vidět. Havarijní stav obvodového plášťě a balkónů kuchyň a obývák včetně dlažeb. Vyhrožování Pavlem Hodkem.",
+              "summary": "Jak daný stav nastal: Předseda SVJ Pavel Hodek udělil generální plnou moc svému otci Václavu Hodkovi, který se jí prokazoval a fakticky vykonával funkci statutárního orgánu minimálně od roku 2011. Václav Hodek spolu s Vítězslavem Husárkem rozhodoval o správě domu bez voleného mandátu a realizoval pouze vybrané akce. Aktuální stav: Nezákonný stav zastoupení – výkon funkce voleného statutárního orgánu SVJ je dle občanského zákoníku osobní a nezastupitelný. Právní jednání činěná zástupcem na základě plné moci jsou právně vadná, což zpochybňuje platnost smluv, usnesení i vymáhání plateb. Očekávaný stav: Okamžité ukončení neplatného zastupování předsedy SVJ na základě plné moci, osobní výkon funkce zvoleným předsedou nebo volba nového statutárního orgánu, který bude jednat v souladu se zákonem.",
               "timelineVisible": true,
               "comments": [
                 {
@@ -8663,22 +8634,17 @@
               "sourcePath": "stiznosti/zastupovani-predsedy-svj-otcem",
               "missingDocuments": [
                 {
-                  "html": "kompletní vyúčtování za dotčené roky",
+                  "html": "<p>Kopie plné moci, kterou se Václav Hodek prokazoval.</p>",
                   "done": false,
                   "files": []
                 },
                 {
-                  "html": "předpisy záloh a bankovní platby",
-                  "done": false,
+                  "html": "<p>Zápisy ze schůzí a shromáždění dokládající vystupování a rozhodování Václava Hodka.</p>",
+                  "done": true,
                   "files": []
                 },
                 {
-                  "html": "smlouvy a faktury dodavatelů energií/služeb",
-                  "done": false,
-                  "files": []
-                },
-                {
-                  "html": "doručenky výzev a odpovědi SVJ",
+                  "html": "<p>Výpis z veřejného rejstříku společenství vlastníků jednotek.</p>",
                   "done": false,
                   "files": []
                 }
@@ -8722,11 +8688,40 @@
               "title": "Komunikace",
               "status": "open",
               "category": "Komunikace",
-              "summary": "",
+              "summary": "Jak daný stav nastal: Zahájení klientské agendy a dosavadní historie komunikace mezi stranami (dopisy, e-maily, osobní jednání). Aktuální stav: Aktuální stav komunikace, nevyřešené otázky a trvající rozpory k dalšímu právnímu posouzení. Očekávaný stav: Dosažení mimosoudní dohody nebo stanovení dalšího procesního postupu a narovnání vztahů.",
               "sourcePath": "",
-              "legalQuestions": [],
-              "claims": [],
-              "missingDocuments": [],
+              "legalQuestions": [
+                {
+                  "html": "<p>Byla dosavadní komunikace mezi stranami prokazatelně doručena a jaké právní důsledky a lhůty z ní plynou?</p>",
+                  "done": false
+                },
+                {
+                  "html": "<p>Jsou sporné otázky v aktuálním stavu řešitelné mimosoudní dohodou, nebo je nezbytný procesní návrh?</p>",
+                  "done": false
+                }
+              ],
+              "claims": [
+                {
+                  "html": "<p>Souhrnná výzva k jednání o smírném narovnání sporných otázek s návrhem dohody.</p>",
+                  "done": false
+                },
+                {
+                  "html": "<p>Příprava procesních kroků pro případ neúspěchu smírčího jednání.</p>",
+                  "done": false
+                }
+              ],
+              "missingDocuments": [
+                {
+                  "html": "<p>Kompletní chronologická evidence odeslaných a doručených zpráv, e-mailů a dopisů.</p>",
+                  "done": false,
+                  "files": []
+                },
+                {
+                  "html": "<p>Přehled vzájemných stanovisek a identifikace trvajících rozporů.</p>",
+                  "done": false,
+                  "files": []
+                }
+              ],
               "files": [
                 {
                   "id": "upload-1791317601931-mq4gxcyjitl",
@@ -8744,7 +8739,10 @@
               "comments": [],
               "updatedAt": "2026-10-06T22:26:34.458Z",
               "edits": {
-                "popis": ""
+                "popis": "<h3>Jak daný stav nastal:</h3><p>Zahájení klientské agendy a dosavadní historie komunikace mezi stranami (dopisy, e-maily, osobní jednání).</p><h3>Aktuální stav:</h3><p>Aktuální stav komunikace, nevyřešené otázky a trvající rozpory k dalšímu právnímu posouzení.</p><h3>Očekávaný stav:</h3><p>Dosažení mimosoudní dohody nebo stanovení dalšího procesního postupu a narovnání vztahů.</p>",
+                "jak_nastal": "<p>Zahájení klientské agendy a dosavadní historie komunikace mezi stranami (dopisy, e-maily, osobní jednání).</p>",
+                "aktualni_stav": "<p>Aktuální stav komunikace, nevyřešené otázky a trvající rozpory k dalšímu právnímu posouzení.</p>",
+                "ocekavany_stav": "<p>Dosažení mimosoudní dohody nebo stanovení dalšího procesního postupu a narovnání vztahů.</p>"
               },
               "sourceTexts": [],
               "legalStatus": "",

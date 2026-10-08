@@ -48,14 +48,10 @@
     .jira-desc-part>div:last-child{display:flex;flex-direction:column;flex:1;min-height:0}
     .jira-desc-part .wysiwyg{display:flex;flex-direction:column;flex:1;min-height:0}
     .jira-desc-part .wysiwyg-editor{flex:1;min-height:140px;max-height:none}
-    .flow-bridge{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 16px;padding:10px 14px;border:1px solid var(--line-soft);border-radius:10px;background:var(--surface-2);box-shadow:var(--shadow)}
-    .flow-bridge .flow-steps{font-weight:700;font-size:12px}
-    .flow-bridge .comparison-result{margin:0;flex:1 1 100%}
     details.panel.sec{border-left-width:4px}
     details.panel.sec-attachments,section.panel.sec-attachments{border-left:4px solid #2f6faf}
     details.panel.sec-desc{border-left-color:#0e9f6e}
     details.panel.sec-desc>summary{background:rgba(14,159,110,.12)}
-    details.panel.sec-compare,.flow-bridge.sec-compare{border-left:4px solid #a8842c}
     details.panel.sec-questions{border-left-color:#1d4e89}
     details.panel.sec-questions>summary{background:rgba(29,78,137,.10)}
     details.panel.sec-next{border-left-color:#c77700}
@@ -1420,7 +1416,7 @@ function renderLegalAnalysisHtml(client,detail,c){
 }
 function renderLegalAnalysisPanel(client,detail,c){
   const existing=sanitizeHtml(c.legalAnalysisHtml||(c.legalAnalysis&&c.legalAnalysis.html)||'');
-  return `<details class="panel collapsible sec sec-analysis" open><summary><span class="chev">▶</span> Provést analýzu<span class="collapsible-count">${existing?'vyplněno':'připraveno'}</span></summary><div class="collapsible-body"><p class="muted small">Finální krok toku případu. Tlačítko zpracuje aktuální vyplněná pole včetně příloh převedených na důkazy, popisu, právních otázek, potvrzených odpovědí, nároků a chybějících podkladů. Výsledek zobrazí i orientační procento vhodnosti pro žalobu nebo další právní kroky.</p>${renderDecisionWeightControls(c)}<div class="legal-analysis-actions"><button class="primary" type="button" onclick="generateLegalAnalysis('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Provést analýzu</button><button type="button" onclick="clearLegalAnalysis()">Vymazat analýzu</button></div><div id="caseEditLegalAnalysis" class="legal-analysis-result formatted-content" contenteditable="true" data-rich-editor="1" onclick="openLegalAnalysisLink(event)" onfocus="window.activeRichEditorId=this.id" onmouseup="window.activeRichEditorId=this.id" onkeyup="window.activeRichEditorId=this.id">${existing}</div></div></details>`;
+  return `<details class="panel collapsible sec sec-analysis" open><summary><span class="chev">▶</span> Provést analýzu<span class="collapsible-count">${existing?'vyplněno':'připraveno'}</span></summary><div class="collapsible-body"><p class="muted small">Finální krok toku případu. Tlačítko zpracuje aktuální vyplněná pole včetně příloh převedených na důkazy, popisu, právních otázek, potvrzených odpovědí, nároků a chybějících podkladů. Výsledek zobrazí i orientační procento vhodnosti pro žalobu nebo další právní kroky.</p>${renderDecisionWeightControls(c)}<div class="legal-analysis-actions"><button id="compareDescriptionLegalBtn" type="button" disabled onclick="compareDescriptionWithLegalParts()" title="Porovná Popis s právními otázkami a nároky">Porovnat s právní částí případu</button><button class="primary" type="button" onclick="generateLegalAnalysis('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Provést analýzu</button><button type="button" onclick="clearLegalAnalysis()">Vymazat analýzu</button></div><p class="muted small">Porovnání se aktivuje po doplnění Popisu. Výsledek zkontrolujte před generováním otázek.</p><div id="descriptionLegalComparison" class="comparison-result hidden"></div><div id="caseEditLegalAnalysis" class="legal-analysis-result formatted-content" contenteditable="true" data-rich-editor="1" onclick="openLegalAnalysisLink(event)" onfocus="window.activeRichEditorId=this.id" onmouseup="window.activeRichEditorId=this.id" onkeyup="window.activeRichEditorId=this.id">${existing}</div></div></details>`;
 }
 function collectCaseDraftForAnalysis(c){
   const draft=JSON.parse(JSON.stringify(c||{}));
@@ -1460,7 +1456,7 @@ function generateLegalAnalysis(clientId,detailId,caseId){
   window.activeRichEditorId='caseEditLegalAnalysis';
   out.focus();
 }
-function clearLegalAnalysis(){const out=document.getElementById('caseEditLegalAnalysis'); if(out)out.innerHTML='';}
+function clearLegalAnalysis(){const out=document.getElementById('caseEditLegalAnalysis'); if(out)out.innerHTML='';const cmp=document.getElementById('descriptionLegalComparison'); if(cmp){cmp.className='comparison-result hidden';cmp.innerHTML='';}}
 
 
 function caseOverviewSortKey(client,detail){return 'caseOverviewSort::'+client.id+'::'+detail.id;}
@@ -1605,7 +1601,7 @@ function showCase(clientId,detailId,caseId){
     ${(() => {
       const descParts = getCaseDescriptionParts(c);
       const descHasContent = !!(htmlToPlainText(descParts.origin) + htmlToPlainText(descParts.current) + htmlToPlainText(descParts.expected)).trim();
-      return `<details class="panel collapsible sec sec-desc" open><summary><span class="chev">▶</span> Popis<span class="collapsible-count">${descHasContent ? 'vyplněno' : 'šablona'}</span></summary><div class="collapsible-body">${renderDescriptionEditor(c)}</div></details><div class="flow-bridge sec sec-compare"><span class="flow-steps">1 Popis → 2 Porovnání → 3 Právní otázky</span><button id="compareDescriptionLegalBtn" class="primary" type="button" disabled onclick="compareDescriptionWithLegalParts()">Porovnat s právní částí případu</button><span class="muted small">Aktivuje se po doplnění Popisu. Výsledek zkontrolujte před generováním otázek.</span><div id="descriptionLegalComparison" class="comparison-result hidden"></div></div>`;
+      return `<details class="panel collapsible sec sec-desc" open><summary><span class="chev">▶</span> Popis<span class="collapsible-count">${descHasContent ? 'vyplněno' : 'šablona'}</span></summary><div class="collapsible-body">${renderDescriptionEditor(c)}</div></details>`;
     })()}
     <details class="panel collapsible sec sec-questions"><summary><span class="chev">▶</span> Právní otázky<span class="collapsible-count">${(normalizeLegalQuestions(c.legalQuestions).length||0)} · ${normalizeLegalQuestions(c.legalQuestions).filter(q=>q.done).length} hotovo</span></summary><div class="collapsible-body"><div class="legal-analysis-actions"><button class="primary" type="button" onclick="fillLegalQuestionsFromAttachments('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Vyplnit právní otázky z popisu</button><span class="muted small">Čte živý obsah polí Jak daný stav nastal, Aktuální stav a Očekávaný stav + přílohy; navrhne cílené otázky pro posouzení právní uznatelnosti.</span></div><p id="legalQuestionsAutoMsg" class="small muted"></p>${renderLegalChecklist(c.legalQuestions)}</div></details>
     <details class="panel collapsible sec sec-next"><summary><span class="chev">▶</span> Další postup<span class="collapsible-count">${(normalizeCheckItems(c.claims).length||0)} · ${normalizeCheckItems(c.claims).filter(x=>x.done).length} splněno</span></summary><div class="collapsible-body"><div class="legal-analysis-actions"><button class="primary" type="button" onclick="fillClaimsFromExpectedState('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Navrhnout nároky z očekávaného stavu</button><button type="button" onclick="transferEligibleQuestionsToClaims()">Ověřit dostupnost pro další právní kroky</button><span class="muted small">Navrhne konkrétní procesní kroky, výzvy a žalobní petity směřující k Očekávanému stavu.</span></div><p id="claimsTransferMsg" class="small muted"></p>${renderClaimsChecklist(c.claims)}</div></details>

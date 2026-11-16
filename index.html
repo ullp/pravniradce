@@ -62,6 +62,8 @@
     details.panel.sec-analysis>summary{background:rgba(179,38,30,.08)}
     details.panel.sec-related{border-left-color:#5b6472}
     details.panel.sec-comments{border-left-color:#0e9f6e}
+    details.panel.sec-events{border-left-color:#ffffff}
+    details.panel.sec-events>summary{background:rgba(255,255,255,.12)}
     .jira-part-head{display:grid;gap:2px}
     .jira-part-head label{margin:0;font-size:12px;font-weight:700}
     .jira-part-head .small{font-size:11px;line-height:1.35}
@@ -1433,7 +1435,7 @@ function renderLegalAnalysisHtml(client,detail,c){
 }
 function renderLegalAnalysisPanel(client,detail,c){
   const existing=sanitizeHtml(c.legalAnalysisHtml||(c.legalAnalysis&&c.legalAnalysis.html)||'');
-  return `<details class="panel collapsible sec sec-analysis" open><summary><span class="chev">▶</span> Provést analýzu<span class="collapsible-count">${existing?'vyplněno':'připraveno'}</span></summary><div class="collapsible-body"><p class="muted small">Finální krok toku případu. Tlačítko zpracuje aktuální vyplněná pole včetně příloh převedených na důkazy, popisu, právních otázek, potvrzených odpovědí, nároků a chybějících podkladů. Výsledek zobrazí i orientační procento vhodnosti pro žalobu nebo další právní kroky.</p>${renderDecisionWeightControls(c)}<div class="legal-analysis-actions"><button id="compareDescriptionLegalBtn" type="button" disabled onclick="compareDescriptionWithLegalParts()" title="Porovná Popis s právními otázkami a nároky">Porovnat s právní částí případu</button><button class="primary" type="button" onclick="generateLegalAnalysis('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Provést analýzu</button><button type="button" onclick="clearLegalAnalysis()">Vymazat analýzu</button></div><p class="muted small">Porovnání se aktivuje po doplnění Popisu. Výsledek zkontrolujte před generováním otázek.</p><div id="descriptionLegalComparison" class="comparison-result hidden"></div><div id="caseEditLegalAnalysis" class="legal-analysis-result formatted-content" contenteditable="true" data-rich-editor="1" onclick="openLegalAnalysisLink(event)" onfocus="window.activeRichEditorId=this.id" onmouseup="window.activeRichEditorId=this.id" onkeyup="window.activeRichEditorId=this.id">${existing}</div></div></details>`;
+  return `<details class="panel collapsible sec sec-analysis"><summary><span class="chev">▶</span> Provést analýzu<span class="collapsible-count">${existing?'vyplněno':'připraveno'}</span></summary><div class="collapsible-body"><p class="muted small">Finální krok toku případu. Tlačítko zpracuje aktuální vyplněná pole včetně příloh převedených na důkazy, popisu, právních otázek, potvrzených odpovědí, nároků a chybějících podkladů. Výsledek zobrazí i orientační procento vhodnosti pro žalobu nebo další právní kroky.</p>${renderDecisionWeightControls(c)}<div class="legal-analysis-actions"><button id="compareDescriptionLegalBtn" type="button" disabled onclick="compareDescriptionWithLegalParts()" title="Porovná Popis s právními otázkami a nároky">Porovnat s právní částí případu</button><button class="primary" type="button" onclick="generateLegalAnalysis('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Provést analýzu</button><button type="button" onclick="clearLegalAnalysis()">Vymazat analýzu</button></div><p class="muted small">Porovnání se aktivuje po doplnění Popisu. Výsledek zkontrolujte před generováním otázek.</p><div id="descriptionLegalComparison" class="comparison-result hidden"></div><div id="caseEditLegalAnalysis" class="legal-analysis-result formatted-content" contenteditable="true" data-rich-editor="1" onclick="openLegalAnalysisLink(event)" onfocus="window.activeRichEditorId=this.id" onmouseup="window.activeRichEditorId=this.id" onkeyup="window.activeRichEditorId=this.id">${existing}</div></div></details>`;
 }
 function collectCaseDraftForAnalysis(c){
   const draft=JSON.parse(JSON.stringify(c||{}));
@@ -1620,12 +1622,13 @@ function showCase(clientId,detailId,caseId){
       const descHasContent = !!(htmlToPlainText(descParts.origin) + htmlToPlainText(descParts.current) + htmlToPlainText(descParts.expected)).trim();
       return `<details class="panel collapsible sec sec-desc" open><summary><span class="chev">▶</span> Popis<span class="collapsible-count">${descHasContent ? 'vyplněno' : 'šablona'}</span></summary><div class="collapsible-body">${renderDescriptionEditor(c)}</div></details>`;
     })()}
+${renderEvents(clientId,detailId,c.id)}
     <details class="panel collapsible sec sec-questions"><summary><span class="chev">▶</span> Právní otázky<span class="collapsible-count">${(normalizeLegalQuestions(c.legalQuestions).length||0)} · ${normalizeLegalQuestions(c.legalQuestions).filter(q=>q.done).length} hotovo</span></summary><div class="collapsible-body"><div class="legal-analysis-actions"><button class="primary" type="button" onclick="fillLegalQuestionsFromAttachments('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Vyplnit právní otázky z popisu</button><span class="muted small">Čte živý obsah polí Jak daný stav nastal, Aktuální stav a Očekávaný stav + přílohy; navrhne cílené otázky pro posouzení právní uznatelnosti.</span></div><p id="legalQuestionsAutoMsg" class="small muted"></p>${renderLegalChecklist(c.legalQuestions)}</div></details>
     <details class="panel collapsible sec sec-next"><summary><span class="chev">▶</span> Další postup<span class="collapsible-count">${(normalizeCheckItems(c.claims).length||0)} · ${normalizeCheckItems(c.claims).filter(x=>x.done).length} splněno</span></summary><div class="collapsible-body"><div class="legal-analysis-actions"><button class="primary" type="button" onclick="fillClaimsFromExpectedState('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Navrhnout nároky z očekávaného stavu</button><button type="button" onclick="transferEligibleQuestionsToClaims()">Ověřit dostupnost pro další právní kroky</button><span class="muted small">Navrhne konkrétní procesní kroky, výzvy a žalobní petity směřující k Očekávanému stavu.</span></div><p id="claimsTransferMsg" class="small muted"></p>${renderClaimsChecklist(c.claims)}</div></details>
     <details class="panel collapsible sec sec-docs"><summary><span class="chev">▶</span> Předané podklady<span class="collapsible-count">${(normalizeCheckItems(c.missingDocuments).length||0)} · ${normalizeCheckItems(c.missingDocuments).filter(x=>x.done).length} předáno</span></summary><div class="collapsible-body"><div class="legal-analysis-actions"><button class="primary" type="button" onclick="fillMissingDocsFromDescription('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Navrhnout podklady z popisu</button><span class="muted small">Navrhne předané listiny a důkazy (datovka, výzvy apod.) k prokázání Aktuálního stavu a uplatnění Očekávaného stavu.</span></div><p id="missingDocsAutoMsg" class="small muted"></p>${renderMissingDocsChecklist(c.missingDocuments)}</div></details>
     ${renderLegalAnalysisPanel(client,detail,c)}
     <p class="muted small">Související případy se nastavují nahoře vedle pole Okruh.</p>
-    <details class="panel collapsible sec sec-comments" open><summary><span class="chev">▶</span> Komentáře<span class="collapsible-count">${(c.comments||[]).length||0}</span></summary><div class="collapsible-body">${renderConversation(c.comments)}</div></details>
+    <details class="panel collapsible sec sec-comments"><summary><span class="chev">▶</span> Komentáře<span class="collapsible-count">${(c.comments||[]).length||0}</span></summary><div class="collapsible-body">${renderConversation(c.comments)}</div></details>
     <div class="save-row"><div id="caseEditMessage" class="edit-json-error"></div><button class="primary" type="submit">Uložit</button><button type="button" onclick="showCase('${jsArg(client.id)}','${jsArg(detail.id)}','${jsArg(c.id)}')">Zahodit změny</button></div>
   </form>`);
   syncTimelinePreview();
@@ -1691,11 +1694,270 @@ function saveCaseDetail(clientId,detailId,caseId){
 function renderLegalChecklistItems(items){const normalized=normalizeLegalQuestions(items);if(!normalized.length)return '';return `<ul class="legal-checklist-view">${normalized.map((q,i)=>`<li class="${q.done?'done':''}"><span class="legal-check-state">${q.done?'☑':'☐'}</span><div class="formatted-content">${sanitizeHtml(q.html)}</div></li>`).join('')}</ul>`;}
 function renderListPanel(title,items){if(!items||!items.length)return ''; return `<section class="panel"><h2>${esc(title)}</h2><ul class="formatted-list">${items.map(i=>`<li><div class="formatted-content">${sanitizeHtml(typeof i==='string'?i:(i&&i.html)||'')}</div></li>`).join('')}</ul></section>`;}
 
+// ========== UDÁLOSTI PŘÍPADU ==========
+
+function renderEvents(clientId,detailId,caseId){
+  const c=getCase(clientId,detailId,caseId);
+  if(!c)return '';
+  const events=Array.isArray(c.events)?c.events:[];
+  const detail=getDetail(clientId,detailId);
+  const client=getClient(clientId);
+  const allDetails=client?getDetails(client):[];
+  // Seskupit vsechny pripadove udosti ze stejneho klienta, seskupene dle agendy (optgroup)
+  const groups=allDetails.map(d=>{
+    const cases=(d.cases||[]).filter(x=>x.id!==caseId);
+    if(!cases.length)return null;
+    return {detail:d,cases};
+  }).filter(Boolean);
+
+  const evList=[...events].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).map(ev=>{
+    const relatedLinks=(ev.relatedCaseIds||[]).map(rid=>{
+      // Najdeme pripad napr. v jakékoli agendy stejneho klienta
+      let rc=null;
+      for(const g of groups){
+        rc=g.cases.find(x=>x.id===rid);
+        if(rc)break;
+      }
+      if(!rc){
+        // Zkusit i v aktualnim detailu
+        rc=(detail&&detail.cases)?detail.cases.find(x=>x.id===rid):null;
+      }
+      return rc?`<a href="#" onclick="event.preventDefault();showCase('${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(rid)}')">${esc(rc.title)}</a>`:esc(rid);
+    }).join(', ')||'—';
+    const filesHtml=(ev.files||[]).map(f=>{
+      const dl=attachmentDataUrl(f);
+      return `<span class="pill small" style="margin-right:4px">${esc(fileName(f))}</span>${dl?`<a class="button small" href="${esc(dl)}" download="${esc(fileName(f))}">Stáhnout</a>`:'<span class="pill small">bez obsahu</span>'} <button type="button" class="danger small" onclick="removeEventFile(this,'${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}','${jsArg(ev.id)}','${jsArg(f.id)}')" style="margin-left:4px">×</button>`;
+    }).join(' ')||'<span class="muted small">bez příloh</span>';
+    return `<article class="event-item" style="padding:12px 16px;margin:10px 0;border:1px solid var(--line-soft);border-radius:10px;background:var(--surface-2)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px">
+        <div style="flex:1">
+          <div style="font-weight:700;font-size:15px">${esc(ev.title||'Bez titulku')}</div>
+          <div style="color:var(--muted);font-size:12px">${esc(ev.date||'')}&nbsp;<span class="pill small" style="margin-left:6px">${(ev.relatedCaseIds||[]).length} propojený případ(ů)</span></div>
+        </div>
+        <div style="display:flex;gap:6px">
+          <button type="button" class="link-button" onclick="editEvent(this,'${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}','${jsArg(ev.id)}')">Upravit</button>
+          <button type="button" class="link-button danger" onclick="deleteEvent('${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}','${jsArg(ev.id)}')">Smazat</button>
+        </div>
+      </div>
+      ${ev.description?`<div style="margin-bottom:8px;white-space:pre-wrap">${sanitizeHtml(ev.description)}</div>`:''}
+      <div style="margin-bottom:6px"><span style="color:var(--muted);font-size:11px">Propojené případy:</span> <div style="display:flex;flex-wrap:wrap;gap:4px">${relatedLinks.split(', ').map(r=>r?'<span class="pill small">'+r+'</span>':'').join('')||'<span class="muted small">—</span>'}</div></div>
+      <div style="margin-bottom:6px"><span style="color:var(--muted);font-size:11px">Přílohy:</span> <div style="display:flex;flex-wrap:wrap;gap:6px">${filesHtml}</div></div>
+    </article>`;
+  }).join('')||'<p class="muted">Zatím nejsou žádné události.</p>';
+
+  // Vytvorit optgroup seskupene dle agendy pro propojene pripady
+  let optgroupsHtml='';
+  groups.forEach(g=>{
+    const opts=g.cases.map(x=>`<option value="${jsArg(x.id)}">${esc(x.title)}</option>`).join('');
+    if(opts) optgroupsHtml+=`<optgroup label="${esc(g.detail.title||'Agenda')}">${opts}</optgroup>`;
+  });
+
+  const showForm = window._eventFormOpen === (clientId+'::'+detailId+'::'+caseId);
+  const formHtml = showForm?`<section class="panel sec sec-event-form" style="margin:14px 0;padding:16px;border:1px solid var(--line-soft);border-radius:12px;background:var(--card)">
+    <h3 style="margin:0 0 12px;font-size:16px">Nová událost</h3>
+    <div class="form-grid" style="gap:10px">
+      <label>Datum<input id="newEventDate" type="date"></label>
+      <label style="grid-column:1/-1">Tituluk události<input id="newEventTitle" type="text" maxlength="100" placeholder="Např. Schůze výboru SVJ"></label>
+      <label style="grid-column:1/-1">Popis<textarea id="newEventDesc" rows="6" placeholder="Co se událo, kdo se zúčastnil, jaké jsou důsledky"></textarea></label>
+      <label style="grid-column:1/-1">Propojené případy<select id="newEventRelated" multiple size="6">${optgroupsHtml}</select><span class="muted small" style="font-size:11px;display:block;margin-top:2px">Pouze případy tohoto klienta (seskupeno dle agendy).</span></label>
+      <label style="grid-column:1/-1">Příloha<input type="file" id="newEventFile"></label>
+    </div>
+    <p style="margin:12px 0 0;display:flex;gap:8px"><button class="primary" type="button" onclick="addEvent('${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}')">Vytvořit událost</button> <button type="button" onclick="toggleEventForm('${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}')">Zrušit</button></p>
+  </section>`:'';
+
+  return `<details class="panel collapsible sec sec-events"><summary><span class="chev">▶</span> Události případu<span class="collapsible-count">(${events.length})</span><button type="button" class="link-button" style="margin-left:auto;padding:4px 10px;font-size:13px" onclick="toggleEventForm('${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}')">${showForm?'Skrýt formulář':'Vytvořit událost'}</button></summary><div class="collapsible-body" style="padding:0 16px 16px">${evList}${formHtml}</div></details>`;
+}
+
+function toggleEventForm(clientId,detailId,caseId){
+  const key=clientId+'::'+detailId+'::'+caseId;
+  if(window._eventFormOpen===key){delete window._eventFormOpen;}
+  else{window._eventFormOpen=key;}
+  showCase(clientId,detailId,caseId);
+}
+
+async function addEvent(clientId,detailId,caseId){
+  const c=getCase(clientId,detailId,caseId);
+  if(!c)return;
+  const dateEl=document.getElementById('newEventDate');
+  const date=(dateEl?dateEl.value:'').trim();
+  const titleEl=document.getElementById('newEventTitle');
+  const title=(titleEl?titleEl.value:'').trim();
+  if(!title){alert('Vyplňte titulek události.');return;}
+  const descEl=document.getElementById('newEventDesc');
+  const desc=sanitizeHtml(descEl?descEl.value:'');
+  const relEl=document.getElementById('newEventRelated');
+  const relatedCaseIds=relEl?Array.from(relEl.selectedOptions).map(o=>o.value):[];
+  const fileEl=document.getElementById('newEventFile');
+  const files=[];
+  if(fileEl&&fileEl.files){
+    for(const file of fileEl.files){
+      const dataUrl=await readFileAsDataUrl(file);
+      files.push({
+        id:'event-file-'+Date.now()+'-'+Math.random().toString(36).slice(2),
+        name:file.name,
+        type:file.name.includes('.')?'.'+file.name.split('.').pop():'',
+        mimeType:file.type||'application/octet-stream',
+        sizeBytes:file.size,
+        uploadedAt:new Date().toISOString(),
+        storedInBrowser:true,
+        dataUrl,
+        downloadAvailable:true
+      });
+    }
+  }
+  c.events=c.events||[];
+  c.events.unshift({
+    id:'event-'+Date.now()+'-'+Math.random().toString(36).slice(2),
+    title,date,description:desc,relatedCaseIds,files,
+    createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()
+  });
+  // Obousmirne propojeni pripadu pres udalost
+  const detailForEvent=getDetail(clientId,detailId);
+  const allCasesForEvent=detailForEvent?detailForEvent.cases:[];
+  for(const rid of relatedCaseIds){
+    const target=allCasesForEvent.find(x=>x.id===rid);
+    if(target){if(!target.related)target.related=[];if(!target.related.includes(caseId))target.related.push(caseId);}
+    if(!c.related)c.related=[];if(!c.related.includes(rid))c.related.push(rid);
+  }
+  if(dateEl)dateEl.value='';
+  if(titleEl)titleEl.value='';
+  if(descEl)descEl.value='';
+  if(relEl)relEl.selectedIndex=-1;
+  if(fileEl)fileEl.value='';
+  try{saveDb();}catch(e){alert(e.message);return;}
+  showCase(clientId,detailId,caseId);
+}
+
+function deleteEvent(clientId,detailId,caseId,eventId){
+  if(!confirm('Opravdu smazat tuto událost?'))return;
+  const c=getCase(clientId,detailId,caseId);
+  if(!c||!Array.isArray(c.events))return;
+  const evToDelete=c.events.find(e=>e.id===eventId);
+  const oldRelated=evToDelete?evToDelete.relatedCaseIds||[]:[];
+  const detailForDel=getDetail(clientId,detailId);
+  const allCasesForDel=detailForDel?detailForDel.cases:[];
+  for(const rid of oldRelated){
+    const target=allCasesForDel.find(x=>x.id===rid);
+    if(target&&Array.isArray(target.related))target.related=target.related.filter(id=>id!==caseId);
+    if(Array.isArray(c.related))c.related=c.related.filter(id=>id!==rid);
+  }
+  c.events=c.events.filter(ev=>ev.id!==eventId);
+  try{saveDb();}catch(e){alert(e.message);return;}
+  showCase(clientId,detailId,caseId);
+}
+
+function editEvent(btn,clientId,detailId,caseId,eventId){
+  const c=getCase(clientId,detailId,caseId);
+  const ev=(c.events||[]).find(e=>e.id===eventId);
+  if(!ev)return;
+  const item=btn.closest('.event-item');
+  if(!item||item.querySelector('.event-edit-box'))return;
+  const detail=getDetail(clientId,detailId);
+  const client=getClient(clientId);
+  const allDetails=client?getDetails(client):[];
+  const groups=allDetails.map(d=>{
+    const cases=(d.cases||[]).filter(x=>x.id!==caseId);
+    if(!cases.length)return null;
+    return {detail:d,cases};
+  }).filter(Boolean);
+  let optgroupsHtml='';
+  groups.forEach(g=>{
+    const opts=g.cases.map(x=>`<option value="${jsArg(x.id)}"${(ev.relatedCaseIds||[]).includes(x.id)?' selected':''}>${esc(x.title)}</option>`).join('');
+    if(opts) optgroupsHtml+=`<optgroup label="${esc(g.detail.title||'Agenda')}">${opts}</optgroup>`;
+  });
+  const currentFiles=(ev.files||[]).map(f=>`<span class="pill small" style="margin-right:4px">${esc(fileName(f))}</span> <button type="button" class="danger small" onclick="removeEventFile(this,'${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}','${jsArg(ev.id)}','${jsArg(f.id)}')" style="margin-left:4px">×</button>`).join(' ')||'<span class="muted small">bez příloh</span>';
+  item.insertAdjacentHTML('beforeend',`<div class="event-edit-box" style="margin-top:10px;padding:10px;border:1px solid var(--line-soft);border-radius:8px;background:var(--field-bg)">
+    <label style="display:block;margin-bottom:4px">Datum<input type="date" id="editEventDate" value="${esc(ev.date||'')}"></label>
+    <label style="display:block;margin-bottom:4px">Tituluk<input type="text" id="editEventTitle" maxlength="100" value="${esc(ev.title||'')}"></label>
+    <label style="display:block;margin-bottom:4px">Popis<textarea id="editEventDesc" rows="6">${esc(ev.description||'')}</textarea></label>
+    <label style="display:block;margin-bottom:4px">Propojené případy<select id="editEventRelated" multiple size="6">${optgroupsHtml}</select></label>
+    <div style="margin:6px 0"><span style="color:var(--muted);font-size:11px">Přílohy:</span> <div style="display:flex;flex-wrap:wrap;gap:6px">${currentFiles}</div></div>
+    <label style="display:flex;align-items:center;gap:6px;font-size:12px">Přidat přílohu<input type="file" onchange="uploadEventFile(this,'${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}','${jsArg(ev.id)}')"></label>
+    <div style="margin-top:8px"><button class="primary" type="button" onclick="saveEventEdit(this,'${jsArg(clientId)}','${jsArg(detailId)}','${jsArg(caseId)}','${jsArg(ev.id)}')">Uložit</button> <button type="button" onclick="cancelEventEdit(this)">Zrušit</button></div>
+  </div>`);
+  Array.from(item.children).forEach(child=>{if(!child.classList.contains('event-edit-box'))child.style.display='none';});
+}
+
+function cancelEventEdit(btn){
+  const item=btn.closest('.event-item');
+  if(!item)return;
+  item.querySelectorAll(':scope > *:not(.event-edit-box)').forEach(child=>child.style.display='');
+  const edit=item.querySelector('.event-edit-box');
+  if(edit)edit.remove();
+}
+
+function saveEventEdit(btn,clientId,detailId,caseId,eventId){
+  const c=getCase(clientId,detailId,caseId);
+  const ev=(c.events||[]).find(e=>e.id===eventId);
+  if(!ev)return;
+  const dateEl=document.getElementById('editEventDate');
+  const date=(dateEl?dateEl.value:'').trim();
+  const titleEl=document.getElementById('editEventTitle');
+  const title=(titleEl?titleEl.value:'').trim();
+  if(!title){alert('Vyplňte titulek události.');return;}
+  const descEl=document.getElementById('editEventDesc');
+  const desc=sanitizeHtml(descEl?descEl.value:'');
+  const relEl=document.getElementById('editEventRelated');
+  const relatedCaseIds=relEl?Array.from(relEl.selectedOptions).map(o=>o.value):[];
+  const oldRelated=ev.relatedCaseIds||[];
+  const added=relatedCaseIds.filter(id=>!oldRelated.includes(id));
+  const removed=oldRelated.filter(id=>!relatedCaseIds.includes(id));
+  const detailForEdit=getDetail(clientId,detailId);
+  const allCasesForEdit=detailForEdit?detailForEdit.cases:[];
+  for(const rid of added){
+    const target=allCasesForEdit.find(x=>x.id===rid);
+    if(target){if(!target.related)target.related=[];if(!target.related.includes(caseId))target.related.push(caseId);}
+    if(!c.related)c.related=[];if(!c.related.includes(rid))c.related.push(rid);
+  }
+  for(const rid of removed){
+    const target=allCasesForEdit.find(x=>x.id===rid);
+    if(target&&Array.isArray(target.related))target.related=target.related.filter(id=>id!==caseId);
+    if(Array.isArray(c.related))c.related=c.related.filter(id=>id!==rid);
+  }
+  ev.title=title; ev.date=date; ev.description=desc; ev.relatedCaseIds=relatedCaseIds; ev.updatedAt=new Date().toISOString();
+  try{saveDb();}catch(e){alert(e.message);return;}
+  showCase(clientId,detailId,caseId);
+}
+
+async function uploadEventFile(input,clientId,detailId,caseId,eventId){
+  if(!input.files||!input.files.length)return;
+  const c=getCase(clientId,detailId,caseId);
+  const ev=(c.events||[]).find(e=>e.id===eventId);
+  if(!ev)return;
+  ev.files=ev.files||[];
+  for(const file of input.files){
+    const dataUrl=await readFileAsDataUrl(file);
+    ev.files.push({
+      id:'event-file-'+Date.now()+'-'+Math.random().toString(36).slice(2),
+      name:file.name,
+      type:file.name.includes('.')?'.'+file.name.split('.').pop():'',
+      mimeType:file.type||'application/octet-stream',
+      sizeBytes:file.size,
+      uploadedAt:new Date().toISOString(),
+      storedInBrowser:true,
+      dataUrl,
+      downloadAvailable:true
+    });
+  }
+  input.value='';
+  try{saveDb();}catch(e){alert(e.message);return;}
+  showCase(clientId,detailId,caseId);
+}
+
+function removeEventFile(btn,clientId,detailId,caseId,eventId,fileId){
+  const c=getCase(clientId,detailId,caseId);
+  const ev=(c.events||[]).find(e=>e.id===eventId);
+  if(!ev||!Array.isArray(ev.files))return;
+  ev.files=ev.files.filter(f=>f.id!==fileId);
+  try{saveDb();}catch(e){alert(e.message);return;}
+  showCase(clientId,detailId,caseId);
+}
+
 function renderComments(comments){if(!comments||!comments.length)return ''; return `<section class="panel"><h2>Komentáře</h2><div class="comment-thread">${comments.map(renderCommentBubble).join('')}</div></section>`;}
 function showNewClient(){selected={clientId:null,detailId:null,view:'new-client',caseId:null}; renderTree(); setTitle('Vložit klienta'); document.getElementById('mainRoot').innerHTML=withBreadcrumb([{label:'Vložit klienta'}],'<section class="panel"><h2>Nový klient</h2><div class="form-grid"><label>Název klienta<input id="newClientName" placeholder="Např. Petr Ullmann"></label><label>E-mail<input id="newClientEmail" type="email" placeholder="volitelné"></label><label class="full">Poznámka<textarea id="newClientNote" rows="4" placeholder="Krátká interní poznámka ke klientovi"></textarea></label><label class="full">Popis detailu případu<textarea id="newClientDetail" rows="4" placeholder="Úvodní popis hlavní agendy klienta"></textarea></label></div><p><button class="primary" type="button" onclick="createClient()">Vložit klienta</button></p></section>');}
 function createClient(){const name=(document.getElementById('newClientName').value||'').trim(); if(!name){alert('Vyplňte název klienta.');return;} let id=slugify(name),i=2; while(db.clients.some(c=>c.id===id))id=slugify(name)+'-'+i++; db.clients.push({id,name,email:(document.getElementById('newClientEmail').value||'').trim(),note:(document.getElementById('newClientNote').value||'').trim(),caseDetails:[{id:'detail-pripadu',title:'SVJ',subtitle:'',description:(document.getElementById('newClientDetail').value||'').trim(),status:'open',cases:[]}]}); normalizeDb(); saveDb(); showClient(id);}
 function showNewCase(clientId,detailId){const client=getClient(clientId); const detail=getDetail(clientId,detailId); if(!client||!detail)return; selected={clientId,detailId:detail.id,view:'new-case',caseId:null}; renderTree(); setTitle('Nový případ'); document.getElementById('mainRoot').innerHTML=`<section class="panel"><h2>Nový případ pro agendu ${esc(client.name)} / ${esc(detail.title||'Agenda')}</h2><div class="form-grid"><label>Název<input id="newCaseTitle" placeholder="Např. Výzva k plnění"></label><label>Stav<select id="newCaseStatus"><option value="open">Návrh</option><option value="progress">Probíhá</option><option value="no_response">Bez odezvy</option><option value="done">Hotovo</option></select></label><label>Okruh<select id="newCaseCategory">${categoryOptionsHtml('')}</select></label><label>Právní statut<select id="newCaseLegalStatus"><option value="">neuvedeno</option><option value="uznatelne">Právně uznatelné</option><option value="neuznatelne">Právně neuznatelné</option></select></label></div><div class="desc-cols-3"><label>Jak daný stav nastal:<textarea id="newCaseOrigin" rows="3" placeholder="Kdo, kdy, jak jednal; data, částky, dokumenty"></textarea></label><label>Aktuální stav:<textarea id="newCaseCurrent" rows="3" placeholder="Problém, vada, újma či nesplněná povinnost"></textarea></label><label>Očekávaný stav:<textarea id="newCaseExpected" rows="3" placeholder="Požadovaná náprava a plnění druhé strany"></textarea></label></div><p><button class="primary" type="button" onclick="createCase('${jsArg(clientId)}','${jsArg(detail.id)}')">Přidat případ</button> <button type="button" onclick="showCaseDetail('${jsArg(clientId)}','${jsArg(detail.id)}')">Zpět</button></p></section>`;}
-function createCase(clientId,detailId){const detail=getDetail(clientId,detailId); const title=(document.getElementById('newCaseTitle').value||'').trim(); if(!detail||!title){alert('Vyplňte název případu.');return;} let id=slugify(title),i=2; while(detail.cases.some(c=>c.id===id))id=slugify(title)+'-'+i++; const now=new Date().toISOString(), day=now.slice(0,10); const origin=(document.getElementById('newCaseOrigin')?document.getElementById('newCaseOrigin').value:'').trim(); const current=(document.getElementById('newCaseCurrent')?document.getElementById('newCaseCurrent').value:'').trim(); const expected=(document.getElementById('newCaseExpected')?document.getElementById('newCaseExpected').value:'').trim(); const originHtml=origin?`<p>${esc(origin)}</p>`:''; const currentHtml=current?`<p>${esc(current)}</p>`:''; const expectedHtml=expected?`<p>${esc(expected)}</p>`:''; const combinedParts=[]; if(originHtml)combinedParts.push(`<h3>Jak daný stav nastal:</h3>${originHtml}`); if(currentHtml)combinedParts.push(`<h3>Aktuální stav:</h3>${currentHtml}`); if(expectedHtml)combinedParts.push(`<h3>Očekávaný stav:</h3>${expectedHtml}`); const combinedPopisHtml=combinedParts.join(''); const combinedSummary=htmlToPlainText(combinedPopisHtml); detail.cases.unshift({id,title,status:document.getElementById('newCaseStatus').value,legalStatus:normalizeLegalStatus((document.getElementById('newCaseLegalStatus')||{}).value||''),showInTimeline:true,timelineVisible:true,hideFromTimeline:false,timelineDate:day,timelineEnd:day,timelineLabel:'',related:[],category:(document.getElementById('newCaseCategory').value||'').trim(),summary:combinedSummary,edits:{jak_nastal:originHtml,aktualni_stav:currentHtml,ocekavany_stav:expectedHtml,popis:combinedPopisHtml},sourcePath:'',legalQuestions:[],claims:[],missingDocuments:[],files:[],decisionWeights:normalizeDecisionWeights(),comments:[],createdAt:now,updatedAt:now}); saveDb(); showCase(clientId,detail.id,id);}
+function createCase(clientId,detailId){const detail=getDetail(clientId,detailId); const title=(document.getElementById('newCaseTitle').value||'').trim(); if(!detail||!title){alert('Vyplňte název případu.');return;} let id=slugify(title),i=2; while(detail.cases.some(c=>c.id===id))id=slugify(title)+'-'+i++; const now=new Date().toISOString(), day=now.slice(0,10); const origin=(document.getElementById('newCaseOrigin')?document.getElementById('newCaseOrigin').value:'').trim(); const current=(document.getElementById('newCaseCurrent')?document.getElementById('newCaseCurrent').value:'').trim(); const expected=(document.getElementById('newCaseExpected')?document.getElementById('newCaseExpected').value:'').trim(); const originHtml=origin?`<p>${esc(origin)}</p>`:''; const currentHtml=current?`<p>${esc(current)}</p>`:''; const expectedHtml=expected?`<p>${esc(expected)}</p>`:''; const combinedParts=[]; if(originHtml)combinedParts.push(`<h3>Jak daný stav nastal:</h3>${originHtml}`); if(currentHtml)combinedParts.push(`<h3>Aktuální stav:</h3>${currentHtml}`); if(expectedHtml)combinedParts.push(`<h3>Očekávaný stav:</h3>${expectedHtml}`); const combinedPopisHtml=combinedParts.join(''); const combinedSummary=htmlToPlainText(combinedPopisHtml); detail.cases.unshift({id,title,status:document.getElementById('newCaseStatus').value,legalStatus:normalizeLegalStatus((document.getElementById('newCaseLegalStatus')||{}).value||''),showInTimeline:true,timelineVisible:true,hideFromTimeline:false,timelineDate:day,timelineEnd:day,timelineLabel:'',related:[],category:(document.getElementById('newCaseCategory').value||'').trim(),summary:combinedSummary,edits:{jak_nastal:originHtml,aktualni_stav:currentHtml,ocekavany_stav:expectedHtml,popis:combinedPopisHtml},sourcePath:'',legalQuestions:[],claims:[],missingDocuments:[],files:[],decisionWeights:normalizeDecisionWeights(),comments:[],events:[],createdAt:now,updatedAt:now}); saveDb(); showCase(clientId,detail.id,id);}
 function cycleStatus(clientId,detailId,caseId){const c=getCase(clientId,detailId,caseId); if(!c)return; const order=['open','progress','no_response','done']; c.status=order[(order.indexOf(c.status||'open')+1)%order.length]; saveDb(); showCase(clientId,detailId,caseId);}
 
 function currentTheme(){return document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';}

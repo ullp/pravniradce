@@ -21,3 +21,5 @@
 /x-dev/backups/
 /x-dev/inputs.md
 /x-dev/
+node_modules/
+package-lock.json

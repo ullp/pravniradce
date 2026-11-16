@@ -230,7 +230,7 @@
   <main class="content">
     <div class="page-title" id="pageTitle"></div>
     <div id="mainRoot"></div>
-    <div class="admin-footer">Data aplikace se načítají z <code>data/database.json</code>. Lokální změny se ukládají do <code>localStorage</code>; aplikace je soběstačná ze statické databáze <code>data/database.json</code>; původní zdrojové soubory jsou převedené do databázových metadat.</div>
+    <div class="admin-footer">Data aplikace se načítají z <code>data/database.json</code>. Lokální změny se ukládají do <code>localStorage</code> (automaticky při každé změně); aplikace je soběstačná ze statické databáze <code>data/database.json</code>; původní zdrojové soubory jsou převedené do databázových metadat.</div><div id="autoSaveIndicator" class="small" style="margin-top:4px"></div>
   </main>
 </section>
 <script>
@@ -374,7 +374,7 @@ function normalizeDb(){
   db.clients.forEach(client=>{client.id=client.id||slugify(client.name); client.name=client.name||'Nový klient'; let details=Array.isArray(client.caseDetails)?client.caseDetails:(client.caseDetail?[client.caseDetail]:[]); if(!details.length)details=[{id:'detail-pripadu',title:client.id==='petr-ullmann'?'SVJ':'Agenda',subtitle:'',description:'',status:'open',cases:[]}]; client.caseDetails=details.map(d=>normalizeDetail(d,client)); client.caseDetail=client.caseDetails[0]; expanded.clients[client.id]=expanded.clients[client.id]??true; client.caseDetails.forEach(d=>{expanded.details[client.id+'::'+d.id]=expanded.details[client.id+'::'+d.id]??true;});});
 }
 
-function saveDb(){db.updatedAt=new Date().toISOString().slice(0,10); localStorage.setItem(DB_KEY,JSON.stringify(db));}
+function saveDb(){db.updatedAt=new Date().toISOString().slice(0,10); localStorage.setItem(DB_KEY,JSON.stringify(db)); const el=document.getElementById('autoSaveIndicator'); if(el){el.textContent='● Uloženo '+new Date().toLocaleTimeString('cs-CZ',{hour:'2-digit',minute:'2-digit'}); el.className='small edit-save-ok'; setTimeout(()=>{el.textContent='';el.className='small';},3000);}}
 async function showApp(){document.getElementById('loginView').classList.add('hidden');document.getElementById('appView').classList.remove('hidden'); applySidebarPref(); await loadDb(); const active=getClient(db.activeClientId)||db.clients[0]; renderTree(); if(active)showClient(active.id); else showDashboard();}
 function getClient(id){return db.clients.find(c=>c.id===id);} function getDetails(client){if(!client)return []; return Array.isArray(client.caseDetails)?client.caseDetails:(client.caseDetail?[client.caseDetail]:[]);} function getDetail(clientId,detailId){const client=getClient(clientId); const details=getDetails(client); return details.find(d=>d.id===detailId)||details[0];} function getCase(clientId,detailId,caseId){return getDetail(clientId,detailId)?.cases?.find(c=>c.id===caseId);} function setTitle(t){const el=document.getElementById('pageTitle'); if(el)el.textContent=t; refreshTopMenu(t);}
 function activeTopDetail(){if(selected&&selected.clientId&&selected.detailId)return getDetail(selected.clientId,selected.detailId); const active=getClient(db.activeClientId); const details=getDetails(active); return details.length===1?details[0]:null;}
@@ -1114,8 +1114,17 @@ function showDashboard(){
 }
 
 
+async function syncLocalToLive(){
+  try{
+    saveDb();
+    const out=JSON.parse(JSON.stringify(db));
+    downloadJson(out,'database.json');
+    backupNote('Soubor database.json je připraven ke stažení. Nahrajte jej do repozitáře jako data/database.json (např. přes webové rozhraní GitHubu).',false);
+  }catch(e){backupNote('Synchronizace se nepodařila: '+e.message,true);}
+}
+
 function renderBackupPanel(){
-  return `<section class="panel"><h2>Záloha a synchronizace dat</h2><p class="muted small">Lokální verze žije v <code>localStorage</code>, webová verze běží na <a href="${WEB_APP_URL}" target="_blank" rel="noopener">ullp.github.io/pravniradce</a> (soubor <code>data/database.json</code>). Tlačítkem synchronizace se data z webové verze stáhnou a sloučí s lokálními. Sloučení nikdy nemaže – u každého případu vyhrává novější <code>updatedAt</code>, komentáře a přílohy se sloučí dohromady, novější obsah přebíhá starší.</p><div class="backup-actions"><button type="button" onclick="exportBackup()">💾 Stáhnout zálohu (JSON)</button><button type="button" onclick="document.getElementById('backupFileInput').click()">📂 Obnovit ze zálohy</button><button type="button" class="primary" onclick="syncWithWeb()">🌐 Synchronizovat s webovou verzí</button><button type="button" onclick="mergeWithLive()">⇄ Sloučit s live verzí (data/database.json)</button><button type="button" onclick="exportLiveFile()">🔗 Stáhnout data/database.json (pro live)</button><input type="file" id="backupFileInput" accept=".json,application/json" style="display:none" onchange="importBackupFile(this)"></div><p class="small" id="backupStatus">Lokální verze: ${esc(db.updatedAt||'–')} · webová verze: načítám…</p><p class="small" id="backupMsg"></p></section>`;
+  return `<section class="panel"><h2>Záloha a synchronizace dat</h2><p class="muted small">Lokální verze žije v <code>localStorage</code>, webová verze běží na <a href="${WEB_APP_URL}" target="_blank" rel="noopener">ullp.github.io/pravniradce</a> (soubor <code>data/database.json</code>). Tlačítkem synchronizace se data z webové verze stáhnou a sloučí s lokálními. Sloučení nikdy nemaže – u každého případu vyhrává novější <code>updatedAt</code>, komentáře a přílohy se sloučí dohromady, novější obsah přebíhá starší.</p><div class="backup-actions"><button type="button" onclick="exportBackup()">💾 Stáhnout zálohu (JSON)</button><button type="button" onclick="document.getElementById('backupFileInput').click()">📂 Obnovit ze zálohy</button><button type="button" class="primary" onclick="syncWithWeb()">🌐 Synchronizovat s webovou verzí</button><button type="button" onclick="mergeWithLive()">⇄ Sloučit s live verzí (data/database.json)</button><button type="button" onclick="exportLiveFile()">🔗 Stáhnout data/database.json (pro live)</button><button type="button" class="primary" onclick="syncLocalToLive()">🔄 Synchronizovat lokální verzi do live (data/database.json)</button><input type="file" id="backupFileInput" accept=".json,application/json" style="display:none" onchange="importBackupFile(this)"></div><p class="small" id="backupStatus">Lokální verze: ${esc(db.updatedAt||'–')} · webová verze: načítám…</p><p class="small" id="backupMsg"></p></section>`;
 }
 function backupNote(text,isErr){const el=document.getElementById('backupMsg'); if(!el)return; el.className='small '+(isErr?'edit-json-error':'edit-save-ok'); el.textContent=text;}
 function backupStatus(text){const el=document.getElementById('backupStatus'); if(el)el.textContent=text;}
